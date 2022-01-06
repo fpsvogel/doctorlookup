@@ -1,1 +1,15 @@
-<p>Hello, world!</p>
+<%= form_with url: searches_update_path, method: :patch do |f| %>
+  <div class="grid">
+    <div>
+      <%= f.label :name, "Doctor's name" %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label :state %>
+      <%= f.select(:state, @states) %>
+    </div>
+  </div>
+
+  <%= f.submit "Search" %>
+<% end %>

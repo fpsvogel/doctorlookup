@@ -1,5 +1,14 @@
+@function derive-rgb-values-from-hex($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
 :root {
   --background-color-dark: #e4e4e4;
+  --form-element-spacing-vertical: .5rem;
+  --form-element-spacing-horizontal: .75rem;
+  --alert-color: var(--form-element-invalid-active-border-color);
+  // see the comment below under ALERTS.
+  --alert-color-rgb: 211, 47, 47;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -7,6 +16,8 @@
     --background-color-dark: #0c1217;
   }
 }
+
+// BASIC LAYOUT
 
 html, body {
   height: 100%;
@@ -39,4 +50,25 @@ footer {
     margin: 0 0.25rem;
     content: "·";
   }
+}
+
+// FORMS
+
+input[type=submit] {
+  max-width: 6rem;
+}
+
+// ALERTS
+
+div[role=alert] {
+  color: var(--alert-color);
+  border: calc(var(--border-width) * 1.5) solid var(--alert-color);
+  // soon this will be possible:
+  // background-color: rgba(from var(--alert-color) r g b, .15);
+  // see https://blog.jim-nielsen.com/2021/css-relative-colors
+  // but for now, I need to use a second color variable converted to rgb:
+  background-color: rgba(var(--alert-color-rgb), .15);
+  border-radius: var(--border-radius);
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  margin-bottom: var(--spacing);
 }

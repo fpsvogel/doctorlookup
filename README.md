@@ -18,7 +18,11 @@ I followed the same basic process that I followed in my recent "lightning apps,"
 - Use a minimalist CSS framework to speed up frontend development. This time I used [Pico](https://picocss.com/).
 - Postpone the database if possible—which in this case it was, because the important features of a lookup tool don't require users or other persisted models. The user's search preferences are instead saved in the session cookie. If I were to expand the app further, I would add user accounts via [Sorcery](https://github.com/Sorcery/sorcery) so that users could bookmark or "star" individual search results.
 
-For more on my lightning apps, see my blog posts about them:
+I also did a few new things in this app:
+
+- Almost solved a CSS problem that I occasionally run into, namely converting a hex color variable into RGB format (in order to set its opacity). The solution is [relative CSS colors](https://blog.jim-nielsen.com/2021/css-relative-colors), and it's coming soon to a browser near you.
+
+For more on my December lightning apps, see my blog posts about them:
 
 - [A "Pass the Story" collaborative writing game](https://fpsvogel.com/posts/2021/pass-the-story-collaborative-writing-game)
 - [A StumbleUpon-style Wikipedia explorer](https://fpsvogel.com/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon)
