@@ -1,0 +1,42 @@
+:root {
+  --background-color-dark: #e4e4e4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-dark: #0c1217;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1rem 0 0 2rem !important;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--background-color-dark);
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  & ul, & ul li {
+    list-style: none;
+    font-size: 90%;
+  }
+  & li {
+    display: inline-block;
+  }
+  & li:not(:first-child)::before {
+    margin: 0 0.25rem;
+    content: "·";
+  }
+}
