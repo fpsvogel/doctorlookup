@@ -257,7 +257,7 @@ DEPENDENCIES
   jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)
-  rails (~> 7.0.0)
+  rails (~> 7.0.1)
   redis (~> 4.0)
   rspec-rails
   sassc-rails
@@ -269,7 +269,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.1.0p0
 
 BUNDLED WITH
-   2.2.32
+   2.3.3
