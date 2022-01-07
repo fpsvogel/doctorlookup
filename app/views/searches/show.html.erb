@@ -1,4 +1,6 @@
-<%= form_with url: searches_update_path, method: :patch do |f| %>
+<%= form_with model: @search, url: searches_update_path, method: :patch do |f| %>
+  <%= render "shared/form_errors", form: f %>
+
   <div class="grid">
     <div>
       <%= f.label :name, "Doctor's name" %>
@@ -7,7 +9,7 @@
 
     <div>
       <%= f.label :state %>
-      <%= f.select(:state, @states) %>
+      <%= f.select(:state, @search.states) %>
     </div>
   </div>
 

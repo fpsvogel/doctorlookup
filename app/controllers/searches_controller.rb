@@ -1,9 +1,20 @@
 class SearchesController < ApplicationController
   def show
-    @states = UsaStates::ALL
+    @search = Search.new
   end
 
   def update
-    redirect_to searches_show_path, alert: "Placeholder alert.", status: "303"
+    @search = Search.new(search_params)
+    if @search.valid?
+      redirect_to searches_show_path, alert: "You've created a search! #{@search}"
+    else
+      render :show, status: :see_other
+    end
+  end
+
+  private
+
+  def search_params
+    params.require(:search).permit(:name, :state)
   end
 end

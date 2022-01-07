@@ -20,7 +20,8 @@ I followed the same basic process that I followed in my recent "lightning apps,"
 
 I also did a few new things in this app:
 
-- Almost solved a CSS problem that I occasionally run into, namely converting a hex color variable into RGB format (in order to set its opacity). The solution is [relative CSS colors](https://blog.jim-nielsen.com/2021/css-relative-colors), and it's coming soon to a browser near you.
+- Mixed `ActiveModel::Model` into a PORO model to give it ActiveRecord-like behavior, so that I can validate input entered into the search form and show form errors, even though I'm not creating a record in the database.
+- *Almost* solved a CSS problem that I occasionally run into, namely converting a hex color variable into RGB format (in order to set its opacity). The solution is [relative CSS colors](https://blog.jim-nielsen.com/2021/css-relative-colors), and it's coming soon to a browser near you.
 
 For more on my December lightning apps, see my blog posts about them:
 

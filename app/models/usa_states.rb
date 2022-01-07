@@ -1,6 +1,7 @@
 class UsaStates
+  DEFAULT = "Any"
   ALL = [
-    ['Any', 'Any'],
+    [DEFAULT, DEFAULT],
     ['Alabama', 'AL'],
     ['Alaska', 'AK'],
     ['Arizona', 'AZ'],

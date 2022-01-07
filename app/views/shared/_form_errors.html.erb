@@ -1,0 +1,7 @@
+<% if form&.object&.errors&.any? %>
+  <% form.object.errors.full_messages.each do |message| %>
+    <div role="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
