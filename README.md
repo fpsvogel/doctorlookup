@@ -1,33 +1,24 @@
 <h1 align="center">👩‍⚕️ Doctor Lookup 👨‍⚕️</h1>
 
-Welcome to the [Doctor Lookup](https://doctorlookup.herokuapp.com/) codebase. Doctor Lookup provides a simple interface to the US Centers for Medicare & Medicaid's NPI (National Provider Identifier) API.
+Welcome to the [Doctor Lookup](https://doctorlookup.herokuapp.com/) codebase. Doctor Lookup is a tool for finding doctors in the U.S. by name, state, and/or specialization. It uses the [NPI API](https://npiregistry.cms.hhs.gov/registry/help-api) by the U.S. Centers for Medicare & Medicaid Services.
 
 ### Table of Contents
 
-- [How I built it](#how-i-built-it)
+- [Why this is on my GitHub portfolio](#why-this-is-on-my-github-portfolio)
 - [Contributing](#contributing)
 - [Requirements](#requirements)
 - [Initial setup](#initial-setup)
 - [License](#license)
 
-## How I built it
+## Why this is on my GitHub portfolio
 
-I followed the same basic process that I followed in my recent "lightning apps," which I built in December 2021 for practicing my Rails testing skills. Here is that process, in a nutshell:
+I followed the same basic process that I followed in a trio of little apps that I built in December 2021 for Rails testing practice. Here is that process, in a nutshell:
 
 - Test my code as I write it, not as an afterthought. I used RSpec to write model and system specs.
 - Use a minimalist CSS framework to speed up frontend development. This time I used [Pico](https://picocss.com/).
-- Postpone the database if possible—which in this case it was, because the important features of a lookup tool don't require users or other persisted models. The user's search preferences are instead saved in the session cookie. If I were to expand the app further, I would add user accounts via [Sorcery](https://github.com/Sorcery/sorcery) so that users could bookmark or "star" individual search results.
+- Avoid using the database if possible—which in this case it was, because the important features of a lookup tool don't require users or other persisted models. If I were to expand the app further, I would add user accounts via [Sorcery](https://github.com/Sorcery/sorcery) to improve the starring (favorites) feature. Currently, a user can star a search result to refer back to it later, but the session cookie (where this data is saved) has a storage limit. Another downside is that the user might delete their starred results by accident if they happen to delete cookies.
 
-I also did a few new things in this app:
-
-- Mixed `ActiveModel::Model` into a PORO model to give it ActiveRecord-like behavior, so that I can validate input entered into the search form and show form errors, even though I'm not creating a record in the database.
-- *Almost* solved a CSS problem that I occasionally run into, namely converting a hex color variable into RGB format (in order to set its opacity). The solution is [relative CSS colors](https://blog.jim-nielsen.com/2021/css-relative-colors), and it's coming soon to a browser near you.
-
-For more on my December lightning apps, see my blog posts about them:
-
-- [A "Pass the Story" collaborative writing game](https://fpsvogel.com/posts/2021/pass-the-story-collaborative-writing-game)
-- [A StumbleUpon-style Wikipedia explorer](https://fpsvogel.com/posts/2021/wikipedia-explorer-discover-articles-like-stumbleupon)
-- [An AI story writer](https://fpsvogel.com/posts/2021/gpt3-ai-story-writer)
+For more on how I built this app, see my blog post [Doctor Lookup: Rails lightning app #4](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool).
 
 ## Contributing
 
