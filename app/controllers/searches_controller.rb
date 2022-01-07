@@ -1,12 +1,13 @@
 class SearchesController < ApplicationController
   def show
-    @search = Search.new
+    @query = Query.new
   end
 
   def update
-    @search = Search.new(search_params)
-    if @search.valid?
-      redirect_to searches_show_path, alert: "You've created a search! #{@search}"
+    @query = Query.new(query_params)
+    if @query.valid?
+      results = @query.results
+      redirect_to searches_show_path, alert: "You've created a query! #{results.first}"
     else
       render :show, status: :see_other
     end
@@ -14,7 +15,8 @@ class SearchesController < ApplicationController
 
   private
 
-  def search_params
-    params.require(:search).permit(:name, :state)
+  def query_params
+    params.require(:query)
+          .permit(:taxonomy_description, :state, :first_name, :last_name)
   end
 end

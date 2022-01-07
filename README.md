@@ -16,7 +16,7 @@ I followed the same basic process that I followed in a trio of little apps that 
 
 - Test my code as I write it, not as an afterthought. I used RSpec to write model and system specs.
 - Use a minimalist CSS framework to speed up frontend development. This time I used [Pico](https://picocss.com/).
-- Avoid using the database if possible—which in this case it was, because the important features of a lookup tool don't require users or other persisted models. If I were to expand the app further, I would add user accounts via [Sorcery](https://github.com/Sorcery/sorcery) to improve the starring (favorites) feature. Currently, a user can star a search result to refer back to it later, but the session cookie (where this data is saved) has a storage limit. Another downside is that the user might delete their starred results by accident if they happen to delete cookies.
+- Avoid using the database if possible—which in this case it was, because the important features of a lookup tool don't require users or other persisted models. (The search results are shown in a Turbo Frame dynamically, without the need to store them between requests.) If I were to expand the app further, I would add user accounts to improve the starring (favorites) feature. Currently, a user can star a search result to refer back to it later, but the session cookie (where starred results are saved) has a storage limit. Another downside is that the user might delete their starred results by accident if they happen to delete their cookies.
 
 For more on how I built this app, see my blog post [Doctor Lookup: Rails lightning app #4](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool).
 

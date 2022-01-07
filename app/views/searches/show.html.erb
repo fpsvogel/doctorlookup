@@ -1,15 +1,25 @@
-<%= form_with model: @search, url: searches_update_path, method: :patch do |f| %>
+<%= form_with model: @query, url: searches_update_path, method: :patch do |f| %>
   <%= render "shared/form_errors", form: f %>
 
   <div class="grid">
     <div>
-      <%= f.label :name, "Doctor's name" %>
-      <%= f.text_field :name %>
+      <%= f.label :taxonomy_description, "Specialty" %>
+      <%= f.text_field :taxonomy_description %>
     </div>
 
     <div>
       <%= f.label :state %>
-      <%= f.select(:state, @search.states) %>
+      <%= f.select(:state, @query.states) %>
+    </div>
+
+    <div>
+      <%= f.label :first_name, "First name (optional)" %>
+      <%= f.text_field :first_name %>
+    </div>
+
+    <div>
+      <%= f.label :last_name, "Last name (optional)" %>
+      <%= f.text_field :last_name %>
     </div>
   </div>
 
