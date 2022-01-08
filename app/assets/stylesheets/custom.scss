@@ -1,9 +1,5 @@
-@function derive-rgb-values-from-hex($hex) {
-  @return red($hex), green($hex), blue($hex);
-}
-
 :root {
-  --background-color-dark: #e4e4e4;
+  --background-color-dark: #ececec;
   --form-element-spacing-vertical: .5rem;
   --form-element-spacing-horizontal: .75rem;
   --alert-color: var(--form-element-invalid-active-border-color);
@@ -46,7 +42,7 @@ footer {
   & li {
     display: inline-block;
   }
-  & li:not(:first-child)::before {
+  & li:not(:last-child)::after {
     margin: 0 0.25rem;
     content: "·";
   }
