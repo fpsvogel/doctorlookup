@@ -1,3 +1,4 @@
+# Stores information on an individual health care provider from an API response.
 class Result
   include ActiveModel::Model
   include ActiveModel::Attributes
@@ -24,6 +25,9 @@ class Result
   attribute :other_specialties, array: true, default: []
   attribute :npi_number, :integer
 
+  # Calls the API.
+  # @param [Hash] response the full API response in JSON format
+  # @return [Array<Result>] relevant information from each result in the response
   def self.array_from_api_response(response)
     return [] unless response && response.has_key?("results")
     response["results"].map do |result|
