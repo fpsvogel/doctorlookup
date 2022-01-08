@@ -1,4 +1,4 @@
-# Stores information on an individual health care provider from an API response.
+# Stores details of an individual health care provider, taken from an API response.
 class Result
   include ActiveModel::Model
   include ActiveModel::Attributes
@@ -15,14 +15,16 @@ class Result
        state
        phone_number
      ]
-  titleized_string_attributes = %i[first_name last_name address_1 address_2 city]
-  optional_string_attributes = %i[credential address_2]
+  attribute :other_specialties, array: true, default: []
+  attribute :npi_number, :integer
 
+  optional_string_attributes = %i[credential address_2]
   string_attributes.each do |attr|
     attribute attr, :string
     validates(attr, presence: true) unless optional_string_attributes.include?(attr)
   end
 
+  titleized_string_attributes = %i[first_name last_name address_1 address_2 city]
   titleized_string_attributes.each do |attr|
     define_method "#{attr}=" do |new_value|
       new_value = titleize(new_value)
@@ -30,10 +32,7 @@ class Result
     end
   end
 
-  attribute :other_specialties, array: true, default: []
-  attribute :npi_number, :integer
-
-  # Calls the API.
+  # Makes Results from an API response.
   # @param [Hash] response the full API response in JSON format
   # @return [Array<Result>] relevant information from each result in the response
   def self.array_from_api_response(response)
@@ -65,6 +64,18 @@ class Result
 
   private
 
+  # similar to ActiveSupport::Inflector.titleize(string)
+  def titleize(string)
+    return nil if string.nil?
+    string.split(" ").map(&:capitalize).join(" ")
+  end
+
+  # mimics ActiveRecord's write_attribute method
+  def write_attribute(attr_name, value)
+    @attributes[attr_name.to_s] = @attributes[attr_name.to_s]
+                                    .with_value_from_user(value)
+  end
+
   private_class_method def self.parse_specialties(raw_taxonomies)
     # create a hash to remove duplicate taxonomies (having the same description)
     desc_and_primary = raw_taxonomies.map do |taxonomy|
@@ -79,17 +90,5 @@ class Result
     others = desc_and_primary.except(primary_description)
     other_descriptions = others.keys
     [primary_description, other_descriptions]
-  end
-
-  # similar to ActiveSupport::Inflector.titleize(string)
-  def titleize(string)
-    return nil if string.nil?
-    string.split(" ").map(&:capitalize).join(" ")
-  end
-
-  # mimics ActiveRecord's write_attribute method
-  def write_attribute(attr_name, value)
-    @attributes[attr_name.to_s] = @attributes[attr_name.to_s]
-                                    .with_value_from_user(value)
   end
 end
