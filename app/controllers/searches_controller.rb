@@ -5,11 +5,21 @@ class SearchesController < ApplicationController
 
   def update
     @query = Query.new(query_params)
-    if @query.valid?
-      results = @query.results
-      redirect_to searches_show_path, alert: "You've created a query! #{results.first}"
-    else
-      render :show, status: :see_other
+    respond_to do |format|
+      if @query.valid?
+        @results = @query.results
+        format.html do
+          redirect_to searches_show_path,
+                      alert: "There was an issue. Please try again!"
+        end
+        format.turbo_stream do
+          render turbo_stream:
+            turbo_stream.replace("results", partial: "results",
+                                            locals: { results: @results })
+        end
+      else
+        format.html { render :show, status: :unprocessable_entity }
+      end
     end
   end
 

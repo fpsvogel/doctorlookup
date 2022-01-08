@@ -1,0 +1,41 @@
+<div id="results">
+  <% if results %>
+    <% results.each do |result| %>
+      <article>
+        <h2>
+          <%= result.first_name %>
+          <%= result.last_name -%>
+          <% concat ", #{result.credential}" if result.credential %>
+        </h2>
+        <p>
+          <strong>Primary specialty:</strong>
+          <%= result.primary_specialty %>
+        </p>
+        <% if result.other_specialties.any? %>
+          <p>
+            <strong>Other specialties:</strong>
+            <%= result.other_specialties.join(", ") %>
+          </p>
+        <% end %>
+        <p>
+          <strong>Gender:</strong> <%= result.gender %>
+        </p>
+        <p>
+          <strong>Address:</strong>
+          <%= result.address_1 %>
+          <%= result.address_2 -%>
+        </p>
+        <p>
+          <strong>City:</strong>
+          <%= result.city -%>
+          <% concat ", #{result.state}" %>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <%= result.phone_number %>
+        </p>
+      </article>
+    <% end %>
+  <% end %>
+</div>
+

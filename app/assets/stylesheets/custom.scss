@@ -72,3 +72,15 @@ div[role=alert] {
   padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
   margin-bottom: var(--spacing);
 }
+
+// RESULTS
+
+#results {
+  h2 {
+    --font-size: 1.25rem;
+    margin-bottom: calc(var(--typography-spacing-vertical) / 4);
+  }
+  p {
+    margin-bottom: calc(var(--typography-spacing-vertical) / 4);
+  }
+}
