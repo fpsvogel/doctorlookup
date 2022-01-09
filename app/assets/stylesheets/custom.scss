@@ -50,6 +50,10 @@ footer {
 
 // FORMS
 
+fieldset legend, label {
+  display: inline-block;
+}
+
 input[type=submit] {
   max-width: 6rem;
 }

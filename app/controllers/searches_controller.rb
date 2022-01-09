@@ -49,7 +49,8 @@ class SearchesController < ApplicationController
                                 partial: results_partial,
                                 locals: { results: @results }),
               turbo_stream.replace("show_more", partial: 'show_more_button',
-                                                locals: { results: @results })
+                                                locals: { results: @results }),
+              turbo_stream.remove("flash")
             ]
         end
       else
