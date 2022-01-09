@@ -22,7 +22,7 @@ class Result
     return [] unless response && response.has_key?("results")
     response["results"].map do |result|
       gender = result["basic"]["gender"]
-      # next unless gender.downcase == query.gender.downcase # TODO
+      next if query.gender && !(gender.downcase == query.gender.downcase)
       primary_specialty, other_specialties = parse_specialties(result["taxonomies"])
       new(
         first_name: result["basic"]["first_name"],
@@ -32,7 +32,7 @@ class Result
         primary_specialty:,
         other_specialties:,
         addresses: Address.addresses_from_api_result(result, query))
-    end#.compact
+    end.compact
   end
 
   def credential=(new_credential)

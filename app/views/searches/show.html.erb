@@ -18,7 +18,25 @@
     </div>
   </div>
 
-   <div class="grid">
+  <div class="grid">
+    <div>
+      <fieldset>
+        <legend>Gender:</legend>
+        <%= f.label :gender_any do %>
+          <%= f.radio_button :gender, "any", checked: true %>
+          Any
+        <% end %>
+        <%= f.label :gender_m do %>
+          <%= f.radio_button :gender, "M" %>
+          Male
+        <% end %>
+        <%= f.label :gender_f do %>
+          <%= f.radio_button :gender, "F" %>
+          Female
+        <% end %>
+      </fieldset>
+    </div>
+
     <div>
       <%= f.label :first_name, "First name (optional)" %>
       <%= f.text_field :first_name %>

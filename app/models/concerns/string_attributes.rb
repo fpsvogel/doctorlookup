@@ -1,6 +1,7 @@
 # Provides a shortcut to defining titleized string attributes in a model.
 module StringAttributes
   extend ActiveSupport::Concern
+  include WriteAttribute
 
   class_methods do
     def add_string_attributes(required:, optional:)
@@ -28,12 +29,6 @@ module StringAttributes
     def titleize(string)
       return nil if string.nil?
       string.split(" ").map(&:capitalize).join(" ")
-    end
-
-    # mimics ActiveRecord's write_attribute method
-    def write_attribute(attr_name, value)
-      @attributes[attr_name.to_s] = @attributes[attr_name.to_s]
-                                      .with_value_from_user(value)
     end
   end
 end

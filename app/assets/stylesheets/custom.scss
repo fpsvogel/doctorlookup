@@ -54,6 +54,11 @@ input[type=submit] {
   max-width: 6rem;
 }
 
+label[for^=query_gender] {
+  display: inline-block;
+  padding: calc(var(--form-element-spacing-vertical)) calc(var(--form-element-spacing-horizontal) * .75);
+}
+
 // ALERTS
 
 div[role=alert] {

@@ -27,6 +27,11 @@ class SearchesController < ApplicationController
 
   def query_params
     params.require(:query)
-          .permit(:taxonomy_description, :state, :city, :first_name, :last_name)
+          .permit(:taxonomy_description,
+                  :state,
+                  :city,
+                  :gender,
+                  :first_name,
+                  :last_name)
   end
 end

@@ -5,6 +5,9 @@ require "json"
 class Query
   include ActiveModel::Model
   include ActiveModel::Attributes
+  include WriteAttribute
+
+  RESULTS_INCREMENT = 10
 
   # see https://npiregistry.cms.hhs.gov/registry/help-api
   # "&enumeration_type=NPI-1" means that only individuals are returned, not
@@ -23,6 +26,7 @@ class Query
     attribute attr, :string
   end
   attribute :state, :string, default: UsaStates::DEFAULT_VALUE
+  attribute :gender, :string
 
   validate :any_param_besides_state_is_present
 
@@ -38,13 +42,18 @@ class Query
     UsaStates::ALL
   end
 
+  def gender=(new_gender)
+    new_gender = nil if new_gender.downcase == "any"
+    write_attribute(:gender, new_gender)
+  end
+
   private
 
   def any_param_besides_state_is_present
     others = API_PARAM_ATTRIBUTES - [:state]
     others_blank = others.all? { |attr| send(attr).blank? }
     if others_blank
-      errors.add :base, "Please specify at least one parameter besides State."
+      errors.add :base, "Please specify at least one parameter besides State and Gender."
     end
   end
 
