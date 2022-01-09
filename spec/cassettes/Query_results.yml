@@ -1,0 +1,192 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=10&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=primary%20care&use_first_name_alias=&version=2.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 15:08:09 GMT
+      Content-Type:
+      - application/json
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Set-Cookie:
+      - TS017b4e40=01cffab1d3c13bef94a7400ad6517f1ec98c8843d3f0e846c60d52457f2917f745f9173cc8b12fd625f9771daba942e2b70d1b851a;
+        Path=/; Domain=.npiregistry.cms.hhs.gov
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"result_count":10, "results":[{"enumeration_type": "NPI-1", "number":
+        1811990005, "last_updated_epoch": 1355184000, "created_epoch": 1116806400,
+        "basic": {"name_prefix": "MRS.", "first_name": "DEBORAH", "last_name": "NEWSOME",
+        "middle_name": "E", "credential": "ARNP-C", "sole_proprietor": "NO", "gender":
+        "F", "enumeration_date": "2005-05-23", "last_updated": "2012-12-11", "status":
+        "A", "name": "NEWSOME DEBORAH"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "4979 HEALTHY WAY", "address_2": "", "city": "MARIANNA",
+        "state": "FL", "postal_code": "324467993", "telephone_number": "850-526-2412",
+        "fax_number": "850-718-0383"}, {"country_code": "US", "country_name": "United
+        States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "4979 HEALTHY WAY", "address_2": "", "city": "MARIANNA", "state": "FL", "postal_code":
+        "324467993", "telephone_number": "850-526-2412", "fax_number": "850-718-0383"}],
+        "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": true, "state": "FL", "license": "ARNP1903302"}], "identifiers":
+        [{"identifier": "306417400", "code": "05", "desc": "MEDICAID", "state": "FL",
+        "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1508869330, "last_updated_epoch":
+        1216598400, "created_epoch": 1116892800, "basic": {"name_prefix": "MRS.",
+        "first_name": "ANNA", "last_name": "ALLEN", "middle_name": "K", "credential":
+        "ARNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-05-24",
+        "last_updated": "2008-07-21", "status": "A", "name": "ALLEN ANNA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "605 LAMAR
+        AVE", "address_2": "", "city": "BROOKSVILLE", "state": "FL", "postal_code":
+        "346013211", "telephone_number": "352-799-5411", "fax_number": "352-544-2713"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "605 LAMAR AVE", "address_2":
+        "", "city": "BROOKSVILLE", "state": "FL", "postal_code": "346013211", "telephone_number":
+        "352-799-5411"}], "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": true, "state": "FL", "license": "ARNP1735792"}],
+        "identifiers": [{"identifier": "305836100", "code": "05", "desc": "MEDICAID",
+        "state": "FL", "issuer": ""}, {"identifier": "P00179739", "code": "01", "desc":
+        "Other", "state": "FL", "issuer": "RAILROAD MEDICARE"}, {"identifier": "Y046S",
+        "code": "01", "desc": "Other", "state": "FL", "issuer": "BC/BS FLA"}]},{"enumeration_type":
+        "NPI-1", "number": 1538162516, "last_updated_epoch": 1345766400, "created_epoch":
+        1116892800, "basic": {"first_name": "MAUREEN", "last_name": "KELLEY", "middle_name":
+        "ANNE", "credential": "CRNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2005-05-24", "last_updated": "2012-08-24", "status": "A", "name": "KELLEY
+        MAUREEN"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "3900 LOCH RAVEN BLVD", "address_2": "", "city": "BALTIMORE", "state": "MD",
+        "postal_code": "212182108", "telephone_number": "410-605-7621", "fax_number":
+        "410-605-7691"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "6392 SHADOWSHAPE PL", "address_2":
+        "", "city": "COLUMBIA", "state": "MD", "postal_code": "210454527", "telephone_number":
+        "410-605-7621", "fax_number": "410-605-7691"}], "taxonomies": [{"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": true, "state": "MD",
+        "license": "R051063"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
+        1609241462, "last_updated_epoch": 1522800000, "created_epoch": 1449187200,
+        "basic": {"first_name": "JENNESTER", "last_name": "CULP", "sole_proprietor":
+        "YES", "gender": "F", "enumeration_date": "2015-12-04", "last_updated": "2018-04-04",
+        "status": "A", "name": "CULP JENNESTER"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "3755 BEACON AVE", "address_2":
+        "# A", "city": "FREMONT", "state": "CA", "postal_code": "945381411", "telephone_number":
+        "707-761-5156"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 7744", "address_2":
+        "", "city": "FREMONT", "state": "CA", "postal_code": "945377744", "telephone_number":
+        "707-761-5156"}], "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": true, "state": "CA", "license": "95002633"}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1609879337, "last_updated_epoch":
+        1343347200, "created_epoch": 1117065600, "basic": {"name_prefix": "DR.", "first_name":
+        "MELISSA", "last_name": "WHITSON", "middle_name": "A", "credential": "D.O.",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2005-05-26",
+        "last_updated": "2012-07-27", "status": "A", "name": "WHITSON MELISSA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "16 HAMPTON
+        VILLAGE PLZ 220", "address_2": "", "city": "SAINT LOUIS", "state": "MO", "postal_code":
+        "631092128", "telephone_number": "314-351-2004", "fax_number": "314-351-0347"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "16 HAMPTON VILLAGE PLZ 220",
+        "address_2": "", "city": "SAINT LOUIS", "state": "MO", "postal_code": "631092128",
+        "telephone_number": "314-351-2004", "fax_number": "314-351-0347"}], "taxonomies":
+        [{"code": "208000000X", "desc": "Pediatrics", "primary": false, "state": "MO",
+        "license": "2008015366"}, {"code": "261QP2300X", "desc": "Clinic/Center Primary
+        Care", "primary": true, "state": "MO", "license": "2008015366"}], "identifiers":
+        [{"identifier": "2008015366", "code": "01", "desc": "Other", "state": "MO",
+        "issuer": "STATE LICENSE NUMBER"}, {"identifier": "1578711420", "code": "01",
+        "desc": "Other", "state": "MO", "issuer": "TYPE 2 NPI"}, {"identifier": "FW1052668",
+        "code": "01", "desc": "Other", "state": "MO", "issuer": "DEA"}, {"identifier":
+        "1609879337", "code": "05", "desc": "MEDICAID", "state": "MO", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1366806770, "last_updated_epoch": 1491955200, "created_epoch":
+        1460419200, "basic": {"first_name": "RENEE", "last_name": "SABOYA", "middle_name":
+        "MARY", "credential": "ARNP", "sole_proprietor": "YES", "gender": "F", "enumeration_date":
+        "2016-04-12", "last_updated": "2017-04-12", "status": "A", "name": "SABOYA
+        RENEE"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "6001 21ST AVE W", "address_2": "", "city": "BRADENTON", "state": "FL", "postal_code":
+        "342097847", "telephone_number": "941-761-4448", "fax_number": "941-761-0235"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "6001 21ST AVE W", "address_2":
+        "", "city": "BRADENTON", "state": "FL", "postal_code": "342097847", "telephone_number":
+        "941-761-4448", "fax_number": "941-761-0235"}], "taxonomies": [{"code": "363LA2200X",
+        "desc": "Nurse Practitioner Adult Health", "primary": true, "state": "FL",
+        "license": "9277493"}, {"code": "363LG0600X", "desc": "Nurse Practitioner
+        Gerontology", "primary": false, "state": "FL", "license": "9277493"}, {"code":
+        "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary": false,
+        "state": "FL", "license": "9277493"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1376545525, "last_updated_epoch": 1372723200, "created_epoch":
+        1117584000, "basic": {"first_name": "JENNIFER", "last_name": "DUNNIGAN-FENTON",
+        "middle_name": "ANN", "credential": "FNP", "sole_proprietor": "NO", "gender":
+        "F", "enumeration_date": "2005-06-01", "last_updated": "2013-07-02", "status":
+        "A", "name": "DUNNIGAN-FENTON JENNIFER"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "9400 READING RD", "address_2":
+        "", "city": "READING", "state": "OH", "postal_code": "452153401", "telephone_number":
+        "513-563-6934", "fax_number": "513-769-2622"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "9400 READING RD", "address_2": "", "city": "READING", "state": "OH", "postal_code":
+        "452153401", "telephone_number": "513-563-6934", "fax_number": "513-769-2622"}],
+        "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": true, "state": "OH", "license": "RN254351"}], "identifiers":
+        [{"identifier": "2217676", "code": "05", "desc": "MEDICAID", "state": "OH",
+        "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1245232297, "last_updated_epoch":
+        1183852800, "created_epoch": 1117670400, "basic": {"name_prefix": "MS.", "first_name":
+        "SUNDIE", "last_name": "ELLIS", "middle_name": "WRIGHT", "credential": "APRN,
+        BC, FNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-06-02",
+        "last_updated": "2007-07-08", "status": "A", "name": "ELLIS SUNDIE"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "10717
+        LIPAN TRL", "address_2": "", "city": "FORT WORTH", "state": "TX", "postal_code":
+        "761086924", "telephone_number": "817-244-1592"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "10717 LIPAN TRL", "address_2": "", "city": "FORT WORTH", "state": "TX", "postal_code":
+        "761086924", "telephone_number": "817-244-1592"}], "taxonomies": [{"code":
+        "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary": true,
+        "state": "TX", "license": "667088"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1871597773, "last_updated_epoch": 1257206400, "created_epoch":
+        1118188800, "basic": {"first_name": "MISTY", "last_name": "RICHARDS", "credential":
+        "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-06-08",
+        "last_updated": "2009-11-03", "status": "A", "name": "RICHARDS MISTY"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "302 S
+        JEFFERS ST", "address_2": "", "city": "NORTH PLATTE", "state": "NE", "postal_code":
+        "691015349", "telephone_number": "308-534-6687", "fax_number": "308-534-1874"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "302 S JEFFERS ST", "address_2":
+        "", "city": "NORTH PLATTE", "state": "NE", "postal_code": "691015349", "telephone_number":
+        "308-534-6687", "fax_number": "308-534-1874"}], "taxonomies": [{"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": true, "state": "NE",
+        "license": "110278"}], "identifiers": [{"identifier": "47082269513", "code":
+        "05", "desc": "MEDICAID", "state": "NE", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1063414019, "last_updated_epoch": 1434560088, "created_epoch":
+        1117670400, "basic": {"first_name": "JANEL", "last_name": "PEREZ", "middle_name":
+        "KEELING", "credential": "FNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2005-06-02", "last_updated": "2015-06-17", "status": "A", "name": "PEREZ
+        JANEL"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "16111 PLUMMER ST", "address_2": "BLDG 20, RM 118C MC122", "city": "NORTH
+        HILLS", "state": "CA", "postal_code": "913432036", "telephone_number": "818-891-7711",
+        "fax_number": "818-895-9339"}, {"country_code": "US", "country_name": "United
+        States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "16111 PLUMMER ST", "address_2": "BLDG 20, RM 118C MC122", "city": "NORTH
+        HILLS", "state": "CA", "postal_code": "913432036", "telephone_number": "818-891-7711",
+        "fax_number": "818-895-9339"}], "taxonomies": [{"code": "363LP2300X", "desc":
+        "Nurse Practitioner Primary Care", "primary": true, "state": "CA", "license":
+        "7504"}], "identifiers": []}]}'
+  recorded_at: Sun, 09 Jan 2022 15:08:10 GMT
+recorded_with: VCR 6.0.0

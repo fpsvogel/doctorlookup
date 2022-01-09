@@ -68,7 +68,13 @@ end
 group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
-  gem "capybara"
+  # for https://github.com/teamcapybara/capybara/pull/2501
+  # so remove when capybara version > 3.36.0
+  gem "capybara", github: 'teamcapybara/capybara'
   gem "webdrivers"
   gem "faker"
+  gem "webmock"
+  # for https://github.com/vcr/vcr/pull/907
+  # so remove when vcr version > 6.0.0
+  gem "vcr", github: 'vcr/vcr'
 end

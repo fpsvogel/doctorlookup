@@ -1,3 +1,23 @@
+GIT
+  remote: https://github.com/teamcapybara/capybara.git
+  revision: a958240ef44b44ca90be8e7b8fbcba8511a6e262
+  specs:
+    capybara (3.36.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
+
+GIT
+  remote: https://github.com/vcr/vcr.git
+  revision: 8ced6c96e01737a418cd270e0382a8c2c6d85f7f
+  specs:
+    vcr (6.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,17 +92,10 @@ GEM
     bootsnap (1.9.3)
       msgpack (~> 1.0)
     builder (3.2.4)
-    capybara (3.36.0)
-      addressable
-      matrix
-      mini_mime (>= 0.1.3)
-      nokogiri (~> 1.8)
-      rack (>= 1.6.0)
-      rack-test (>= 0.6.3)
-      regexp_parser (>= 1.5, < 3.0)
-      xpath (~> 3.2)
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     debug (1.4.0)
       irb (>= 1.3.6)
@@ -100,6 +113,7 @@ GEM
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    hashdiff (1.0.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
@@ -237,6 +251,10 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
+    webmock (3.14.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -249,7 +267,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  capybara
+  capybara!
   debug
   factory_bot_rails
   faker
@@ -265,8 +283,10 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  vcr!
   web-console
   webdrivers
+  webmock
 
 RUBY VERSION
    ruby 3.1.0p0

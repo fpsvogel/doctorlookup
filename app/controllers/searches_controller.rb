@@ -11,7 +11,7 @@ class SearchesController < ApplicationController
         session[:query_stopping_point] = @query.stopping_point
         format.html do
           redirect_to searches_show_path,
-                      alert: "There was an issue. Please try again!"
+                      alert: "There was an issue with your search 😖"
         end
         format.turbo_stream do
           render turbo_stream:
@@ -37,7 +37,7 @@ class SearchesController < ApplicationController
         session[:query_stopping_point] = @query.stopping_point
         format.html do
           redirect_to searches_show_path,
-                      alert: "There was an issue. Please try again!"
+                      alert: "There was an issue showing more results 😖"
         end
         format.turbo_stream do
           render turbo_stream:

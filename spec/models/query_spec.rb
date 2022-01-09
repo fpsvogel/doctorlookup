@@ -1,16 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe Query, type: :model do
-  # TODO use VCR to record the API call
   describe "#results" do
     let!(:query) { Query.new(taxonomy_description: "primary care") }
 
     it "returns an API response converted to an array of Results" do
-      results = query.results
-      expect(results).to_not be_empty
-      results.each do |result|
-        expect(result.valid?).to be true
+      VCR.use_cassette "Query#results" do
+        results = query.results
+        expect(results).to_not be_empty
+        results.each do |result|
+          expect(result.valid?).to be true
+        end
       end
+
     end
   end
 

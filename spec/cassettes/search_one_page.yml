@@ -1,0 +1,857 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=Lexington&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=30&number=&organization_name=&postal_code=&skip=&state=KY&taxonomy_description=primary%20care&use_first_name_alias=&version=2.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 15:08:14 GMT
+      Content-Type:
+      - application/json
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Set-Cookie:
+      - TS017b4e40=01cffab1d38c432fc1c78fd0e5a7add311cc7ceeca8b2893fde41f68a6a0b1b549ad17a0c1f362ba512afda8352a5c7fe8595f1d0a;
+        Path=/; Domain=.npiregistry.cms.hhs.gov
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"result_count":21, "results":[{"enumeration_type": "NPI-1", "number":
+        1780199638, "last_updated_epoch": 1521244800, "created_epoch": 1513123200,
+        "basic": {"first_name": "ALYSSA", "last_name": "FLEMING", "credential": "APRN",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2017-12-13",
+        "last_updated": "2018-03-17", "status": "A", "name": "FLEMING ALYSSA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "225 FALCON
+        DR", "address_2": "", "city": "MT STERLING", "state": "KY", "postal_code":
+        "403539792", "telephone_number": "859-497-5000"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "3348 ORCHARD GRASS RD", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "postal_code": "405098642", "telephone_number": "859-967-6485"}], "taxonomies":
+        [{"code": "363L00000X", "desc": "Nurse Practitioner", "primary": true, "state":
+        "KY", "license": "3011929"}, {"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": false, "state": "KY", "license": "3011929", "taxonomy_group":
+        "193400000X SINGLE SPECIALTY  GROUP"}], "identifiers": [], "practiceLocations":
+        [{"address_type": "DOM", "address_1": "3348 ORCHARD GRASS RD", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405098642", "country_code":
+        "US", "country_name": "United States", "fax_number": "859-967-6485", "telephone_number":
+        "859-967-6485", "update_date": "2018-03-15 10:46"}]},{"enumeration_type":
+        "NPI-1", "number": 1598239592, "last_updated_epoch": 1547468051, "created_epoch":
+        1547424000, "basic": {"name_prefix": "MRS.", "first_name": "CHRISTINA", "last_name":
+        "BARNETT", "middle_name": "LEIGH", "credential": "APRN", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2019-01-14", "last_updated": "2019-01-14",
+        "status": "A", "name": "BARNETT CHRISTINA"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "2337 SIR BARTON WAY", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405092474", "telephone_number":
+        "859-245-7546"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1829 BAHAMA RD", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405099537", "telephone_number":
+        "859-559-2618"}], "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": true, "state": "KY", "license": "3013004"}], "identifiers":
+        [], "practiceLocations": [{"address_type": "DOM", "address_1": "1001 MONARCH
+        ST STE 110", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405131848", "country_code": "US", "country_name": "United States", "telephone_number":
+        "859-259-0101", "update_date": "2019-01-14 12:01"}]},{"enumeration_type":
+        "NPI-1", "number": 1427501295, "last_updated_epoch": 1605609327, "created_epoch":
+        1469664000, "basic": {"first_name": "DORIS", "last_name": "ADAMS", "middle_name":
+        "WHITNEY", "credential": "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2016-07-28", "last_updated": "2020-11-17", "status": "A", "name": "ADAMS
+        DORIS", "certification_date": "2020-11-17"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2":
+        "SUITE 201", "city": "LEXINGTON", "state": "KY", "postal_code": "405099023",
+        "telephone_number": "859-278-5007", "fax_number": "859-278-6867"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2": "SUITE 201", "city":
+        "LEXINGTON", "state": "KY", "postal_code": "405099023", "telephone_number":
+        "859-278-5007", "fax_number": "859-278-6867"}], "taxonomies": [{"code": "363LF0000X",
+        "desc": "Nurse Practitioner Family", "primary": true, "state": "KY", "license":
+        "3010390"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care",
+        "primary": false, "state": "KY", "license": "3010390"}], "identifiers": [],
+        "practiceLocations": [{"address_type": "DOM", "address_1": "800 ROSE ST",
+        "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360293",
+        "country_code": "US", "country_name": "United States", "telephone_number":
+        "859-323-0295", "update_date": "2020-11-17 10:11"}]},{"enumeration_type":
+        "NPI-1", "number": 1023030350, "last_updated_epoch": 1607429632, "created_epoch":
+        1153699200, "basic": {"first_name": "LEANN", "last_name": "BROWN", "middle_name":
+        "S", "credential": "ARNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2006-07-24", "last_updated": "2020-12-08", "status": "A", "name": "BROWN
+        LEANN", "certification_date": "2020-12-08"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "401 HIGHLAND PARK DR", "address_2":
+        "", "city": "RICHMOND", "state": "KY", "postal_code": "404753839", "telephone_number":
+        "859-626-7700", "fax_number": "859-626-7890"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "1010 MAIN ST S", "address_2": "", "city": "MC KEE", "state": "KY", "postal_code":
+        "404477089", "telephone_number": "859-626-7700", "fax_number": "859-626-7890"}],
+        "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": true, "state": "KY", "license": "3003046"}], "identifiers":
+        [{"identifier": "78005493", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}], "practiceLocations": [{"address_type": "DOM", "address_1":
+        "3084 LAKECREST CIR STE 100", "address_2": "", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405131972", "country_code": "US", "country_name": "United
+        States", "fax_number": "859-219-6449", "telephone_number": "859-219-6440",
+        "update_date": "2019-01-29 13:01"}, {"address_type": "DOM", "address_1": "405
+        DANVILLE ST", "address_2": "", "city": "LANCASTER", "state": "KY", "postal_code":
+        "404441150", "country_code": "US", "country_name": "United States", "fax_number":
+        "859-792-4759", "telephone_number": "859-792-2124", "update_date": "2017-07-06
+        09:07"}], "endpoints": [{"endpointType": "DIRECT", "endpointTypeDescription":
+        "Direct Messaging Address", "endpoint": "lbrown6152@bhkydirect.com", "endpointDescription":
+        "", "affiliation": "N", "affiliationName": "", "use": "", "useDescription":
+        "", "useOtherDescription": "", "contentType": "", "contentTypeDescription":
+        "", "contentOtherDescription": "", "address_type": "DOM", "address_1": "3084
+        LAKECREST CIR STE 100", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "country_code": "US", "postal_code": "405131972", "country_name": "United
+        States"}]},{"enumeration_type": "NPI-1", "number": 1558969469, "last_updated_epoch":
+        1607511284, "created_epoch": 1602547200, "basic": {"first_name": "KENNETH",
+        "last_name": "BAKER", "middle_name": "STARLING", "name_suffix": "III", "credential":
+        "AGPCNP-BC", "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2020-10-13",
+        "last_updated": "2020-12-09", "status": "A", "name": "BAKER KENNETH", "certification_date":
+        "2020-12-09"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "740 S LIMESTONE", "address_2": "STE B101", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405360284", "telephone_number": "859-323-5661"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "493 AMBERLEY DR", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405154775", "telephone_number": "606-854-6120"}],
+        "taxonomies": [{"code": "363LA2200X", "desc": "Nurse Practitioner Adult Health",
+        "primary": false, "state": "KY", "license": "1137306"}, {"code": "363LG0600X",
+        "desc": "Nurse Practitioner Gerontology", "primary": false, "state": "KY",
+        "license": "1137306"}, {"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": true, "state": "KY", "license": "2020044609"}],
+        "identifiers": [], "practiceLocations": [{"address_type": "DOM", "address_1":
+        "1000 SOUTH LIMESTONE", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "postal_code": "405360001", "country_code": "US", "country_name": "United
+        States", "telephone_number": "859-323-5000", "update_date": "2020-12-09 10:12"}]},{"enumeration_type":
+        "NPI-1", "number": 1750824116, "last_updated_epoch": 1618434188, "created_epoch":
+        1480636800, "basic": {"first_name": "LORI", "last_name": "DENISON", "credential":
+        "APRN", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2016-12-02",
+        "last_updated": "2021-04-14", "status": "A", "name": "DENISON LORI", "certification_date":
+        "2021-04-14"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "2036 REGENCY RD", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405032309", "telephone_number": "859-693-8399", "fax_number": "859-276-3726"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "2036 REGENCY RD STE 2", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405032309", "telephone_number":
+        "859-286-9046", "fax_number": "859-276-3726"}], "taxonomies": [{"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": true, "state": "KY",
+        "license": "3010876"}], "identifiers": [], "practiceLocations": [{"address_type":
+        "DOM", "address_1": "3015 WILSON AVE", "address_2": "", "city": "LOUISVILLE",
+        "state": "KY", "postal_code": "402111969", "country_code": "US", "country_name":
+        "United States", "telephone_number": "502-774-4401", "update_date": "2020-07-29
+        10:07"}, {"address_type": "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2":
+        "SUITE 201", "city": "LEXINGTON", "state": "KY", "postal_code": "405099023",
+        "country_code": "US", "country_name": "United States", "fax_number": "859-278-6867",
+        "telephone_number": "859-278-5007", "update_date": "2020-06-03 11:06"}]},{"enumeration_type":
+        "NPI-1", "number": 1588866305, "last_updated_epoch": 1627304031, "created_epoch":
+        1180915200, "basic": {"first_name": "MISTY", "last_name": "ELLIS", "middle_name":
+        "D", "credential": "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2007-06-04", "last_updated": "2021-07-26", "status": "A", "name": "ELLIS
+        MISTY", "certification_date": "2021-07-26"}, "other_names": [{"code": "1",
+        "type": "Former Name", "last_name": "BOURNE", "first_name": "MISTY", "middle_name":
+        "D", "credential": "APRN"}], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "231 E CHESTNUT ST", "address_2": "", "city": "LOUISVILLE", "state": "KY",
+        "postal_code": "402021821", "telephone_number": "502-629-6000", "fax_number":
+        "502-629-5865"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 909", "address_2":
+        "", "city": "LOUISVILLE", "state": "KY", "postal_code": "402010909", "telephone_number":
+        "502-629-6000", "fax_number": "502-629-5865"}], "taxonomies": [{"code": "363LP0200X",
+        "desc": "Nurse Practitioner Pediatrics", "primary": false, "state": "KY",
+        "license": "3005293"}, {"code": "363LP0222X", "desc": "Nurse Practitioner
+        Pediatrics, Critical Care", "primary": true, "state": "KY", "license": "3005293"},
+        {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary":
+        false, "state": "KY", "license": "3005293"}], "identifiers": [{"identifier":
+        "200892820", "code": "05", "desc": "MEDICAID", "state": "IN", "issuer": ""},
+        {"identifier": "7100026490", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}], "practiceLocations": [{"address_type": "DOM", "address_1":
+        "800 ROSE ST", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405361821", "country_code": "US", "country_name": "United States", "fax_number":
+        "859-257-1831", "telephone_number": "859-218-0921", "update_date": "2021-07-26
+        12:07"}]},{"enumeration_type": "NPI-1", "number": 1912399486, "last_updated_epoch":
+        1628779070, "created_epoch": 1424390400, "basic": {"name_prefix": "MR.", "first_name":
+        "WILLIAM", "last_name": "LONGWORTH", "credential": "APRN", "sole_proprietor":
+        "NO", "gender": "M", "enumeration_date": "2015-02-20", "last_updated": "2021-08-12",
+        "status": "A", "name": "LONGWORTH WILLIAM", "certification_date": "2021-08-12"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1250 KEENE RD STE 102", "address_2": "", "city": "NICHOLASVILLE", "state":
+        "KY", "postal_code": "40356", "telephone_number": "859-887-6752", "fax_number":
+        "859-887-6879"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 936", "address_2":
+        "", "city": "LONDON", "state": "KY", "postal_code": "407430936", "fax_number":
+        "606-330-7825"}], "taxonomies": [{"code": "363LF0000X", "desc": "Nurse Practitioner
+        Family", "primary": true, "state": "KY", "license": "3009269"}, {"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": false, "state": "KY",
+        "license": "3009269"}], "identifiers": [{"identifier": "7100347760", "code":
+        "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}], "practiceLocations":
+        [{"address_type": "DOM", "address_1": "470 LINDEN AVE STE 5", "address_2":
+        "", "city": "HARRODSBURG", "state": "KY", "postal_code": "403301871", "country_code":
+        "US", "country_name": "United States", "fax_number": "859-733-5865", "telephone_number":
+        "859-733-5864", "update_date": "2018-05-02 16:05"}, {"address_type": "DOM",
+        "address_1": "642 MONTICELLO BLVD", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405033518", "country_code": "US", "country_name":
+        "United States", "telephone_number": "859-361-0699", "update_date": "2017-06-22
+        11:06"}]},{"enumeration_type": "NPI-1", "number": 1023022738, "last_updated_epoch":
+        1183852800, "created_epoch": 1154044800, "basic": {"first_name": "KITTYE",
+        "last_name": "ROBERTS", "middle_name": "R", "credential": "ARNP", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2006-07-28", "last_updated": "2007-07-08",
+        "status": "A", "name": "ROBERTS KITTYE"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "740 S LIMESTONE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360001", "telephone_number":
+        "859-323-5981"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "138 LEADER AVE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405083215", "telephone_number":
+        "859-257-7910", "fax_number": "859-257-7899"}], "taxonomies": [{"code": "363L00000X",
+        "desc": "Nurse Practitioner", "primary": false, "state": "KY", "license":
+        "39075"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care",
+        "primary": false, "state": "KY", "license": "39075"}], "identifiers": [{"identifier":
+        "64090194", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1366452302, "last_updated_epoch": 1540553972, "created_epoch":
+        1155081600, "basic": {"first_name": "LYNNE", "last_name": "JENSEN", "middle_name":
+        "ANDERSON", "credential": "APRN", "sole_proprietor": "NO", "gender": "F",
+        "enumeration_date": "2006-08-09", "last_updated": "2018-10-26", "status":
+        "A", "name": "JENSEN LYNNE"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "740 S LIMESTONE SUITE L305", "address_2": "", "city":
+        "LEXINGTON", "state": "KY", "postal_code": "405360001", "telephone_number":
+        "859-323-3900"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "740 S LIMESTONE SUITE L305",
+        "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360001"}],
+        "taxonomies": [{"code": "363L00000X", "desc": "Nurse Practitioner", "primary":
+        true, "state": "KY", "license": "3002809"}, {"code": "363LP2300X", "desc":
+        "Nurse Practitioner Primary Care", "primary": false, "state": "KY", "license":
+        "3002809"}], "identifiers": [{"identifier": "78003464", "code": "05", "desc":
+        "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type": "NPI-1", "number":
+        1679678932, "last_updated_epoch": 1193961600, "created_epoch": 1158105600,
+        "basic": {"first_name": "ELAINE", "last_name": "SMITH", "middle_name": "L.",
+        "credential": "A.R.N.P.", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2006-09-13", "last_updated": "2007-11-02", "status": "A", "name": "SMITH
+        ELAINE"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "3580 LYON DR", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405131210", "telephone_number": "859-224-9581", "fax_number": "859-224-9497"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "3580 LYON DR", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405131210", "telephone_number":
+        "859-224-9581", "fax_number": "859-224-9497"}], "taxonomies": [{"code": "363LA2200X",
+        "desc": "Nurse Practitioner Adult Health", "primary": false, "state": "KY",
+        "license": "4288P"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": false, "state": "KY", "license": "4288P"}, {"code": "363L00000X",
+        "desc": "Nurse Practitioner", "primary": true, "state": "KY", "license": "4288P"}],
+        "identifiers": [{"identifier": "4000501", "code": "01", "desc": "Other", "state":
+        "KY", "issuer": "MEDICARE LAB GROUP"}, {"identifier": "78014255", "code":
+        "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}, {"identifier": "37903705",
+        "code": "01", "desc": "Other", "state": "KY", "issuer": "MEDICAID LAB GROUP"},
+        {"identifier": "CB5773", "code": "01", "desc": "Other", "state": "KY", "issuer":
+        "RR MEDICARE GROUP"}, {"identifier": "P00243304", "code": "01", "desc": "Other",
+        "state": "KY", "issuer": "RR MEDICARE PIN"}]},{"enumeration_type": "NPI-1",
+        "number": 1497842009, "last_updated_epoch": 1183852800, "created_epoch": 1160092800,
+        "basic": {"first_name": "QUENTIN", "last_name": "MOORE", "credential": "ARNP",
+        "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2006-10-06",
+        "last_updated": "2007-07-08", "status": "A", "name": "MOORE QUENTIN"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "1055 DOVE
+        RUN RD", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405023536", "telephone_number": "859-269-4668", "fax_number": "859-266-5577"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1055 DOVE RUN RD", "address_2":
+        "SUITE 200", "city": "LEXINGTON", "state": "KY", "postal_code": "405023536",
+        "telephone_number": "859-268-0061", "fax_number": "859-266-1152"}], "taxonomies":
+        [{"code": "163W00000X", "desc": "Registered Nurse", "primary": false, "state":
+        "KY", "license": "1051982"}, {"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": false, "state": "KY", "license": "4172P"}], "identifiers":
+        [{"identifier": "78013703", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1215240684, "last_updated_epoch":
+        1451999669, "created_epoch": 1279065600, "basic": {"name_prefix": "MS.", "first_name":
+        "LAUREL", "last_name": "STOCKS", "middle_name": "ANN", "credential": "APRN",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2010-07-14",
+        "last_updated": "2016-01-05", "status": "A", "name": "STOCKS LAUREL"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "496 SOUTHLAND
+        DR", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code": "405031827",
+        "telephone_number": "859-288-2425", "fax_number": "859-288-7516"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "1736 ALEXANDRIA DR", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405043160", "telephone_number": "859-288-2425"}],
+        "taxonomies": [{"code": "363LA2100X", "desc": "Nurse Practitioner Acute Care",
+        "primary": false, "state": "KY", "license": "3006699"}, {"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": false, "state": "KY",
+        "license": "3006699"}, {"code": "363LA2200X", "desc": "Nurse Practitioner
+        Adult Health", "primary": true, "state": "KY", "license": "3006699"}], "identifiers":
+        [{"identifier": "3006699", "code": "01", "desc": "Other", "state": "KY", "issuer":
+        "APRN"}, {"identifier": "7100375190", "code": "05", "desc": "MEDICAID", "state":
+        "KY", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1679021729,
+        "last_updated_epoch": 1474287627, "created_epoch": 1474243200, "basic": {"first_name":
+        "LINDSEY", "last_name": "CLICKNER", "middle_name": "H", "credential": "APRN",
+        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2016-09-19",
+        "last_updated": "2016-09-19", "status": "A", "name": "CLICKNER LINDSEY"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1775 ALYSHEBA WAY", "address_2": "SUITE 201", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405099023", "telephone_number": "859-278-5007", "fax_number":
+        "859-278-6867"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2":
+        "SUITE 201", "city": "LEXINGTON", "state": "KY", "postal_code": "405099023",
+        "telephone_number": "859-278-5007", "fax_number": "859-278-6867"}], "taxonomies":
+        [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary":
+        true, "state": "KY", "license": "3010730"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1689104085, "last_updated_epoch": 1504224000, "created_epoch":
+        1497744000, "basic": {"first_name": "EMILY", "last_name": "MESSERLI", "middle_name":
+        "CLAIRE", "credential": "DNP, APRN, FNP-C", "sole_proprietor": "NO", "gender":
+        "F", "enumeration_date": "2017-06-18", "last_updated": "2017-09-01", "status":
+        "A", "name": "MESSERLI EMILY"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "830 SOUTH LIMESTONE", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405362815", "telephone_number": "859-323-2778"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "830 SOUTH LIMESTONE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "40536"}], "taxonomies":
+        [{"code": "363LC1500X", "desc": "Nurse Practitioner Community Health", "primary":
+        false, "state": "KY", "license": "3011355"}, {"code": "363LP2300X", "desc":
+        "Nurse Practitioner Primary Care", "primary": false, "state": "KY", "license":
+        "3011355"}, {"code": "363LF0000X", "desc": "Nurse Practitioner Family", "primary":
+        true, "state": "KY", "license": "3011355"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1881171981, "last_updated_epoch": 1532346195, "created_epoch":
+        1532304000, "basic": {"first_name": "MORGAN", "last_name": "STACEY", "middle_name":
+        "ELIZABETH", "credential": "APRN", "sole_proprietor": "YES", "gender": "F",
+        "enumeration_date": "2018-07-23", "last_updated": "2018-07-23", "status":
+        "A", "name": "STACEY MORGAN"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "UK DIVISION OF DIGESTIVE DISEASES 740 S LIMESTONE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360001", "telephone_number":
+        "859-323-0079"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "UK DIVISION OF DIGESTIVE DISEASES
+        800 ROSE ST MN649", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405360001"}], "taxonomies": [{"code": "363LG0600X", "desc": "Nurse Practitioner
+        Gerontology", "primary": false, "state": "KY", "license": "3011555"}, {"code":
+        "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary": true,
+        "state": "KY", "license": "3011555"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1083912141, "last_updated_epoch": 1566487841, "created_epoch":
+        1300060800, "basic": {"first_name": "BRANDY", "last_name": "AKERS", "middle_name":
+        "LEE", "credential": "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2011-03-14", "last_updated": "2019-08-22", "status": "A", "name": "AKERS
+        BRANDY"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "496 SOUTHLAND DR", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405031827", "telephone_number": "859-288-2425", "fax_number": "859-288-7510"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "496 SOUTHLAND DR", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405031827", "telephone_number":
+        "859-288-2392", "fax_number": "859-721-3918"}], "taxonomies": [{"code": "363LF0000X",
+        "desc": "Nurse Practitioner Family", "primary": true, "state": "KY", "license":
+        "3006677"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care",
+        "primary": false, "state": "KY", "license": "3006677"}], "identifiers": [{"identifier":
+        "7100176560", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1821638479, "last_updated_epoch": 1578865643, "created_epoch":
+        1578787200, "basic": {"first_name": "SANDRA", "last_name": "MCCLAIN", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2020-01-12", "last_updated": "2020-01-12",
+        "status": "A", "name": "MCCLAIN SANDRA", "certification_date": "2020-01-12"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "800 ROSE ST", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405367001", "telephone_number": "859-257-9555"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "385 COPPERAS HOLW", "address_2": "", "city": "MOREHEAD", "state": "KY", "postal_code":
+        "403518295", "telephone_number": "606-356-6935"}], "taxonomies": [{"code":
+        "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary": true,
+        "state": "KY", "license": "3012944"}], "identifiers": [], "endpoints": [{"endpointType":
+        "DIRECT", "endpointTypeDescription": "Direct Messaging Address", "endpoint":
+        "sdgi227@uky.edu", "endpointDescription": "work email", "affiliation": "N",
+        "affiliationName": "", "use": "DIRECT", "useDescription": "Direct", "useOtherDescription":
+        "", "contentType": "OTHER", "contentTypeDescription": "Other", "contentOtherDescription":
+        "health care provider email", "address_type": "DOM", "address_1": "385 COPPERAS
+        HOLW", "address_2": "", "city": "MOREHEAD", "state": "KY", "country_code":
+        "US", "postal_code": "403518295", "country_name": "United States"}]},{"enumeration_type":
+        "NPI-1", "number": 1992209324, "last_updated_epoch": 1581411297, "created_epoch":
+        1521590400, "basic": {"first_name": "MALLORY", "last_name": "MULLINS", "middle_name":
+        "NICOLE", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2018-03-21",
+        "last_updated": "2020-02-11", "status": "A", "name": "MULLINS MALLORY", "certification_date":
+        "2020-02-11"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "3175 BEAUMONT CENTRE CIR", "address_2": "", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405131957", "telephone_number": "859-576-0058"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "3175 BEAUMONT CENTRE CIR", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405131957"}], "taxonomies": [{"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": false, "state": "KY",
+        "license": "3012151"}, {"code": "363LF0000X", "desc": "Nurse Practitioner
+        Family", "primary": true, "state": "KY", "license": "3012151"}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1295358927, "last_updated_epoch":
+        1590681352, "created_epoch": 1590624000, "basic": {"first_name": "HAZEL JOY",
+        "last_name": "GONZALEZ", "middle_name": "CAMIT", "credential": "APRN", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2020-05-28", "last_updated": "2020-05-28",
+        "status": "A", "name": "GONZALEZ HAZEL JOY", "certification_date": "2020-05-28"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "300 QUINTON CT APT 23203", "address_2": "", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405092685", "telephone_number": "248-231-2910"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "300 QUINTON CT APT 23203", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405092685", "telephone_number": "248-231-2910"}],
+        "taxonomies": [{"code": "163WM0705X", "desc": "Registered Nurse Medical-Surgical",
+        "primary": false, "state": "KY", "license": "1140163"}, {"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": true, "state": "KY",
+        "license": "3013800"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
+        1669974119, "last_updated_epoch": 1641406309, "created_epoch": 1519862400,
+        "basic": {"name_prefix": "MR.", "first_name": "DONALD", "last_name": "AVERY",
+        "middle_name": "RAY", "name_suffix": "JR.", "credential": "NURSE PRACTITIONER",
+        "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2018-03-01",
+        "last_updated": "2022-01-05", "status": "A", "name": "AVERY DONALD", "certification_date":
+        "2022-01-05"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1050 CHINOE RD STE 350", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "postal_code": "405026571", "telephone_number": "859-255-0075"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "611 PARK AVE, LOUISVILLE", "address_2": "", "city": "LOUISVILLE",
+        "state": "KY", "postal_code": "40208", "telephone_number": "502-338-8884"}],
+        "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": true, "state": "KY", "license": "3012133"}], "identifiers":
+        []}]}'
+  recorded_at: Sun, 09 Jan 2022 15:08:15 GMT
+- request:
+    method: get
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=Lexington&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=60&number=&organization_name=&postal_code=&skip=&state=KY&taxonomy_description=primary%20care&use_first_name_alias=&version=2.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 15:08:14 GMT
+      Content-Type:
+      - application/json
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Set-Cookie:
+      - TS017b4e40=01cffab1d3357d76597c727a42250c4fcb508bd1fafcea78300c1218bc4ab7f77032ca647596ef5787f3eaf73eaee8411d1cb30562;
+        Path=/; Domain=.npiregistry.cms.hhs.gov
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"result_count":21, "results":[{"enumeration_type": "NPI-1", "number":
+        1780199638, "last_updated_epoch": 1521244800, "created_epoch": 1513123200,
+        "basic": {"first_name": "ALYSSA", "last_name": "FLEMING", "credential": "APRN",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2017-12-13",
+        "last_updated": "2018-03-17", "status": "A", "name": "FLEMING ALYSSA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "225 FALCON
+        DR", "address_2": "", "city": "MT STERLING", "state": "KY", "postal_code":
+        "403539792", "telephone_number": "859-497-5000"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "3348 ORCHARD GRASS RD", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "postal_code": "405098642", "telephone_number": "859-967-6485"}], "taxonomies":
+        [{"code": "363L00000X", "desc": "Nurse Practitioner", "primary": true, "state":
+        "KY", "license": "3011929"}, {"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": false, "state": "KY", "license": "3011929", "taxonomy_group":
+        "193400000X SINGLE SPECIALTY  GROUP"}], "identifiers": [], "practiceLocations":
+        [{"address_type": "DOM", "address_1": "3348 ORCHARD GRASS RD", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405098642", "country_code":
+        "US", "country_name": "United States", "fax_number": "859-967-6485", "telephone_number":
+        "859-967-6485", "update_date": "2018-03-15 10:46"}]},{"enumeration_type":
+        "NPI-1", "number": 1598239592, "last_updated_epoch": 1547468051, "created_epoch":
+        1547424000, "basic": {"name_prefix": "MRS.", "first_name": "CHRISTINA", "last_name":
+        "BARNETT", "middle_name": "LEIGH", "credential": "APRN", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2019-01-14", "last_updated": "2019-01-14",
+        "status": "A", "name": "BARNETT CHRISTINA"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "2337 SIR BARTON WAY", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405092474", "telephone_number":
+        "859-245-7546"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1829 BAHAMA RD", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405099537", "telephone_number":
+        "859-559-2618"}], "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": true, "state": "KY", "license": "3013004"}], "identifiers":
+        [], "practiceLocations": [{"address_type": "DOM", "address_1": "1001 MONARCH
+        ST STE 110", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405131848", "country_code": "US", "country_name": "United States", "telephone_number":
+        "859-259-0101", "update_date": "2019-01-14 12:01"}]},{"enumeration_type":
+        "NPI-1", "number": 1427501295, "last_updated_epoch": 1605609327, "created_epoch":
+        1469664000, "basic": {"first_name": "DORIS", "last_name": "ADAMS", "middle_name":
+        "WHITNEY", "credential": "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2016-07-28", "last_updated": "2020-11-17", "status": "A", "name": "ADAMS
+        DORIS", "certification_date": "2020-11-17"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2":
+        "SUITE 201", "city": "LEXINGTON", "state": "KY", "postal_code": "405099023",
+        "telephone_number": "859-278-5007", "fax_number": "859-278-6867"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2": "SUITE 201", "city":
+        "LEXINGTON", "state": "KY", "postal_code": "405099023", "telephone_number":
+        "859-278-5007", "fax_number": "859-278-6867"}], "taxonomies": [{"code": "363LF0000X",
+        "desc": "Nurse Practitioner Family", "primary": true, "state": "KY", "license":
+        "3010390"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care",
+        "primary": false, "state": "KY", "license": "3010390"}], "identifiers": [],
+        "practiceLocations": [{"address_type": "DOM", "address_1": "800 ROSE ST",
+        "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360293",
+        "country_code": "US", "country_name": "United States", "telephone_number":
+        "859-323-0295", "update_date": "2020-11-17 10:11"}]},{"enumeration_type":
+        "NPI-1", "number": 1023030350, "last_updated_epoch": 1607429632, "created_epoch":
+        1153699200, "basic": {"first_name": "LEANN", "last_name": "BROWN", "middle_name":
+        "S", "credential": "ARNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2006-07-24", "last_updated": "2020-12-08", "status": "A", "name": "BROWN
+        LEANN", "certification_date": "2020-12-08"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "401 HIGHLAND PARK DR", "address_2":
+        "", "city": "RICHMOND", "state": "KY", "postal_code": "404753839", "telephone_number":
+        "859-626-7700", "fax_number": "859-626-7890"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "1010 MAIN ST S", "address_2": "", "city": "MC KEE", "state": "KY", "postal_code":
+        "404477089", "telephone_number": "859-626-7700", "fax_number": "859-626-7890"}],
+        "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": true, "state": "KY", "license": "3003046"}], "identifiers":
+        [{"identifier": "78005493", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}], "practiceLocations": [{"address_type": "DOM", "address_1":
+        "3084 LAKECREST CIR STE 100", "address_2": "", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405131972", "country_code": "US", "country_name": "United
+        States", "fax_number": "859-219-6449", "telephone_number": "859-219-6440",
+        "update_date": "2019-01-29 13:01"}, {"address_type": "DOM", "address_1": "405
+        DANVILLE ST", "address_2": "", "city": "LANCASTER", "state": "KY", "postal_code":
+        "404441150", "country_code": "US", "country_name": "United States", "fax_number":
+        "859-792-4759", "telephone_number": "859-792-2124", "update_date": "2017-07-06
+        09:07"}], "endpoints": [{"endpointType": "DIRECT", "endpointTypeDescription":
+        "Direct Messaging Address", "endpoint": "lbrown6152@bhkydirect.com", "endpointDescription":
+        "", "affiliation": "N", "affiliationName": "", "use": "", "useDescription":
+        "", "useOtherDescription": "", "contentType": "", "contentTypeDescription":
+        "", "contentOtherDescription": "", "address_type": "DOM", "address_1": "3084
+        LAKECREST CIR STE 100", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "country_code": "US", "postal_code": "405131972", "country_name": "United
+        States"}]},{"enumeration_type": "NPI-1", "number": 1558969469, "last_updated_epoch":
+        1607511284, "created_epoch": 1602547200, "basic": {"first_name": "KENNETH",
+        "last_name": "BAKER", "middle_name": "STARLING", "name_suffix": "III", "credential":
+        "AGPCNP-BC", "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2020-10-13",
+        "last_updated": "2020-12-09", "status": "A", "name": "BAKER KENNETH", "certification_date":
+        "2020-12-09"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "740 S LIMESTONE", "address_2": "STE B101", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405360284", "telephone_number": "859-323-5661"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "493 AMBERLEY DR", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405154775", "telephone_number": "606-854-6120"}],
+        "taxonomies": [{"code": "363LA2200X", "desc": "Nurse Practitioner Adult Health",
+        "primary": false, "state": "KY", "license": "1137306"}, {"code": "363LG0600X",
+        "desc": "Nurse Practitioner Gerontology", "primary": false, "state": "KY",
+        "license": "1137306"}, {"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": true, "state": "KY", "license": "2020044609"}],
+        "identifiers": [], "practiceLocations": [{"address_type": "DOM", "address_1":
+        "1000 SOUTH LIMESTONE", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "postal_code": "405360001", "country_code": "US", "country_name": "United
+        States", "telephone_number": "859-323-5000", "update_date": "2020-12-09 10:12"}]},{"enumeration_type":
+        "NPI-1", "number": 1750824116, "last_updated_epoch": 1618434188, "created_epoch":
+        1480636800, "basic": {"first_name": "LORI", "last_name": "DENISON", "credential":
+        "APRN", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2016-12-02",
+        "last_updated": "2021-04-14", "status": "A", "name": "DENISON LORI", "certification_date":
+        "2021-04-14"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "2036 REGENCY RD", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405032309", "telephone_number": "859-693-8399", "fax_number": "859-276-3726"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "2036 REGENCY RD STE 2", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405032309", "telephone_number":
+        "859-286-9046", "fax_number": "859-276-3726"}], "taxonomies": [{"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": true, "state": "KY",
+        "license": "3010876"}], "identifiers": [], "practiceLocations": [{"address_type":
+        "DOM", "address_1": "3015 WILSON AVE", "address_2": "", "city": "LOUISVILLE",
+        "state": "KY", "postal_code": "402111969", "country_code": "US", "country_name":
+        "United States", "telephone_number": "502-774-4401", "update_date": "2020-07-29
+        10:07"}, {"address_type": "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2":
+        "SUITE 201", "city": "LEXINGTON", "state": "KY", "postal_code": "405099023",
+        "country_code": "US", "country_name": "United States", "fax_number": "859-278-6867",
+        "telephone_number": "859-278-5007", "update_date": "2020-06-03 11:06"}]},{"enumeration_type":
+        "NPI-1", "number": 1588866305, "last_updated_epoch": 1627304031, "created_epoch":
+        1180915200, "basic": {"first_name": "MISTY", "last_name": "ELLIS", "middle_name":
+        "D", "credential": "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2007-06-04", "last_updated": "2021-07-26", "status": "A", "name": "ELLIS
+        MISTY", "certification_date": "2021-07-26"}, "other_names": [{"code": "1",
+        "type": "Former Name", "last_name": "BOURNE", "first_name": "MISTY", "middle_name":
+        "D", "credential": "APRN"}], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "231 E CHESTNUT ST", "address_2": "", "city": "LOUISVILLE", "state": "KY",
+        "postal_code": "402021821", "telephone_number": "502-629-6000", "fax_number":
+        "502-629-5865"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 909", "address_2":
+        "", "city": "LOUISVILLE", "state": "KY", "postal_code": "402010909", "telephone_number":
+        "502-629-6000", "fax_number": "502-629-5865"}], "taxonomies": [{"code": "363LP0200X",
+        "desc": "Nurse Practitioner Pediatrics", "primary": false, "state": "KY",
+        "license": "3005293"}, {"code": "363LP0222X", "desc": "Nurse Practitioner
+        Pediatrics, Critical Care", "primary": true, "state": "KY", "license": "3005293"},
+        {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary":
+        false, "state": "KY", "license": "3005293"}], "identifiers": [{"identifier":
+        "200892820", "code": "05", "desc": "MEDICAID", "state": "IN", "issuer": ""},
+        {"identifier": "7100026490", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}], "practiceLocations": [{"address_type": "DOM", "address_1":
+        "800 ROSE ST", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405361821", "country_code": "US", "country_name": "United States", "fax_number":
+        "859-257-1831", "telephone_number": "859-218-0921", "update_date": "2021-07-26
+        12:07"}]},{"enumeration_type": "NPI-1", "number": 1912399486, "last_updated_epoch":
+        1628779070, "created_epoch": 1424390400, "basic": {"name_prefix": "MR.", "first_name":
+        "WILLIAM", "last_name": "LONGWORTH", "credential": "APRN", "sole_proprietor":
+        "NO", "gender": "M", "enumeration_date": "2015-02-20", "last_updated": "2021-08-12",
+        "status": "A", "name": "LONGWORTH WILLIAM", "certification_date": "2021-08-12"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1250 KEENE RD STE 102", "address_2": "", "city": "NICHOLASVILLE", "state":
+        "KY", "postal_code": "40356", "telephone_number": "859-887-6752", "fax_number":
+        "859-887-6879"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 936", "address_2":
+        "", "city": "LONDON", "state": "KY", "postal_code": "407430936", "fax_number":
+        "606-330-7825"}], "taxonomies": [{"code": "363LF0000X", "desc": "Nurse Practitioner
+        Family", "primary": true, "state": "KY", "license": "3009269"}, {"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": false, "state": "KY",
+        "license": "3009269"}], "identifiers": [{"identifier": "7100347760", "code":
+        "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}], "practiceLocations":
+        [{"address_type": "DOM", "address_1": "470 LINDEN AVE STE 5", "address_2":
+        "", "city": "HARRODSBURG", "state": "KY", "postal_code": "403301871", "country_code":
+        "US", "country_name": "United States", "fax_number": "859-733-5865", "telephone_number":
+        "859-733-5864", "update_date": "2018-05-02 16:05"}, {"address_type": "DOM",
+        "address_1": "642 MONTICELLO BLVD", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405033518", "country_code": "US", "country_name":
+        "United States", "telephone_number": "859-361-0699", "update_date": "2017-06-22
+        11:06"}]},{"enumeration_type": "NPI-1", "number": 1023022738, "last_updated_epoch":
+        1183852800, "created_epoch": 1154044800, "basic": {"first_name": "KITTYE",
+        "last_name": "ROBERTS", "middle_name": "R", "credential": "ARNP", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2006-07-28", "last_updated": "2007-07-08",
+        "status": "A", "name": "ROBERTS KITTYE"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "740 S LIMESTONE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360001", "telephone_number":
+        "859-323-5981"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "138 LEADER AVE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405083215", "telephone_number":
+        "859-257-7910", "fax_number": "859-257-7899"}], "taxonomies": [{"code": "363L00000X",
+        "desc": "Nurse Practitioner", "primary": false, "state": "KY", "license":
+        "39075"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care",
+        "primary": false, "state": "KY", "license": "39075"}], "identifiers": [{"identifier":
+        "64090194", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1366452302, "last_updated_epoch": 1540553972, "created_epoch":
+        1155081600, "basic": {"first_name": "LYNNE", "last_name": "JENSEN", "middle_name":
+        "ANDERSON", "credential": "APRN", "sole_proprietor": "NO", "gender": "F",
+        "enumeration_date": "2006-08-09", "last_updated": "2018-10-26", "status":
+        "A", "name": "JENSEN LYNNE"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "740 S LIMESTONE SUITE L305", "address_2": "", "city":
+        "LEXINGTON", "state": "KY", "postal_code": "405360001", "telephone_number":
+        "859-323-3900"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "740 S LIMESTONE SUITE L305",
+        "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360001"}],
+        "taxonomies": [{"code": "363L00000X", "desc": "Nurse Practitioner", "primary":
+        true, "state": "KY", "license": "3002809"}, {"code": "363LP2300X", "desc":
+        "Nurse Practitioner Primary Care", "primary": false, "state": "KY", "license":
+        "3002809"}], "identifiers": [{"identifier": "78003464", "code": "05", "desc":
+        "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type": "NPI-1", "number":
+        1679678932, "last_updated_epoch": 1193961600, "created_epoch": 1158105600,
+        "basic": {"first_name": "ELAINE", "last_name": "SMITH", "middle_name": "L.",
+        "credential": "A.R.N.P.", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2006-09-13", "last_updated": "2007-11-02", "status": "A", "name": "SMITH
+        ELAINE"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "3580 LYON DR", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405131210", "telephone_number": "859-224-9581", "fax_number": "859-224-9497"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "3580 LYON DR", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405131210", "telephone_number":
+        "859-224-9581", "fax_number": "859-224-9497"}], "taxonomies": [{"code": "363LA2200X",
+        "desc": "Nurse Practitioner Adult Health", "primary": false, "state": "KY",
+        "license": "4288P"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": false, "state": "KY", "license": "4288P"}, {"code": "363L00000X",
+        "desc": "Nurse Practitioner", "primary": true, "state": "KY", "license": "4288P"}],
+        "identifiers": [{"identifier": "4000501", "code": "01", "desc": "Other", "state":
+        "KY", "issuer": "MEDICARE LAB GROUP"}, {"identifier": "78014255", "code":
+        "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}, {"identifier": "37903705",
+        "code": "01", "desc": "Other", "state": "KY", "issuer": "MEDICAID LAB GROUP"},
+        {"identifier": "CB5773", "code": "01", "desc": "Other", "state": "KY", "issuer":
+        "RR MEDICARE GROUP"}, {"identifier": "P00243304", "code": "01", "desc": "Other",
+        "state": "KY", "issuer": "RR MEDICARE PIN"}]},{"enumeration_type": "NPI-1",
+        "number": 1497842009, "last_updated_epoch": 1183852800, "created_epoch": 1160092800,
+        "basic": {"first_name": "QUENTIN", "last_name": "MOORE", "credential": "ARNP",
+        "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2006-10-06",
+        "last_updated": "2007-07-08", "status": "A", "name": "MOORE QUENTIN"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "1055 DOVE
+        RUN RD", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405023536", "telephone_number": "859-269-4668", "fax_number": "859-266-5577"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1055 DOVE RUN RD", "address_2":
+        "SUITE 200", "city": "LEXINGTON", "state": "KY", "postal_code": "405023536",
+        "telephone_number": "859-268-0061", "fax_number": "859-266-1152"}], "taxonomies":
+        [{"code": "163W00000X", "desc": "Registered Nurse", "primary": false, "state":
+        "KY", "license": "1051982"}, {"code": "363LP2300X", "desc": "Nurse Practitioner
+        Primary Care", "primary": false, "state": "KY", "license": "4172P"}], "identifiers":
+        [{"identifier": "78013703", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1215240684, "last_updated_epoch":
+        1451999669, "created_epoch": 1279065600, "basic": {"name_prefix": "MS.", "first_name":
+        "LAUREL", "last_name": "STOCKS", "middle_name": "ANN", "credential": "APRN",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2010-07-14",
+        "last_updated": "2016-01-05", "status": "A", "name": "STOCKS LAUREL"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "496 SOUTHLAND
+        DR", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code": "405031827",
+        "telephone_number": "859-288-2425", "fax_number": "859-288-7516"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "1736 ALEXANDRIA DR", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405043160", "telephone_number": "859-288-2425"}],
+        "taxonomies": [{"code": "363LA2100X", "desc": "Nurse Practitioner Acute Care",
+        "primary": false, "state": "KY", "license": "3006699"}, {"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": false, "state": "KY",
+        "license": "3006699"}, {"code": "363LA2200X", "desc": "Nurse Practitioner
+        Adult Health", "primary": true, "state": "KY", "license": "3006699"}], "identifiers":
+        [{"identifier": "3006699", "code": "01", "desc": "Other", "state": "KY", "issuer":
+        "APRN"}, {"identifier": "7100375190", "code": "05", "desc": "MEDICAID", "state":
+        "KY", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1679021729,
+        "last_updated_epoch": 1474287627, "created_epoch": 1474243200, "basic": {"first_name":
+        "LINDSEY", "last_name": "CLICKNER", "middle_name": "H", "credential": "APRN",
+        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2016-09-19",
+        "last_updated": "2016-09-19", "status": "A", "name": "CLICKNER LINDSEY"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1775 ALYSHEBA WAY", "address_2": "SUITE 201", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405099023", "telephone_number": "859-278-5007", "fax_number":
+        "859-278-6867"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1775 ALYSHEBA WAY", "address_2":
+        "SUITE 201", "city": "LEXINGTON", "state": "KY", "postal_code": "405099023",
+        "telephone_number": "859-278-5007", "fax_number": "859-278-6867"}], "taxonomies":
+        [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary":
+        true, "state": "KY", "license": "3010730"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1689104085, "last_updated_epoch": 1504224000, "created_epoch":
+        1497744000, "basic": {"first_name": "EMILY", "last_name": "MESSERLI", "middle_name":
+        "CLAIRE", "credential": "DNP, APRN, FNP-C", "sole_proprietor": "NO", "gender":
+        "F", "enumeration_date": "2017-06-18", "last_updated": "2017-09-01", "status":
+        "A", "name": "MESSERLI EMILY"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "830 SOUTH LIMESTONE", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405362815", "telephone_number": "859-323-2778"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "830 SOUTH LIMESTONE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "40536"}], "taxonomies":
+        [{"code": "363LC1500X", "desc": "Nurse Practitioner Community Health", "primary":
+        false, "state": "KY", "license": "3011355"}, {"code": "363LP2300X", "desc":
+        "Nurse Practitioner Primary Care", "primary": false, "state": "KY", "license":
+        "3011355"}, {"code": "363LF0000X", "desc": "Nurse Practitioner Family", "primary":
+        true, "state": "KY", "license": "3011355"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1881171981, "last_updated_epoch": 1532346195, "created_epoch":
+        1532304000, "basic": {"first_name": "MORGAN", "last_name": "STACEY", "middle_name":
+        "ELIZABETH", "credential": "APRN", "sole_proprietor": "YES", "gender": "F",
+        "enumeration_date": "2018-07-23", "last_updated": "2018-07-23", "status":
+        "A", "name": "STACEY MORGAN"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "UK DIVISION OF DIGESTIVE DISEASES 740 S LIMESTONE", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405360001", "telephone_number":
+        "859-323-0079"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "UK DIVISION OF DIGESTIVE DISEASES
+        800 ROSE ST MN649", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405360001"}], "taxonomies": [{"code": "363LG0600X", "desc": "Nurse Practitioner
+        Gerontology", "primary": false, "state": "KY", "license": "3011555"}, {"code":
+        "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary": true,
+        "state": "KY", "license": "3011555"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1083912141, "last_updated_epoch": 1566487841, "created_epoch":
+        1300060800, "basic": {"first_name": "BRANDY", "last_name": "AKERS", "middle_name":
+        "LEE", "credential": "APRN", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2011-03-14", "last_updated": "2019-08-22", "status": "A", "name": "AKERS
+        BRANDY"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "496 SOUTHLAND DR", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405031827", "telephone_number": "859-288-2425", "fax_number": "859-288-7510"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "496 SOUTHLAND DR", "address_2":
+        "", "city": "LEXINGTON", "state": "KY", "postal_code": "405031827", "telephone_number":
+        "859-288-2392", "fax_number": "859-721-3918"}], "taxonomies": [{"code": "363LF0000X",
+        "desc": "Nurse Practitioner Family", "primary": true, "state": "KY", "license":
+        "3006677"}, {"code": "363LP2300X", "desc": "Nurse Practitioner Primary Care",
+        "primary": false, "state": "KY", "license": "3006677"}], "identifiers": [{"identifier":
+        "7100176560", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1821638479, "last_updated_epoch": 1578865643, "created_epoch":
+        1578787200, "basic": {"first_name": "SANDRA", "last_name": "MCCLAIN", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2020-01-12", "last_updated": "2020-01-12",
+        "status": "A", "name": "MCCLAIN SANDRA", "certification_date": "2020-01-12"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "800 ROSE ST", "address_2": "", "city": "LEXINGTON", "state": "KY", "postal_code":
+        "405367001", "telephone_number": "859-257-9555"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "385 COPPERAS HOLW", "address_2": "", "city": "MOREHEAD", "state": "KY", "postal_code":
+        "403518295", "telephone_number": "606-356-6935"}], "taxonomies": [{"code":
+        "363LP2300X", "desc": "Nurse Practitioner Primary Care", "primary": true,
+        "state": "KY", "license": "3012944"}], "identifiers": [], "endpoints": [{"endpointType":
+        "DIRECT", "endpointTypeDescription": "Direct Messaging Address", "endpoint":
+        "sdgi227@uky.edu", "endpointDescription": "work email", "affiliation": "N",
+        "affiliationName": "", "use": "DIRECT", "useDescription": "Direct", "useOtherDescription":
+        "", "contentType": "OTHER", "contentTypeDescription": "Other", "contentOtherDescription":
+        "health care provider email", "address_type": "DOM", "address_1": "385 COPPERAS
+        HOLW", "address_2": "", "city": "MOREHEAD", "state": "KY", "country_code":
+        "US", "postal_code": "403518295", "country_name": "United States"}]},{"enumeration_type":
+        "NPI-1", "number": 1992209324, "last_updated_epoch": 1581411297, "created_epoch":
+        1521590400, "basic": {"first_name": "MALLORY", "last_name": "MULLINS", "middle_name":
+        "NICOLE", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2018-03-21",
+        "last_updated": "2020-02-11", "status": "A", "name": "MULLINS MALLORY", "certification_date":
+        "2020-02-11"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "3175 BEAUMONT CENTRE CIR", "address_2": "", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405131957", "telephone_number": "859-576-0058"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "3175 BEAUMONT CENTRE CIR", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405131957"}], "taxonomies": [{"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": false, "state": "KY",
+        "license": "3012151"}, {"code": "363LF0000X", "desc": "Nurse Practitioner
+        Family", "primary": true, "state": "KY", "license": "3012151"}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1295358927, "last_updated_epoch":
+        1590681352, "created_epoch": 1590624000, "basic": {"first_name": "HAZEL JOY",
+        "last_name": "GONZALEZ", "middle_name": "CAMIT", "credential": "APRN", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2020-05-28", "last_updated": "2020-05-28",
+        "status": "A", "name": "GONZALEZ HAZEL JOY", "certification_date": "2020-05-28"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "300 QUINTON CT APT 23203", "address_2": "", "city": "LEXINGTON", "state":
+        "KY", "postal_code": "405092685", "telephone_number": "248-231-2910"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "300 QUINTON CT APT 23203", "address_2": "", "city": "LEXINGTON",
+        "state": "KY", "postal_code": "405092685", "telephone_number": "248-231-2910"}],
+        "taxonomies": [{"code": "163WM0705X", "desc": "Registered Nurse Medical-Surgical",
+        "primary": false, "state": "KY", "license": "1140163"}, {"code": "363LP2300X",
+        "desc": "Nurse Practitioner Primary Care", "primary": true, "state": "KY",
+        "license": "3013800"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
+        1669974119, "last_updated_epoch": 1641406309, "created_epoch": 1519862400,
+        "basic": {"name_prefix": "MR.", "first_name": "DONALD", "last_name": "AVERY",
+        "middle_name": "RAY", "name_suffix": "JR.", "credential": "NURSE PRACTITIONER",
+        "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2018-03-01",
+        "last_updated": "2022-01-05", "status": "A", "name": "AVERY DONALD", "certification_date":
+        "2022-01-05"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1050 CHINOE RD STE 350", "address_2": "", "city": "LEXINGTON", "state": "KY",
+        "postal_code": "405026571", "telephone_number": "859-255-0075"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "611 PARK AVE, LOUISVILLE", "address_2": "", "city": "LOUISVILLE",
+        "state": "KY", "postal_code": "40208", "telephone_number": "502-338-8884"}],
+        "taxonomies": [{"code": "363LP2300X", "desc": "Nurse Practitioner Primary
+        Care", "primary": true, "state": "KY", "license": "3012133"}], "identifiers":
+        []}]}'
+  recorded_at: Sun, 09 Jan 2022 15:08:15 GMT
+recorded_with: VCR 6.0.0

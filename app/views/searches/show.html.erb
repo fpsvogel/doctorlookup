@@ -1,4 +1,8 @@
-<%= form_with model: @query, url: searches_create_path, method: :post, id: "search" do |f| %>
+<%= form_with model: @query,
+              url: searches_create_path,
+              method: :post,
+              id: "search" do |f| %>
+
   <%= render "shared/form_errors", form: f %>
 
   <div class="grid">
