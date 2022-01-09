@@ -25,7 +25,7 @@ class Query
        limit]
 
   attribute :taxonomy_description, :string
-  attribute :state,          :string, default: UsaStates::DEFAULT_VALUE
+  attribute :state,          :string
   attribute :city,           :string
   attribute :first_name,     :string
   attribute :last_name,      :string
@@ -49,6 +49,11 @@ class Query
       self.limit = stopping_point + results_increment
     end
     results_batch
+  end
+
+  # @return [Array<String>] a list of all NPI taxonomy descriptions
+  def taxonomy_descriptions
+    NPITaxonomyDescriptions::ALL
   end
 
   # @return [Array<Array<String>>] pairs of U.S. state names and abbreviations

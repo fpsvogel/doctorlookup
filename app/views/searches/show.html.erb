@@ -1,14 +1,16 @@
 <%= form_with model: @query,
               url: searches_create_path,
               method: :post,
-              id: "search" do |f| %>
+              id: "search",
+              data: { controller: "search" } do |f| %>
 
   <%= render "shared/form_errors", form: f %>
 
   <div class="grid">
     <div>
       <%= f.label :taxonomy_description, "Specialty" %>
-      <%= f.text_field :taxonomy_description %>
+      <%= f.select :taxonomy_description, @query.taxonomy_descriptions %>
+      <%#= f.text_field :taxonomy_description %>
     </div>
 
     <div>

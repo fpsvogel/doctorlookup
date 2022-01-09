@@ -59,6 +59,33 @@ label[for^=query_gender] {
   padding: calc(var(--form-element-spacing-vertical)) calc(var(--form-element-spacing-horizontal) * .75);
 }
 
+// SELECTIZE.JS
+
+.selectize-input, .selectize-dropdown {
+  border: var(--border-width) solid var(--form-element-border-color) !important;
+  border-radius: var(--border-radius) !important;
+}
+
+.selectize-input {
+  background: none !important;
+  padding: 0 var(--form-element-spacing-horizontal) !important;
+  box-shadow: none !important;
+  --height-fix: calc(1rem * var(--line-height) + var(--form-element-spacing-vertical) * 2 + var(--border-width) * 2);
+  height: var(--height-fix) !important;
+  &.full {
+    line-height: var(--height-fix) !important;
+  }
+  & input, .item {
+    color: var(--form-element-color) !important;
+    font-size: 1rem !important;
+  }
+}
+
+.selectize-dropdown {
+  background: var(--background-color-dark) !important;
+  color: var(--form-element-color) !important;
+}
+
 // ALERTS
 
 div[role=alert] {
