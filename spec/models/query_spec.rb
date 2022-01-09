@@ -16,25 +16,22 @@ RSpec.describe Query, type: :model do
     end
   end
 
-  context "when attributes with defaults are not provided" do
-    let!(:query) { Query.new(taxonomy_description: "primary care") }
-
-    it "is valid with defaults" do
-      expect(query).to be_valid
-      expect(query.state).to eq UsaStates::DEFAULT_VALUE
-    end
-  end
-
-  context "when all attributes besides state are blank" do
+  context "when all attributes besides state and gender are blank" do
     let!(:query) do
-      Query.new(taxonomy_description: "",
-                first_name: "",
-                last_name: "")
+      Query.new(state: "KY", gender: "F")
     end
 
     it "is invalid" do
       expect(query).to_not be_valid
-      expect(query.errors[:base].first.downcase).to include "besides state"
+      expect(query.errors[:base].first.downcase).to include "besides state and gender"
+    end
+  end
+
+  context "when any attribute besides state and gender is provided" do
+    let!(:query) { Query.new(taxonomy_description: "primary care") }
+
+    it "is valid" do
+      expect(query).to be_valid
     end
   end
 end

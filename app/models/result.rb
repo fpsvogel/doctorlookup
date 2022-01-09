@@ -19,7 +19,7 @@ class Result
   # @param [Hash] response the full API response in JSON format
   # @return [Array<Result>] relevant information from each result in the response
   def self.results_from_api_response(response, query)
-    return [] unless response && response.has_key?("results")
+    raise Exceptions::NoResultsFound unless response && response.has_key?("results")
     raw_results = response["results"].drop(query.stopping_point)
     new_results =
       raw_results.map do |result|

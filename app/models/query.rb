@@ -40,6 +40,7 @@ class Query
   def results
     self.limit = stopping_point + results_increment
     results_batch = []
+    first_try = (stopping_point == 0)
     while results_batch.count < RESULTS_INCREMENT
       response = JSON.load(URI.open(api_url_with_params))
       new_results, reached_end = Result.results_from_api_response(response, self)
@@ -48,6 +49,7 @@ class Query
       break if reached_end
       self.limit = stopping_point + results_increment
     end
+    raise Exceptions::NoResultsFound if first_try && results_batch.count == 0
     results_batch
   end
 

@@ -9,6 +9,19 @@ RSpec.describe "Search page", type: :system, js: true do
     end
   end
 
+  context "when no results are found" do
+    let!(:specialty) { "some nonsense that is not actually a specialty" }
+
+    it "shows an alert" do
+      VCR.use_cassette "search with no results" do
+        visit searches_show_path
+        fill_in 'query_taxonomy_description', with: specialty
+        click_on "Search"
+        expect(page).to have_selector('div[role=alert]')
+      end
+    end
+  end
+
   context "when there are multiple pages of results" do
     let!(:specialty) { "mental health" }
 
@@ -28,7 +41,7 @@ RSpec.describe "Search page", type: :system, js: true do
 
   context "when there is only one page of results" do
     let!(:specialty) { "primary care" }
-    let!(:state) { "Kentucky" }
+    let!(:state) { "KY" }
     let!(:city) { "Lexington" }
     let!(:gender) { "m" }
 
@@ -36,7 +49,7 @@ RSpec.describe "Search page", type: :system, js: true do
       VCR.use_cassette "search one page" do
         visit searches_show_path
         fill_in 'query_taxonomy_description', with: specialty
-        select state, from: 'query_state'
+        execute_script("window.stateSelect.setValue('#{state}', false)")
         fill_in 'query_city', with: city
         choose "query_gender_#{gender}"
         click_on "Search"

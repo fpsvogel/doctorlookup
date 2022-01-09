@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=10&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=some%20nonsense%20that%20is%20not%20actually%20a%20specialty&use_first_name_alias=&version=2.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 09 Jan 2022 20:29:29 GMT
+      Content-Type:
+      - application/json
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Set-Cookie:
+      - TS017b4e40=01cffab1d3651ca05f43b75ff44ede88a4e314671a55080579786d118740760821f3e59dd7bfbe35d3ee1be2f37b02afe08f9e192c;
+        Path=/; Domain=.npiregistry.cms.hhs.gov
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"Errors": [{"field": "taxonomy_description", "number": "14", "description":
+        "No taxonomy codes found with entered description"}]}'
+  recorded_at: Sun, 09 Jan 2022 20:29:29 GMT
+recorded_with: VCR 6.0.0

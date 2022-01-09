@@ -75,6 +75,11 @@ label[for^=query_gender] {
   &.full {
     line-height: var(--height-fix) !important;
   }
+  &.not-full input {
+    // without this min-width, the inner input becomes very narrow in some circumstances,
+    // e.g. when search parameters are invalid and the page refreshes or re-renders with an alert.
+    min-width: 33px !important;
+  }
   & input, .item {
     color: var(--form-element-color) !important;
     font-size: 1rem !important;

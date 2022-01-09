@@ -26,6 +26,10 @@ class SearchesController < ApplicationController
         format.html { render :show, status: :unprocessable_entity }
       end
     end
+  rescue Exceptions::NoResultsFound
+    redirect_to searches_show_path,
+      alert: "No results were found. Please try again with different search parameters.",
+      status: :unprocessable_entity
   end
 
   def show_more
