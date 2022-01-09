@@ -41,8 +41,12 @@ class SearchesController < ApplicationController
         end
         format.turbo_stream do
           render turbo_stream:
-            turbo_stream.append("results", partial: 'results',
-                                           locals: { results: @results })
+            [
+              turbo_stream.append("results", partial: 'results',
+                                            locals: { results: @results }),
+              turbo_stream.replace("show_more", partial: 'show_more_button',
+                                                locals: { results: @results })
+            ]
         end
       else
         format.html { render :show, status: :unprocessable_entity }

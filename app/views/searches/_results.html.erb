@@ -1,4 +1,10 @@
 <% if results %>
+  <% if results.empty? %>
+    <div role="alert">
+      You've reached the end of the results.
+    </div>
+  <% end %>
+
   <% results.each_with_index do |result, index| %>
     <article>
       <h2>

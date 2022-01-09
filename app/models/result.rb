@@ -20,22 +20,23 @@ class Result
   # @return [Array<Result>] relevant information from each result in the response
   def self.results_from_api_response(response, query)
     return [] unless response && response.has_key?("results")
-    Rails.logger.info "RESPONSE RESULTS COUNT: #{response["results"].count}"
     raw_results = response["results"].drop(query.stopping_point)
-    raw_results.map do |result|
-      gender = result["basic"]["gender"]
-      next if query.gender && !(gender.downcase == query.gender.downcase)
-      primary_specialty, other_specialties = parse_specialties(result["taxonomies"])
-      new(
-        first_name: result["basic"]["first_name"],
-        last_name: result["basic"]["last_name"],
-        credential: result["basic"]["credential"],
-        gender:,
-        npi_number: result["number"],
-        primary_specialty:,
-        other_specialties:,
-        addresses: Address.addresses_from_api_result(result, query))
-    end.compact
+    new_results =
+      raw_results.map do |result|
+        gender = result["basic"]["gender"]
+        next if query.gender && !(gender.downcase == query.gender.downcase)
+        primary_specialty, other_specialties = parse_specialties(result["taxonomies"])
+        new(
+          first_name: result["basic"]["first_name"],
+          last_name: result["basic"]["last_name"],
+          credential: result["basic"]["credential"],
+          gender:,
+          npi_number: result["number"],
+          primary_specialty:,
+          other_specialties:,
+          addresses: Address.addresses_from_api_result(result, query))
+      end.compact
+    [new_results, reached_end?(response, query)]
   end
 
   def credential=(new_credential)
@@ -59,5 +60,10 @@ class Result
     other_descriptions = others.keys
     other_descriptions.select! { |other| !primary_description.include? other }
     [primary_description, other_descriptions]
+  end
+
+  private_class_method def self.reached_end?(response, query)
+    return true if response["results"].count < query.limit
+    false
   end
 end

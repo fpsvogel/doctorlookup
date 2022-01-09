@@ -42,8 +42,10 @@ class Query
     results_batch = []
     while results_batch.count < RESULTS_INCREMENT
       response = JSON.load(URI.open(api_url_with_params))
-      results_batch += Result.results_from_api_response(response, self)
+      new_results, reached_end = Result.results_from_api_response(response, self)
+      results_batch += new_results
       self.stopping_point += limit
+      break if reached_end
       self.limit = stopping_point + results_increment
     end
     results_batch

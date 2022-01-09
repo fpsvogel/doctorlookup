@@ -1,6 +1,6 @@
 <div id="show_more">
   <% if results %>
     <input type="submit" formmethod="patch" name="commit" value="Show more" form="search"
-           style="max-width:8rem">
+           style="max-width:8rem" <%= "disabled" if results.empty? %>>
   <% end %>
 </div>
