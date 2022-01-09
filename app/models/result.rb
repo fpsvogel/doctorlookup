@@ -2,59 +2,37 @@
 class Result
   include ActiveModel::Model
   include ActiveModel::Attributes
+  include StringAttributes
 
-  string_attributes =
-    %i[first_name
-       last_name
-       credential
-       primary_specialty
-       gender
-       address_1
-       address_2
-       city
-       state
-       phone_number
-     ]
+  add_string_attributes(
+    required: [:first_name,
+               :last_name,
+               :primary_specialty,
+               :gender],
+    optional: [:credential])
+  define_titleizing_setters([:first_name, :last_name])
   attribute :other_specialties, array: true, default: []
-  attribute :npi_number, :integer
-
-  optional_string_attributes = %i[credential address_2]
-  string_attributes.each do |attr|
-    attribute attr, :string
-    validates(attr, presence: true) unless optional_string_attributes.include?(attr)
-  end
-
-  titleized_string_attributes = %i[first_name last_name address_1 address_2 city]
-  titleized_string_attributes.each do |attr|
-    define_method "#{attr}=" do |new_value|
-      new_value = titleize(new_value)
-      write_attribute(attr, new_value)
-    end
-  end
+  attribute :addresses, array: true, default: []
+  attribute :npi_number, :integer # TODO show
 
   # Makes Results from an API response.
   # @param [Hash] response the full API response in JSON format
   # @return [Array<Result>] relevant information from each result in the response
-  def self.array_from_api_response(response)
+  def self.results_from_api_response(response, query)
     return [] unless response && response.has_key?("results")
     response["results"].map do |result|
-      location_address = result["addresses"].find do |address|
-        address["address_purpose"] == "LOCATION"
-      end
+      gender = result["basic"]["gender"]
+      # next unless gender.downcase == query.gender.downcase # TODO
       primary_specialty, other_specialties = parse_specialties(result["taxonomies"])
       new(
         first_name: result["basic"]["first_name"],
         last_name: result["basic"]["last_name"],
         credential: result["basic"]["credential"],
-        gender: result["basic"]["gender"],
+        gender:,
         primary_specialty:,
         other_specialties:,
-        address_1: location_address["address_1"],
-        address_2: location_address["address_2"],
-        city: location_address["city"],
-        state: location_address["state"],
-        phone_number: location_address["telephone_number"])
-    end
+        addresses: Address.addresses_from_api_result(result, query))
+    end#.compact
   end
 
   def credential=(new_credential)
@@ -64,17 +42,17 @@ class Result
 
   private
 
-  # similar to ActiveSupport::Inflector.titleize(string)
-  def titleize(string)
-    return nil if string.nil?
-    string.split(" ").map(&:capitalize).join(" ")
-  end
+  # # similar to ActiveSupport::Inflector.titleize(string)
+  # def titleize(string)
+  #   return nil if string.nil?
+  #   string.split(" ").map(&:capitalize).join(" ")
+  # end
 
-  # mimics ActiveRecord's write_attribute method
-  def write_attribute(attr_name, value)
-    @attributes[attr_name.to_s] = @attributes[attr_name.to_s]
-                                    .with_value_from_user(value)
-  end
+  # # mimics ActiveRecord's write_attribute method
+  # def write_attribute(attr_name, value)
+  #   @attributes[attr_name.to_s] = @attributes[attr_name.to_s]
+  #                                   .with_value_from_user(value)
+  # end
 
   private_class_method def self.parse_specialties(raw_taxonomies)
     # create a hash to remove duplicate taxonomies (having the same description)

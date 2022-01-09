@@ -21,19 +21,27 @@
           <strong>Gender:</strong> <%= result.gender %>
         </p>
         <p>
-          <strong>Address:</strong>
-          <%= result.address_1 %>
-          <%= result.address_2 -%>
+          <strong>Address<%= "es" if result.addresses.count > 1 %>:</strong>
         </p>
-        <p>
-          <strong>City:</strong>
-          <%= result.city -%>
-          <% concat ", #{result.state}" %>
-        </p>
-        <p>
-          <strong>Phone:</strong>
-          <%= result.phone_number %>
-        </p>
+        <div class="grid">
+          <% result.addresses.each do |address| %>
+            <div class="address">
+              <p>
+                <%= address.line_1 %>
+                <%= address.line_2 %>
+              </p>
+              <p>
+                <%= address.city -%>
+                <% concat ", #{address.state}" %>
+              </p>
+              <% address.phone_numbers.each do |phone_number| %>
+                <p>
+                  <%= phone_number %>
+                </p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </article>
     <% end %>
   <% end %>

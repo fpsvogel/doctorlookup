@@ -15,6 +15,7 @@ class Query
   API_PARAM_ATTRIBUTES =
     %i[taxonomy_description
        state
+       city
        first_name
        last_name]
 
@@ -29,7 +30,7 @@ class Query
   # @return [Array<Result>] relevant information from each result in the response
   def results
     response = JSON.load(URI.open(api_url_with_params))
-    Result.array_from_api_response(response)
+    Result.results_from_api_response(response, self)
   end
 
   # @return [Array<Array<String>>] pairs of U.S. state names and abbreviations

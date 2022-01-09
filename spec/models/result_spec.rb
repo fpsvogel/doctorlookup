@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Result, type: :model do
   # I generally don't test private methods, but this one is complex enough to
-  # merit a test.
+  # warrant a test.
   describe ".parse_specialties" do
     let!(:result_taxonomies) do
       [{"code"=>"101YM0800X",

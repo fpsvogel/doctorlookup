@@ -72,11 +72,18 @@ div[role=alert] {
 // RESULTS
 
 #results {
+  --small-spacing-vertical: calc(var(--typography-spacing-vertical) / 4);
   h2 {
     --font-size: 1.25rem;
-    margin-bottom: calc(var(--typography-spacing-vertical) / 4);
+    margin-bottom: var(--small-spacing-vertical);
   }
   p {
-    margin-bottom: calc(var(--typography-spacing-vertical) / 4);
+    margin-bottom: var(--small-spacing-vertical);
+  }
+  .address {
+    margin-bottom: var(--typography-spacing-vertical);
+  }
+  article {
+    padding-bottom: 0;
   }
 }
