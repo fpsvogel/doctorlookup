@@ -13,7 +13,7 @@ class Result
   define_titleizing_setters([:first_name, :last_name])
   attribute :other_specialties, array: true, default: []
   attribute :addresses, array: true, default: []
-  attribute :npi_number, :integer # TODO show
+  attribute :npi_number, :integer
 
   # Makes Results from an API response.
   # @param [Hash] response the full API response in JSON format
@@ -45,18 +45,6 @@ class Result
 
   private
 
-  # # similar to ActiveSupport::Inflector.titleize(string)
-  # def titleize(string)
-  #   return nil if string.nil?
-  #   string.split(" ").map(&:capitalize).join(" ")
-  # end
-
-  # # mimics ActiveRecord's write_attribute method
-  # def write_attribute(attr_name, value)
-  #   @attributes[attr_name.to_s] = @attributes[attr_name.to_s]
-  #                                   .with_value_from_user(value)
-  # end
-
   private_class_method def self.parse_specialties(raw_taxonomies)
     # create a hash to remove duplicate taxonomies (having the same description)
     desc_and_primary = raw_taxonomies.map do |taxonomy|
@@ -66,10 +54,10 @@ class Result
     end
     primary = desc_and_primary.find { |desc, primary| primary == true } \
               || desc_and_primary.first
-    debugger if primary.nil?
     primary_description = primary.first # the key
     others = desc_and_primary.except(primary_description)
     other_descriptions = others.keys
+    other_descriptions.select! { |other| !primary_description.include? other }
     [primary_description, other_descriptions]
   end
 end
