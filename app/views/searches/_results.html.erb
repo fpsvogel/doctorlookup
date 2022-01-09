@@ -1,49 +1,49 @@
-<div id="results">
-  <% if results %>
-    <% results.each do |result| %>
-      <article>
-        <h2>
-          <%= result.first_name %>
-          <%= result.last_name -%>
-          <% concat ", #{result.credential}" if result.credential %>
-        </h2>
+<% if results %>
+  <% results.each_with_index do |result, index| %>
+    <article>
+      <h2>
+        <%= result.first_name %>
+        <%= result.last_name -%>
+        <% concat ", #{result.credential}" if result.credential %>
+      </h2>
+      <p>
+        <strong>Primary specialty:</strong>
+        <%= result.primary_specialty %>
+      </p>
+      <% if result.other_specialties.any? %>
         <p>
-          <strong>Primary specialty:</strong>
-          <%= result.primary_specialty %>
+          <strong>Other specialties:</strong>
+          <%= result.other_specialties.join(", ") %>
         </p>
-        <% if result.other_specialties.any? %>
-          <p>
-            <strong>Other specialties:</strong>
-            <%= result.other_specialties.join(", ") %>
-          </p>
+      <% end %>
+      <p>
+        <strong>Gender:</strong> <%= result.gender %>
+      </p>
+      <p>
+        <strong>NPI number:</strong> <%= result.npi_number %>
+      </p>
+      <p>
+        <strong>Address<%= "es" if result.addresses.count > 1 %>:</strong>
+      </p>
+      <div class="grid">
+        <% result.addresses.each do |address| %>
+          <div class="address">
+            <p>
+              <%= address.line_1 %>
+              <%= address.line_2 %>
+            </p>
+            <p>
+              <%= address.city -%>
+              <% concat ", #{address.state}" %>
+            </p>
+            <% address.phone_numbers.each do |phone_number| %>
+              <p>
+                <%= phone_number %>
+              </p>
+            <% end %>
+          </div>
         <% end %>
-        <p>
-          <strong>Gender:</strong> <%= result.gender %>
-        </p>
-        <p>
-          <strong>Address<%= "es" if result.addresses.count > 1 %>:</strong>
-        </p>
-        <div class="grid">
-          <% result.addresses.each do |address| %>
-            <div class="address">
-              <p>
-                <%= address.line_1 %>
-                <%= address.line_2 %>
-              </p>
-              <p>
-                <%= address.city -%>
-                <% concat ", #{address.state}" %>
-              </p>
-              <% address.phone_numbers.each do |phone_number| %>
-                <p>
-                  <%= phone_number %>
-                </p>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      </article>
-    <% end %>
+      </div>
+    </article>
   <% end %>
-</div>
-
+<% end %>

@@ -8,6 +8,7 @@ class Query
   include WriteAttribute
 
   RESULTS_INCREMENT = 10
+  GENDER_INCREMENT_MULTIPLIER = 3 # to reduce the need for repeated API calls.
 
   # see https://npiregistry.cms.hhs.gov/registry/help-api
   # "&enumeration_type=NPI-1" means that only individuals are returned, not
@@ -20,21 +21,32 @@ class Query
        state
        city
        first_name
-       last_name]
+       last_name
+       limit]
 
-  API_PARAM_ATTRIBUTES.each do |attr|
-    attribute attr, :string
-  end
-  attribute :state, :string, default: UsaStates::DEFAULT_VALUE
-  attribute :gender, :string
+  attribute :taxonomy_description, :string
+  attribute :state,          :string, default: UsaStates::DEFAULT_VALUE
+  attribute :city,           :string
+  attribute :first_name,     :string
+  attribute :last_name,      :string
+  attribute :limit,          :integer
+  attribute :gender,         :string
+  attribute :stopping_point, :integer, default: 0
 
   validate :any_param_besides_state_is_present
 
   # Calls the API.
   # @return [Array<Result>] relevant information from each result in the response
   def results
-    response = JSON.load(URI.open(api_url_with_params))
-    Result.results_from_api_response(response, self)
+    self.limit = stopping_point + results_increment
+    results_batch = []
+    while results_batch.count < RESULTS_INCREMENT
+      response = JSON.load(URI.open(api_url_with_params))
+      results_batch += Result.results_from_api_response(response, self)
+      self.stopping_point += limit
+      self.limit = stopping_point + results_increment
+    end
+    results_batch
   end
 
   # @return [Array<Array<String>>] pairs of U.S. state names and abbreviations
@@ -55,6 +67,12 @@ class Query
     if others_blank
       errors.add :base, "Please specify at least one parameter besides State and Gender."
     end
+  end
+
+  def results_increment
+    increment = RESULTS_INCREMENT
+    increment *= GENDER_INCREMENT_MULTIPLIER if gender
+    increment
   end
 
   def api_url_with_params

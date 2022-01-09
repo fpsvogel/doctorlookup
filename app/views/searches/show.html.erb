@@ -1,4 +1,4 @@
-<%= form_with model: @query, url: searches_update_path, method: :patch do |f| %>
+<%= form_with model: @query, url: searches_create_path, method: :post, id: "search" do |f| %>
   <%= render "shared/form_errors", form: f %>
 
   <div class="grid">
@@ -51,4 +51,6 @@
   <%= f.submit "Search" %>
 <% end %>
 
-<%= render 'results', results: @results %>
+<%= render 'wrapped_results', results: @results %>
+
+<%= render 'show_more_button', results: @results %>
