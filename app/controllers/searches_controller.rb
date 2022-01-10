@@ -15,7 +15,10 @@ class SearchesController < ApplicationController
 
   def show_more
     stopping_point = session[:query_stopping_point]
-    @query = Query.new(stopping_point:, **query_params)
+    effective_taxonomy_attr = session[:effective_taxonomy_attr]
+    @query = Query.new(stopping_point:,
+                       effective_taxonomy_attr:,
+                       **query_params)
     respond_to_create_or_show_more(results_action: "append",
                                    results_partial: "results")
   end
@@ -37,6 +40,7 @@ class SearchesController < ApplicationController
       if @query.valid?
         @results = @query.results
         session[:query_stopping_point] = @query.stopping_point
+        session[:effective_taxonomy_attr] = @query.effective_taxonomy_attr
         format.html do
           redirect_to searches_show_path,
                       alert: "There was an issue 😖 Please try again."

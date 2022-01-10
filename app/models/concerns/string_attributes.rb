@@ -1,7 +1,7 @@
 # Provides a shortcut to defining titleized string attributes in a model.
 module StringAttributes
   extend ActiveSupport::Concern
-  include WriteAttribute
+  include ReadWriteAttribute
 
   class_methods do
     def add_string_attributes(required:, optional:)

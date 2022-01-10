@@ -24,8 +24,9 @@ class Result
     new_results =
       raw_results.map do |result|
         gender = result["basic"]["gender"]
-        next if query.gender && !(gender.downcase == query.gender.downcase)
+        next unless gender_match?(gender, query)
         primary_specialty, other_specialties = parse_specialties(result["taxonomies"])
+        next unless specialty_match?(primary_specialty, other_specialties, query)
         new(
           first_name: result["basic"]["first_name"],
           last_name: result["basic"]["last_name"],
@@ -50,6 +51,8 @@ class Result
     # create a hash to remove duplicate taxonomies (having the same description)
     desc_and_primary = raw_taxonomies.map do |taxonomy|
       [taxonomy["desc"], taxonomy["primary"]]
+    end.map do |desc, _primary|
+      NPITaxonomyDescriptions.parenthesize(desc)
     end.each_with_object({}) do |(desc, primary), hash|
       hash[desc] = primary unless hash[desc] == true
     end
@@ -58,12 +61,26 @@ class Result
     primary_description = primary.first # the key
     others = desc_and_primary.except(primary_description)
     other_descriptions = others.keys
-    other_descriptions.select! { |other| !primary_description.include? other }
-    [primary_description, other_descriptions]
+    other_descriptions&.select! do |other|
+      debugger if other.nil?
+      !primary_description.include? other
+    end
+    [primary_description, other_descriptions || []]
   end
 
   private_class_method def self.reached_end?(response, query)
     return true if response["results"].count < query.limit
     false
+  end
+
+  private_class_method def self.gender_match?(gender, query)
+    query.gender.nil? || gender.downcase == query.gender.downcase
+  end
+
+  private_class_method def self.specialty_match?(primary_specialty,
+                                                 other_specialties, query)
+    !query.taxonomy_description_has_specialization? ||
+      ([primary_specialty] + other_specialties).include?(
+                                      query.parenthesized_taxonomy_description)
   end
 end

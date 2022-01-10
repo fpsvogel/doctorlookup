@@ -26,7 +26,7 @@ RSpec.describe Result, type: :model do
       it "returns the primary specialty and an array of other specialties, " \
         "with no overlap or duplicates" do
         primary, others = Result.send(:parse_specialties, result_taxonomies)
-        expect(primary).to eq "Counselor Mental Health"
+        expect(primary).to eq "Counselor (Mental Health)"
         expect(others).to eq ["Marriage & Family Therapist"]
       end
     end
@@ -47,7 +47,7 @@ RSpec.describe Result, type: :model do
 
       it "removes the redundant other specialties" do
         primary, others = Result.send(:parse_specialties, result_taxonomies)
-        expect(primary).to eq "Counselor Mental Health"
+        expect(primary).to eq "Counselor (Mental Health)"
         expect(others).to eq []
       end
     end

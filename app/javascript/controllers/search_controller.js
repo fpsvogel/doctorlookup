@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     var $select = $("select").selectize();
-    window.stateSelect = $select[0].selectize;
+    window.specialtySelect = $select[0].selectize;
+    window.stateSelect = $select[1].selectize;
   }
 }

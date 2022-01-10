@@ -10,12 +10,12 @@ RSpec.describe "Search page", type: :system, js: true do
   end
 
   context "when no results are found" do
-    let!(:specialty) { "some nonsense that is not actually a specialty" }
+    let!(:first_name) { "some name that belongs to no one" }
 
     it "shows an alert" do
       VCR.use_cassette "search with no results" do
         visit searches_show_path
-        fill_in 'query_taxonomy_description', with: specialty
+        fill_in 'query_first_name', with: first_name
         click_on "Search"
         expect(page).to have_selector('div[role=alert]')
       end
@@ -23,12 +23,12 @@ RSpec.describe "Search page", type: :system, js: true do
   end
 
   context "when there are multiple pages of results" do
-    let!(:specialty) { "mental health" }
+    let!(:specialty) { "Counselor" }
 
     it "shows results, and can show more" do
       VCR.use_cassette "search multiple pages" do
         visit searches_show_path
-        fill_in 'query_taxonomy_description', with: specialty
+        execute_script("window.specialtySelect.setValue('#{specialty}', false)")
         click_on "Search"
         expect(page).to have_selector('#results article',
                                       count: Query::RESULTS_INCREMENT)
@@ -40,18 +40,15 @@ RSpec.describe "Search page", type: :system, js: true do
   end
 
   context "when there is only one page of results" do
-    let!(:specialty) { "primary care" }
+    let!(:specialty) { "Technician, Pathology" }
     let!(:state) { "KY" }
     let!(:city) { "Lexington" }
-    let!(:gender) { "m" }
 
     it "shows results, then an alert when the user tries to show more" do
       VCR.use_cassette "search one page" do
         visit searches_show_path
-        fill_in 'query_taxonomy_description', with: specialty
+        execute_script("window.specialtySelect.setValue('#{specialty}', false)")
         execute_script("window.stateSelect.setValue('#{state}', false)")
-        fill_in 'query_city', with: city
-        choose "query_gender_#{gender}"
         click_on "Search"
         expect(page).to have_selector('#results article')
         click_on "Show more"

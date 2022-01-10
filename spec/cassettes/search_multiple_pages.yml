@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=10&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=mental%20health&use_first_name_alias=&version=2.1
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=10&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=Counselor&use_first_name_alias=&version=2.1
     body:
       encoding: US-ASCII
       string: ''
@@ -19,38 +19,52 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 09 Jan 2022 15:08:12 GMT
+      - Mon, 10 Jan 2022 13:42:00 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d3d672069fb4b3f6cbebc4d5989d58ab8ee8c1d9bfd3a8ae9036c68af882cd9df759ea9eb2832f342d6ae47630b807510a;
+      - TS017b4e40=01cffab1d3510a5cd3f6c8fc0e6460dfee2bfdb18e33d743b77f2225d1306a4d340976c1edbcfa692ffb68cc565262b7898a8c4e56;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"result_count":10, "results":[{"enumeration_type": "NPI-1", "number":
-        1891251633, "last_updated_epoch": 1550487087, "created_epoch": 1550448000,
-        "basic": {"first_name": "BRIDGET", "last_name": "KELTNER", "middle_name":
-        "I", "credential": "LMHC", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2019-02-18", "last_updated": "2019-02-18", "status": "A", "name": "KELTNER
-        BRIDGET"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "5700 LAKE WORTH RD STE 110", "address_2": "", "city": "GREENACRES", "state":
-        "FL", "postal_code": "334633213", "telephone_number": "561-880-4877"}, {"country_code":
+        1598249856, "last_updated_epoch": 1537536169, "created_epoch": 1537488000,
+        "basic": {"first_name": "AMANDA", "last_name": "MIKEDIS", "credential": "PH.D;
+        B.A.", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2018-09-21",
+        "last_updated": "2018-09-21", "status": "A", "name": "MIKEDIS AMANDA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "545 WESTMINSTER
+        ST", "address_2": "", "city": "FITCHBURG", "state": "MA", "postal_code": "014204727",
+        "telephone_number": "978-345-0685", "fax_number": "978-829-2210"}, {"country_code":
         "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
-        "DOM", "address_1": "7375 CANAL DR", "address_2": "", "city": "LAKE WORTH",
-        "state": "FL", "postal_code": "334675635", "telephone_number": "561-379-2861"}],
-        "taxonomies": [{"code": "101YM0800X", "desc": "Counselor Mental Health", "primary":
-        true, "state": "FL", "license": "MH14636"}], "identifiers": []},{"enumeration_type":
-        "NPI-1", "number": 1689677601, "last_updated_epoch": 1183852800, "created_epoch":
-        1116806400, "basic": {"first_name": "ALAN", "last_name": "CHRISTENBERRY",
-        "middle_name": "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
-        "2005-05-23", "last_updated": "2007-07-08", "status": "A", "name": "CHRISTENBERRY
-        ALAN"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "DOM", "address_1": "545 WESTMINSTER ST", "address_2": "", "city": "FITCHBURG",
+        "state": "MA", "postal_code": "014204727", "telephone_number": "978-345-0685",
+        "fax_number": "978-829-2210"}], "taxonomies": [{"code": "101Y00000X", "desc":
+        "Counselor", "primary": true, "state": "", "license": ""}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1891251633, "last_updated_epoch":
+        1550487087, "created_epoch": 1550448000, "basic": {"first_name": "BRIDGET",
+        "last_name": "KELTNER", "middle_name": "I", "credential": "LMHC", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2019-02-18", "last_updated": "2019-02-18",
+        "status": "A", "name": "KELTNER BRIDGET"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "5700 LAKE WORTH RD STE 110",
+        "address_2": "", "city": "GREENACRES", "state": "FL", "postal_code": "334633213",
+        "telephone_number": "561-880-4877"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "7375 CANAL DR", "address_2": "", "city": "LAKE WORTH", "state": "FL", "postal_code":
+        "334675635", "telephone_number": "561-379-2861"}], "taxonomies": [{"code":
+        "101YM0800X", "desc": "Counselor Mental Health", "primary": true, "state":
+        "FL", "license": "MH14636"}], "identifiers": []},{"enumeration_type": "NPI-1",
+        "number": 1689677601, "last_updated_epoch": 1183852800, "created_epoch": 1116806400,
+        "basic": {"first_name": "ALAN", "last_name": "CHRISTENBERRY", "middle_name":
+        "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2005-05-23",
+        "last_updated": "2007-07-08", "status": "A", "name": "CHRISTENBERRY ALAN"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
         "119 W MARKET ST", "address_2": "", "city": "COLUMBIA CITY", "state": "IN",
         "postal_code": "467252311", "telephone_number": "260-248-8176", "fax_number":
         "260-248-2236"}, {"country_code": "US", "country_name": "United States", "address_purpose":
@@ -59,84 +73,65 @@ http_interactions:
         "574-267-7169", "fax_number": "574-269-3995"}], "taxonomies": [{"code": "101YM0800X",
         "desc": "Counselor Mental Health", "primary": true, "state": "IN", "license":
         "39001088A"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
-        1871596072, "last_updated_epoch": 1379635200, "created_epoch": 1116806400,
-        "basic": {"name_prefix": "MRS.", "first_name": "SHERRYL", "last_name": "PAVLICK",
-        "middle_name": "D", "credential": "RN,C,MSN,CRNP", "sole_proprietor": "NO",
-        "gender": "F", "enumeration_date": "2005-05-23", "last_updated": "2013-09-20",
-        "status": "A", "name": "PAVLICK SHERRYL"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "575 COAL VALLEY RD", "address_2":
-        "STE 407", "city": "CLAIRTON", "state": "PA", "postal_code": "150253726",
-        "telephone_number": "412-469-7933", "fax_number": "412-469-7024"}, {"country_code":
-        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
-        "DOM", "address_1": "1415 6TH ST", "address_2": "", "city": "PITTSBURGH",
-        "state": "PA", "postal_code": "152342737", "telephone_number": "412-469-7933",
-        "fax_number": "412-469-7024"}], "taxonomies": [{"code": "363LP0808X", "desc":
-        "Nurse Practitioner Psych/Mental Health", "primary": true, "state": "PA",
-        "license": "VP005719L"}], "identifiers": [{"identifier": "031996", "code":
-        "01", "desc": "Other", "state": "PA", "issuer": "PIN"}]},{"enumeration_type":
-        "NPI-1", "number": 1548263775, "last_updated_epoch": 1319414400, "created_epoch":
-        1116806400, "basic": {"first_name": "LINDA", "last_name": "ANDERSON", "middle_name":
-        "JEAN", "credential": "ARNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2005-05-23", "last_updated": "2011-10-24", "status": "A", "name": "ANDERSON
-        LINDA"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "289 IRELAND AVE", "address_2": "", "city": "FORT KNOX", "state": "KY", "postal_code":
-        "401215111", "telephone_number": "502-626-6225"}, {"country_code": "US", "country_name":
+        1760733794, "last_updated_epoch": 1465580281, "created_epoch": 1349049600,
+        "basic": {"first_name": "JENNA", "last_name": "LEGGETT", "credential": "MS,
+        LPC, LCAS", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2012-10-01",
+        "last_updated": "2016-06-10", "status": "A", "name": "LEGGETT JENNA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "1035C
+        DIRECTOR CT", "address_2": "", "city": "GREENVILLE", "state": "NC", "postal_code":
+        "278585996", "telephone_number": "252-215-9011"}, {"country_code": "US", "country_name":
         "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "289 IRELAND AVE", "address_2": "", "city": "FORT KNOX", "state": "KY", "postal_code":
-        "401215111"}], "taxonomies": [{"code": "363LP0808X", "desc": "Nurse Practitioner
-        Psych/Mental Health", "primary": true, "state": "KY", "license": "3374S"}],
-        "identifiers": []},{"enumeration_type": "NPI-1", "number": 1679576672, "last_updated_epoch":
-        1393200000, "created_epoch": 1116806400, "basic": {"first_name": "SCOTT",
-        "last_name": "PARIS", "credential": "ARNP", "sole_proprietor": "YES", "gender":
-        "M", "enumeration_date": "2005-05-23", "last_updated": "2014-02-24", "status":
-        "A", "name": "PARIS SCOTT"}, "other_names": [], "addresses": [{"country_code":
-        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
-        "DOM", "address_1": "8910 MAIN ST E", "address_2": "", "city": "BONNEY LAKE",
-        "state": "WA", "postal_code": "983918988", "telephone_number": "253-299-6556"},
+        "1035C DIRECTOR CT", "address_2": "", "city": "GREENVILLE", "state": "NC",
+        "postal_code": "278585996"}], "taxonomies": [{"code": "101YP2500X", "desc":
+        "Counselor Professional", "primary": true, "state": "NC", "license": "3016A"}],
+        "identifiers": []},{"enumeration_type": "NPI-1", "number": 1205327830, "last_updated_epoch":
+        1526601600, "created_epoch": 1526601600, "basic": {"name_prefix": "MS.", "first_name":
+        "AMBER", "last_name": "DILLON", "middle_name": "RENEE", "credential": "LPC",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2018-05-18",
+        "last_updated": "2018-05-18", "status": "A", "name": "DILLON AMBER"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "410 S
+        ORCHARD ST STE 184", "address_2": "", "city": "BOISE", "state": "ID", "postal_code":
+        "837051293", "telephone_number": "208-891-9891"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "3108 N 26TH ST", "address_2": "", "city": "BOISE", "state": "ID", "postal_code":
+        "837020614", "telephone_number": "208-891-9891"}], "taxonomies": [{"code":
+        "101YP2500X", "desc": "Counselor Professional", "primary": true, "state":
+        "ID", "license": "6943"}], "identifiers": []},{"enumeration_type": "NPI-1",
+        "number": 1518459080, "last_updated_epoch": 1527724800, "created_epoch": 1527724800,
+        "basic": {"first_name": "ADDIE", "last_name": "DIROBERTS", "middle_name":
+        "ROBIN", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2018-05-31",
+        "last_updated": "2018-05-31", "status": "A", "name": "DIROBERTS ADDIE"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "10240
+        W. 31ST AVE", "address_2": "", "city": "PHOENIX", "state": "AZ", "postal_code":
+        "85051", "telephone_number": "602-863-1862", "fax_number": "602-863-4388"},
         {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "8910 MAIN ST E", "address_2":
-        "SUITE C", "city": "BONNEY LAKE", "state": "WA", "postal_code": "983918988",
-        "telephone_number": "253-299-6556"}], "taxonomies": [{"code": "163WA0400X",
-        "desc": "Registered Nurse Addiction (Substance Use Disorder)", "primary":
-        false, "state": "WA", "license": "AP30006338RN00135307"}, {"code": "163WA2000X",
-        "desc": "Registered Nurse Administrator", "primary": false, "state": "WA",
-        "license": "AP30006338RN00135307"}, {"code": "163W00000X", "desc": "Registered
-        Nurse", "primary": false, "state": "WA", "license": "AP30006338RN00135307"},
-        {"code": "163WC0400X", "desc": "Registered Nurse Case Management", "primary":
-        false, "state": "WA", "license": "AP30006338RN00135307"}, {"code": "163WC1600X",
-        "desc": "Registered Nurse Continuing Education/Staff Development", "primary":
-        false, "state": "WA", "license": "AP30006338RN00135307"}, {"code": "163WN0800X",
-        "desc": "Registered Nurse Neuroscience", "primary": false, "state": "WA",
-        "license": "AP30006338RN00135307"}, {"code": "163WP0000X", "desc": "Registered
-        Nurse Pain Management", "primary": false, "state": "WA", "license": "AP30006338RN00135307"},
-        {"code": "163WP0809X", "desc": "Registered Nurse Psych/Mental Health, Adult",
-        "primary": false, "state": "WA", "license": "AP30006338RN00135307"}, {"code":
-        "363LP0808X", "desc": "Nurse Practitioner Psych/Mental Health", "primary":
-        true, "state": "WA", "license": "AP30006338"}], "identifiers": [{"identifier":
-        "9644246", "code": "05", "desc": "MEDICAID", "state": "WA", "issuer": ""},
-        {"identifier": "0193813", "code": "01", "desc": "Other", "state": "WA", "issuer":
-        "L & I"}, {"identifier": "MP1179084", "code": "01", "desc": "Other", "state":
-        "WA", "issuer": "DEA"}]},{"enumeration_type": "NPI-1", "number": 1518459080,
-        "last_updated_epoch": 1527724800, "created_epoch": 1527724800, "basic": {"first_name":
-        "ADDIE", "last_name": "DIROBERTS", "middle_name": "ROBIN", "sole_proprietor":
-        "NO", "gender": "F", "enumeration_date": "2018-05-31", "last_updated": "2018-05-31",
-        "status": "A", "name": "DIROBERTS ADDIE"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "10240 W. 31ST AVE", "address_2":
-        "", "city": "PHOENIX", "state": "AZ", "postal_code": "85051", "telephone_number":
-        "602-863-1862", "fax_number": "602-863-4388"}, {"country_code": "US", "country_name":
-        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "6008 E CALLE DE POMPAS", "address_2": "", "city": "CAVE CREEK", "state":
-        "AZ", "postal_code": "853312509", "telephone_number": "602-863-1862", "fax_number":
-        "602-863-4388"}], "taxonomies": [{"code": "101YM0800X", "desc": "Counselor
-        Mental Health", "primary": true, "state": "AZ", "license": "LAC-16052"}],
-        "identifiers": [{"identifier": "LAC-16052", "code": "05", "desc": "MEDICAID",
-        "state": "AZ", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1982938171,
-        "last_updated_epoch": 1546177716, "created_epoch": 1253577600, "basic": {"first_name":
-        "AZRA", "last_name": "OMERBEGOVIC", "credential": "MS, MLADC, LCMHC", "sole_proprietor":
-        "NO", "gender": "F", "enumeration_date": "2009-09-22", "last_updated": "2018-12-30",
+        "MAILING", "address_type": "DOM", "address_1": "6008 E CALLE DE POMPAS", "address_2":
+        "", "city": "CAVE CREEK", "state": "AZ", "postal_code": "853312509", "telephone_number":
+        "602-863-1862", "fax_number": "602-863-4388"}], "taxonomies": [{"code": "101YM0800X",
+        "desc": "Counselor Mental Health", "primary": true, "state": "AZ", "license":
+        "LAC-16052"}], "identifiers": [{"identifier": "LAC-16052", "code": "05", "desc":
+        "MEDICAID", "state": "AZ", "issuer": ""}]},{"enumeration_type": "NPI-1", "number":
+        1154786986, "last_updated_epoch": 1537361016, "created_epoch": 1450656000,
+        "basic": {"name_prefix": "MS.", "first_name": "HEATHER", "last_name": "YOKUM",
+        "middle_name": "MICHELLE", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2015-12-21", "last_updated": "2018-09-19", "status": "A", "name": "YOKUM
+        HEATHER"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "121 CYPRESS DR", "address_2": "", "city": "DES ALLEMANDS", "state": "LA",
+        "postal_code": "700304620", "telephone_number": "985-758-5621"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "121 CYPRESS DR", "address_2": "", "city": "DES ALLEMANDS",
+        "state": "LA", "postal_code": "700304620", "telephone_number": "985-758-5621"}],
+        "taxonomies": [{"code": "101Y00000X", "desc": "Counselor", "primary": false,
+        "state": "", "license": ""}, {"code": "171M00000X", "desc": "Case Manager/Care
+        Coordinator", "primary": true, "state": "", "license": ""}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1982938171, "last_updated_epoch":
+        1546177716, "created_epoch": 1253577600, "basic": {"first_name": "AZRA", "last_name":
+        "OMERBEGOVIC", "credential": "MS, MLADC, LCMHC", "sole_proprietor": "NO",
+        "gender": "F", "enumeration_date": "2009-09-22", "last_updated": "2018-12-30",
         "status": "A", "name": "OMERBEGOVIC AZRA"}, "other_names": [], "addresses":
         [{"country_code": "US", "country_name": "United States", "address_purpose":
         "LOCATION", "address_type": "DOM", "address_1": "10 WEST ST", "address_2":
@@ -147,54 +142,37 @@ http_interactions:
         [{"code": "101YA0400X", "desc": "Counselor Addiction (Substance Use Disorder)",
         "primary": false, "state": "NH", "license": "0580"}, {"code": "101YM0800X",
         "desc": "Counselor Mental Health", "primary": true, "state": "NH", "license":
-        "2081"}], "identifiers": []},{"enumeration_type": "NPI-1", "number": 1730182973,
-        "last_updated_epoch": 1183852800, "created_epoch": 1116806400, "basic": {"name_prefix":
-        "MS.", "first_name": "CHRISTI", "last_name": "BALLARD", "middle_name": "C",
-        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-05-23",
-        "last_updated": "2007-07-08", "status": "A", "name": "BALLARD CHRISTI"}, "other_names":
+        "2081"}], "identifiers": []},{"enumeration_type": "NPI-1", "number": 1699248757,
+        "last_updated_epoch": 1547135932, "created_epoch": 1547078400, "basic": {"first_name":
+        "LEAH", "last_name": "GRAY", "middle_name": "MARIE", "credential": "MS, LPC-IT",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2019-01-10",
+        "last_updated": "2019-01-10", "status": "A", "name": "GRAY LEAH"}, "other_names":
         [], "addresses": [{"country_code": "US", "country_name": "United States",
-        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "255 N
-        MIAMI ST", "address_2": "", "city": "WABASH", "state": "IN", "postal_code":
-        "469922705", "telephone_number": "260-563-8446", "fax_number": "574-563-1902"},
-        {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "850 N HARRISON ST", "address_2":
-        "", "city": "WARSAW", "state": "IN", "postal_code": "465803163", "telephone_number":
-        "574-267-7169", "fax_number": "574-269-3995"}], "taxonomies": [{"code": "101YM0800X",
-        "desc": "Counselor Mental Health", "primary": true, "state": "IN", "license":
-        "39000251A"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
-        1659374791, "last_updated_epoch": 1183852800, "created_epoch": 1116806400,
-        "basic": {"name_prefix": "MR.", "first_name": "KEVIN", "last_name": "BROWN",
-        "middle_name": "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
-        "2005-05-23", "last_updated": "2007-07-08", "status": "A", "name": "BROWN
-        KEVIN"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "850 N HARRISON ST", "address_2": "", "city": "WARSAW", "state": "IN", "postal_code":
-        "465803163", "telephone_number": "574-267-7169", "fax_number": "574-269-3995"},
-        {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "850 N HARRISON ST", "address_2":
-        "", "city": "WARSAW", "state": "IN", "postal_code": "465803163", "telephone_number":
-        "574-267-7169", "fax_number": "574-269-3995"}], "taxonomies": [{"code": "101YM0800X",
-        "desc": "Counselor Mental Health", "primary": true, "state": "IN", "license":
-        "39001329A"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
-        1679576532, "last_updated_epoch": 1183852800, "created_epoch": 1116892800,
-        "basic": {"name_prefix": "MR.", "first_name": "WILLIAM", "last_name": "COBURN",
-        "middle_name": "RICHARD", "credential": "MA, LPC", "sole_proprietor": "NO",
-        "gender": "M", "enumeration_date": "2005-05-24", "last_updated": "2007-07-08",
-        "status": "A", "name": "COBURN WILLIAM"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "1025 MAIN ST", "address_2":
-        "STE 708", "city": "WHEELING", "state": "WV", "postal_code": "260032726",
-        "telephone_number": "304-232-7232", "fax_number": "304-232-7245"}, {"country_code":
-        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
-        "DOM", "address_1": "1025 MAIN ST", "address_2": "STE 708", "city": "WHEELING",
-        "state": "WV", "postal_code": "260032726", "telephone_number": "304-232-7232",
-        "fax_number": "304-232-7245"}], "taxonomies": [{"code": "101YM0800X", "desc":
-        "Counselor Mental Health", "primary": true, "state": "WV", "license": "1683"}],
-        "identifiers": []}]}'
-  recorded_at: Sun, 09 Jan 2022 15:08:13 GMT
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "120 S
+        BARSTOW ST", "address_2": "", "city": "EAU CLAIRE", "state": "WI", "postal_code":
+        "547013642", "telephone_number": "715-832-2221"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "120 S BARSTOW ST", "address_2": "", "city": "EAU CLAIRE", "state": "WI",
+        "postal_code": "547013642", "telephone_number": "715-832-2221"}], "taxonomies":
+        [{"code": "101YP2500X", "desc": "Counselor Professional", "primary": true,
+        "state": "WI", "license": ""}], "identifiers": []},{"enumeration_type": "NPI-1",
+        "number": 1295738474, "last_updated_epoch": 1183939200, "created_epoch": 1116806400,
+        "basic": {"first_name": "ANNA", "last_name": "ISOM", "credential": "LPC",
+        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-05-23",
+        "last_updated": "2007-07-09", "status": "A", "name": "ISOM ANNA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "901 WALLACE
+        BLVD", "address_2": "BLDG 501", "city": "AMARILLO", "state": "TX", "postal_code":
+        "791061705", "telephone_number": "806-351-3348"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "901 WALLACE BLVD", "address_2": "BLDG 501", "city": "AMARILLO", "state":
+        "TX", "postal_code": "791061705", "telephone_number": "806-351-3348"}], "taxonomies":
+        [{"code": "101YP2500X", "desc": "Counselor Professional", "primary": true,
+        "state": "TX", "license": "16516"}], "identifiers": []}]}'
+  recorded_at: Mon, 10 Jan 2022 13:42:01 GMT
 - request:
     method: get
-    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=20&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=mental%20health&use_first_name_alias=&version=2.1
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=20&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=Counselor&use_first_name_alias=&version=2.1
     body:
       encoding: US-ASCII
       string: ''
@@ -211,38 +189,52 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 09 Jan 2022 15:08:13 GMT
+      - Mon, 10 Jan 2022 13:42:01 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d3943787b231a27bf9db4eb387db696e29ada61a6b0aa2edbfc059d29227fc65ee60c5588568d76751dfd860f40ddd3ef0;
+      - TS017b4e40=01cffab1d39625f06a32f1b3dd5db27fd4edae72ababf309b15131227ede2de4d0aab8c7a417bf4215096094c10f581061d29c1663;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"result_count":20, "results":[{"enumeration_type": "NPI-1", "number":
-        1891251633, "last_updated_epoch": 1550487087, "created_epoch": 1550448000,
-        "basic": {"first_name": "BRIDGET", "last_name": "KELTNER", "middle_name":
-        "I", "credential": "LMHC", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2019-02-18", "last_updated": "2019-02-18", "status": "A", "name": "KELTNER
-        BRIDGET"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "5700 LAKE WORTH RD STE 110", "address_2": "", "city": "GREENACRES", "state":
-        "FL", "postal_code": "334633213", "telephone_number": "561-880-4877"}, {"country_code":
+        1598249856, "last_updated_epoch": 1537536169, "created_epoch": 1537488000,
+        "basic": {"first_name": "AMANDA", "last_name": "MIKEDIS", "credential": "PH.D;
+        B.A.", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2018-09-21",
+        "last_updated": "2018-09-21", "status": "A", "name": "MIKEDIS AMANDA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "545 WESTMINSTER
+        ST", "address_2": "", "city": "FITCHBURG", "state": "MA", "postal_code": "014204727",
+        "telephone_number": "978-345-0685", "fax_number": "978-829-2210"}, {"country_code":
         "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
-        "DOM", "address_1": "7375 CANAL DR", "address_2": "", "city": "LAKE WORTH",
-        "state": "FL", "postal_code": "334675635", "telephone_number": "561-379-2861"}],
-        "taxonomies": [{"code": "101YM0800X", "desc": "Counselor Mental Health", "primary":
-        true, "state": "FL", "license": "MH14636"}], "identifiers": []},{"enumeration_type":
-        "NPI-1", "number": 1689677601, "last_updated_epoch": 1183852800, "created_epoch":
-        1116806400, "basic": {"first_name": "ALAN", "last_name": "CHRISTENBERRY",
-        "middle_name": "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
-        "2005-05-23", "last_updated": "2007-07-08", "status": "A", "name": "CHRISTENBERRY
-        ALAN"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "DOM", "address_1": "545 WESTMINSTER ST", "address_2": "", "city": "FITCHBURG",
+        "state": "MA", "postal_code": "014204727", "telephone_number": "978-345-0685",
+        "fax_number": "978-829-2210"}], "taxonomies": [{"code": "101Y00000X", "desc":
+        "Counselor", "primary": true, "state": "", "license": ""}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1891251633, "last_updated_epoch":
+        1550487087, "created_epoch": 1550448000, "basic": {"first_name": "BRIDGET",
+        "last_name": "KELTNER", "middle_name": "I", "credential": "LMHC", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2019-02-18", "last_updated": "2019-02-18",
+        "status": "A", "name": "KELTNER BRIDGET"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "5700 LAKE WORTH RD STE 110",
+        "address_2": "", "city": "GREENACRES", "state": "FL", "postal_code": "334633213",
+        "telephone_number": "561-880-4877"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "7375 CANAL DR", "address_2": "", "city": "LAKE WORTH", "state": "FL", "postal_code":
+        "334675635", "telephone_number": "561-379-2861"}], "taxonomies": [{"code":
+        "101YM0800X", "desc": "Counselor Mental Health", "primary": true, "state":
+        "FL", "license": "MH14636"}], "identifiers": []},{"enumeration_type": "NPI-1",
+        "number": 1689677601, "last_updated_epoch": 1183852800, "created_epoch": 1116806400,
+        "basic": {"first_name": "ALAN", "last_name": "CHRISTENBERRY", "middle_name":
+        "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2005-05-23",
+        "last_updated": "2007-07-08", "status": "A", "name": "CHRISTENBERRY ALAN"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
         "119 W MARKET ST", "address_2": "", "city": "COLUMBIA CITY", "state": "IN",
         "postal_code": "467252311", "telephone_number": "260-248-8176", "fax_number":
         "260-248-2236"}, {"country_code": "US", "country_name": "United States", "address_purpose":
@@ -251,84 +243,65 @@ http_interactions:
         "574-267-7169", "fax_number": "574-269-3995"}], "taxonomies": [{"code": "101YM0800X",
         "desc": "Counselor Mental Health", "primary": true, "state": "IN", "license":
         "39001088A"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
-        1871596072, "last_updated_epoch": 1379635200, "created_epoch": 1116806400,
-        "basic": {"name_prefix": "MRS.", "first_name": "SHERRYL", "last_name": "PAVLICK",
-        "middle_name": "D", "credential": "RN,C,MSN,CRNP", "sole_proprietor": "NO",
-        "gender": "F", "enumeration_date": "2005-05-23", "last_updated": "2013-09-20",
-        "status": "A", "name": "PAVLICK SHERRYL"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "575 COAL VALLEY RD", "address_2":
-        "STE 407", "city": "CLAIRTON", "state": "PA", "postal_code": "150253726",
-        "telephone_number": "412-469-7933", "fax_number": "412-469-7024"}, {"country_code":
-        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
-        "DOM", "address_1": "1415 6TH ST", "address_2": "", "city": "PITTSBURGH",
-        "state": "PA", "postal_code": "152342737", "telephone_number": "412-469-7933",
-        "fax_number": "412-469-7024"}], "taxonomies": [{"code": "363LP0808X", "desc":
-        "Nurse Practitioner Psych/Mental Health", "primary": true, "state": "PA",
-        "license": "VP005719L"}], "identifiers": [{"identifier": "031996", "code":
-        "01", "desc": "Other", "state": "PA", "issuer": "PIN"}]},{"enumeration_type":
-        "NPI-1", "number": 1548263775, "last_updated_epoch": 1319414400, "created_epoch":
-        1116806400, "basic": {"first_name": "LINDA", "last_name": "ANDERSON", "middle_name":
-        "JEAN", "credential": "ARNP", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2005-05-23", "last_updated": "2011-10-24", "status": "A", "name": "ANDERSON
-        LINDA"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "289 IRELAND AVE", "address_2": "", "city": "FORT KNOX", "state": "KY", "postal_code":
-        "401215111", "telephone_number": "502-626-6225"}, {"country_code": "US", "country_name":
+        1760733794, "last_updated_epoch": 1465580281, "created_epoch": 1349049600,
+        "basic": {"first_name": "JENNA", "last_name": "LEGGETT", "credential": "MS,
+        LPC, LCAS", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2012-10-01",
+        "last_updated": "2016-06-10", "status": "A", "name": "LEGGETT JENNA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "1035C
+        DIRECTOR CT", "address_2": "", "city": "GREENVILLE", "state": "NC", "postal_code":
+        "278585996", "telephone_number": "252-215-9011"}, {"country_code": "US", "country_name":
         "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "289 IRELAND AVE", "address_2": "", "city": "FORT KNOX", "state": "KY", "postal_code":
-        "401215111"}], "taxonomies": [{"code": "363LP0808X", "desc": "Nurse Practitioner
-        Psych/Mental Health", "primary": true, "state": "KY", "license": "3374S"}],
-        "identifiers": []},{"enumeration_type": "NPI-1", "number": 1679576672, "last_updated_epoch":
-        1393200000, "created_epoch": 1116806400, "basic": {"first_name": "SCOTT",
-        "last_name": "PARIS", "credential": "ARNP", "sole_proprietor": "YES", "gender":
-        "M", "enumeration_date": "2005-05-23", "last_updated": "2014-02-24", "status":
-        "A", "name": "PARIS SCOTT"}, "other_names": [], "addresses": [{"country_code":
-        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
-        "DOM", "address_1": "8910 MAIN ST E", "address_2": "", "city": "BONNEY LAKE",
-        "state": "WA", "postal_code": "983918988", "telephone_number": "253-299-6556"},
+        "1035C DIRECTOR CT", "address_2": "", "city": "GREENVILLE", "state": "NC",
+        "postal_code": "278585996"}], "taxonomies": [{"code": "101YP2500X", "desc":
+        "Counselor Professional", "primary": true, "state": "NC", "license": "3016A"}],
+        "identifiers": []},{"enumeration_type": "NPI-1", "number": 1205327830, "last_updated_epoch":
+        1526601600, "created_epoch": 1526601600, "basic": {"name_prefix": "MS.", "first_name":
+        "AMBER", "last_name": "DILLON", "middle_name": "RENEE", "credential": "LPC",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2018-05-18",
+        "last_updated": "2018-05-18", "status": "A", "name": "DILLON AMBER"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "410 S
+        ORCHARD ST STE 184", "address_2": "", "city": "BOISE", "state": "ID", "postal_code":
+        "837051293", "telephone_number": "208-891-9891"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "3108 N 26TH ST", "address_2": "", "city": "BOISE", "state": "ID", "postal_code":
+        "837020614", "telephone_number": "208-891-9891"}], "taxonomies": [{"code":
+        "101YP2500X", "desc": "Counselor Professional", "primary": true, "state":
+        "ID", "license": "6943"}], "identifiers": []},{"enumeration_type": "NPI-1",
+        "number": 1518459080, "last_updated_epoch": 1527724800, "created_epoch": 1527724800,
+        "basic": {"first_name": "ADDIE", "last_name": "DIROBERTS", "middle_name":
+        "ROBIN", "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2018-05-31",
+        "last_updated": "2018-05-31", "status": "A", "name": "DIROBERTS ADDIE"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "10240
+        W. 31ST AVE", "address_2": "", "city": "PHOENIX", "state": "AZ", "postal_code":
+        "85051", "telephone_number": "602-863-1862", "fax_number": "602-863-4388"},
         {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "8910 MAIN ST E", "address_2":
-        "SUITE C", "city": "BONNEY LAKE", "state": "WA", "postal_code": "983918988",
-        "telephone_number": "253-299-6556"}], "taxonomies": [{"code": "163WA0400X",
-        "desc": "Registered Nurse Addiction (Substance Use Disorder)", "primary":
-        false, "state": "WA", "license": "AP30006338RN00135307"}, {"code": "163WA2000X",
-        "desc": "Registered Nurse Administrator", "primary": false, "state": "WA",
-        "license": "AP30006338RN00135307"}, {"code": "163W00000X", "desc": "Registered
-        Nurse", "primary": false, "state": "WA", "license": "AP30006338RN00135307"},
-        {"code": "163WC0400X", "desc": "Registered Nurse Case Management", "primary":
-        false, "state": "WA", "license": "AP30006338RN00135307"}, {"code": "163WC1600X",
-        "desc": "Registered Nurse Continuing Education/Staff Development", "primary":
-        false, "state": "WA", "license": "AP30006338RN00135307"}, {"code": "163WN0800X",
-        "desc": "Registered Nurse Neuroscience", "primary": false, "state": "WA",
-        "license": "AP30006338RN00135307"}, {"code": "163WP0000X", "desc": "Registered
-        Nurse Pain Management", "primary": false, "state": "WA", "license": "AP30006338RN00135307"},
-        {"code": "163WP0809X", "desc": "Registered Nurse Psych/Mental Health, Adult",
-        "primary": false, "state": "WA", "license": "AP30006338RN00135307"}, {"code":
-        "363LP0808X", "desc": "Nurse Practitioner Psych/Mental Health", "primary":
-        true, "state": "WA", "license": "AP30006338"}], "identifiers": [{"identifier":
-        "9644246", "code": "05", "desc": "MEDICAID", "state": "WA", "issuer": ""},
-        {"identifier": "0193813", "code": "01", "desc": "Other", "state": "WA", "issuer":
-        "L & I"}, {"identifier": "MP1179084", "code": "01", "desc": "Other", "state":
-        "WA", "issuer": "DEA"}]},{"enumeration_type": "NPI-1", "number": 1518459080,
-        "last_updated_epoch": 1527724800, "created_epoch": 1527724800, "basic": {"first_name":
-        "ADDIE", "last_name": "DIROBERTS", "middle_name": "ROBIN", "sole_proprietor":
-        "NO", "gender": "F", "enumeration_date": "2018-05-31", "last_updated": "2018-05-31",
-        "status": "A", "name": "DIROBERTS ADDIE"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "10240 W. 31ST AVE", "address_2":
-        "", "city": "PHOENIX", "state": "AZ", "postal_code": "85051", "telephone_number":
-        "602-863-1862", "fax_number": "602-863-4388"}, {"country_code": "US", "country_name":
-        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "6008 E CALLE DE POMPAS", "address_2": "", "city": "CAVE CREEK", "state":
-        "AZ", "postal_code": "853312509", "telephone_number": "602-863-1862", "fax_number":
-        "602-863-4388"}], "taxonomies": [{"code": "101YM0800X", "desc": "Counselor
-        Mental Health", "primary": true, "state": "AZ", "license": "LAC-16052"}],
-        "identifiers": [{"identifier": "LAC-16052", "code": "05", "desc": "MEDICAID",
-        "state": "AZ", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1982938171,
-        "last_updated_epoch": 1546177716, "created_epoch": 1253577600, "basic": {"first_name":
-        "AZRA", "last_name": "OMERBEGOVIC", "credential": "MS, MLADC, LCMHC", "sole_proprietor":
-        "NO", "gender": "F", "enumeration_date": "2009-09-22", "last_updated": "2018-12-30",
+        "MAILING", "address_type": "DOM", "address_1": "6008 E CALLE DE POMPAS", "address_2":
+        "", "city": "CAVE CREEK", "state": "AZ", "postal_code": "853312509", "telephone_number":
+        "602-863-1862", "fax_number": "602-863-4388"}], "taxonomies": [{"code": "101YM0800X",
+        "desc": "Counselor Mental Health", "primary": true, "state": "AZ", "license":
+        "LAC-16052"}], "identifiers": [{"identifier": "LAC-16052", "code": "05", "desc":
+        "MEDICAID", "state": "AZ", "issuer": ""}]},{"enumeration_type": "NPI-1", "number":
+        1154786986, "last_updated_epoch": 1537361016, "created_epoch": 1450656000,
+        "basic": {"name_prefix": "MS.", "first_name": "HEATHER", "last_name": "YOKUM",
+        "middle_name": "MICHELLE", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2015-12-21", "last_updated": "2018-09-19", "status": "A", "name": "YOKUM
+        HEATHER"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "121 CYPRESS DR", "address_2": "", "city": "DES ALLEMANDS", "state": "LA",
+        "postal_code": "700304620", "telephone_number": "985-758-5621"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "121 CYPRESS DR", "address_2": "", "city": "DES ALLEMANDS",
+        "state": "LA", "postal_code": "700304620", "telephone_number": "985-758-5621"}],
+        "taxonomies": [{"code": "101Y00000X", "desc": "Counselor", "primary": false,
+        "state": "", "license": ""}, {"code": "171M00000X", "desc": "Case Manager/Care
+        Coordinator", "primary": true, "state": "", "license": ""}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1982938171, "last_updated_epoch":
+        1546177716, "created_epoch": 1253577600, "basic": {"first_name": "AZRA", "last_name":
+        "OMERBEGOVIC", "credential": "MS, MLADC, LCMHC", "sole_proprietor": "NO",
+        "gender": "F", "enumeration_date": "2009-09-22", "last_updated": "2018-12-30",
         "status": "A", "name": "OMERBEGOVIC AZRA"}, "other_names": [], "addresses":
         [{"country_code": "US", "country_name": "United States", "address_purpose":
         "LOCATION", "address_type": "DOM", "address_1": "10 WEST ST", "address_2":
@@ -339,24 +312,81 @@ http_interactions:
         [{"code": "101YA0400X", "desc": "Counselor Addiction (Substance Use Disorder)",
         "primary": false, "state": "NH", "license": "0580"}, {"code": "101YM0800X",
         "desc": "Counselor Mental Health", "primary": true, "state": "NH", "license":
-        "2081"}], "identifiers": []},{"enumeration_type": "NPI-1", "number": 1730182973,
-        "last_updated_epoch": 1183852800, "created_epoch": 1116806400, "basic": {"name_prefix":
-        "MS.", "first_name": "CHRISTI", "last_name": "BALLARD", "middle_name": "C",
-        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-05-23",
-        "last_updated": "2007-07-08", "status": "A", "name": "BALLARD CHRISTI"}, "other_names":
+        "2081"}], "identifiers": []},{"enumeration_type": "NPI-1", "number": 1699248757,
+        "last_updated_epoch": 1547135932, "created_epoch": 1547078400, "basic": {"first_name":
+        "LEAH", "last_name": "GRAY", "middle_name": "MARIE", "credential": "MS, LPC-IT",
+        "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2019-01-10",
+        "last_updated": "2019-01-10", "status": "A", "name": "GRAY LEAH"}, "other_names":
         [], "addresses": [{"country_code": "US", "country_name": "United States",
-        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "255 N
-        MIAMI ST", "address_2": "", "city": "WABASH", "state": "IN", "postal_code":
-        "469922705", "telephone_number": "260-563-8446", "fax_number": "574-563-1902"},
-        {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "850 N HARRISON ST", "address_2":
-        "", "city": "WARSAW", "state": "IN", "postal_code": "465803163", "telephone_number":
-        "574-267-7169", "fax_number": "574-269-3995"}], "taxonomies": [{"code": "101YM0800X",
-        "desc": "Counselor Mental Health", "primary": true, "state": "IN", "license":
-        "39000251A"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
-        1659374791, "last_updated_epoch": 1183852800, "created_epoch": 1116806400,
-        "basic": {"name_prefix": "MR.", "first_name": "KEVIN", "last_name": "BROWN",
-        "middle_name": "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "120 S
+        BARSTOW ST", "address_2": "", "city": "EAU CLAIRE", "state": "WI", "postal_code":
+        "547013642", "telephone_number": "715-832-2221"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "120 S BARSTOW ST", "address_2": "", "city": "EAU CLAIRE", "state": "WI",
+        "postal_code": "547013642", "telephone_number": "715-832-2221"}], "taxonomies":
+        [{"code": "101YP2500X", "desc": "Counselor Professional", "primary": true,
+        "state": "WI", "license": ""}], "identifiers": []},{"enumeration_type": "NPI-1",
+        "number": 1295738474, "last_updated_epoch": 1183939200, "created_epoch": 1116806400,
+        "basic": {"first_name": "ANNA", "last_name": "ISOM", "credential": "LPC",
+        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-05-23",
+        "last_updated": "2007-07-09", "status": "A", "name": "ISOM ANNA"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "901 WALLACE
+        BLVD", "address_2": "BLDG 501", "city": "AMARILLO", "state": "TX", "postal_code":
+        "791061705", "telephone_number": "806-351-3348"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "901 WALLACE BLVD", "address_2": "BLDG 501", "city": "AMARILLO", "state":
+        "TX", "postal_code": "791061705", "telephone_number": "806-351-3348"}], "taxonomies":
+        [{"code": "101YP2500X", "desc": "Counselor Professional", "primary": true,
+        "state": "TX", "license": "16516"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1588667703, "last_updated_epoch": 1383696000, "created_epoch":
+        1116806400, "basic": {"name_prefix": "MR.", "first_name": "LYNN", "last_name":
+        "SIMS", "credential": "M.ED.", "sole_proprietor": "YES", "gender": "M", "enumeration_date":
+        "2005-05-23", "last_updated": "2013-11-06", "status": "A", "name": "SIMS LYNN"},
+        "other_names": [], "addresses": [{"country_code": "US", "country_name": "United
+        States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "4334 NW EXPRESSWAY", "address_2": "STE 266", "city": "OKLAHOMA CITY", "state":
+        "OK", "postal_code": "731161578", "telephone_number": "405-842-6552", "fax_number":
+        "405-842-6559"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 721175", "address_2":
+        "", "city": "OKLAHOMA CITY", "state": "OK", "postal_code": "731721175", "telephone_number":
+        "405-842-6552", "fax_number": "405-842-6559"}], "taxonomies": [{"code": "101YA0400X",
+        "desc": "Counselor Addiction (Substance Use Disorder)", "primary": false,
+        "state": "OK", "license": "7554161186"}, {"code": "106H00000X", "desc": "Marriage
+        & Family Therapist", "primary": true, "state": "OK", "license": "75"}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1538162755, "last_updated_epoch":
+        1383696000, "created_epoch": 1116806400, "basic": {"name_prefix": "MRS.",
+        "first_name": "TOMMYE", "last_name": "SIMS", "middle_name": "J", "credential":
+        "M.ED.", "sole_proprietor": "YES", "gender": "F", "enumeration_date": "2005-05-23",
+        "last_updated": "2013-11-06", "status": "A", "name": "SIMS TOMMYE"}, "other_names":
+        [], "addresses": [{"country_code": "US", "country_name": "United States",
+        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "4334 NW
+        EXPRESSWAY", "address_2": "SUITE 266", "city": "OKLAHOMA CITY", "state": "OK",
+        "postal_code": "731161578", "telephone_number": "405-842-6552", "fax_number":
+        "405-842-6559"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 721175", "address_2":
+        "", "city": "OKLAHOMA CITY", "state": "OK", "postal_code": "731721175", "telephone_number":
+        "405-842-6552", "fax_number": "405-842-6559"}], "taxonomies": [{"code": "101YA0400X",
+        "desc": "Counselor Addiction (Substance Use Disorder)", "primary": false,
+        "state": "OK", "license": "7634811187"}, {"code": "106H00000X", "desc": "Marriage
+        & Family Therapist", "primary": true, "state": "OK", "license": "076"}], "identifiers":
+        []},{"enumeration_type": "NPI-1", "number": 1730182973, "last_updated_epoch":
+        1183852800, "created_epoch": 1116806400, "basic": {"name_prefix": "MS.", "first_name":
+        "CHRISTI", "last_name": "BALLARD", "middle_name": "C", "sole_proprietor":
+        "NO", "gender": "F", "enumeration_date": "2005-05-23", "last_updated": "2007-07-08",
+        "status": "A", "name": "BALLARD CHRISTI"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "255 N MIAMI ST", "address_2":
+        "", "city": "WABASH", "state": "IN", "postal_code": "469922705", "telephone_number":
+        "260-563-8446", "fax_number": "574-563-1902"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "850 N HARRISON ST", "address_2": "", "city": "WARSAW", "state": "IN", "postal_code":
+        "465803163", "telephone_number": "574-267-7169", "fax_number": "574-269-3995"}],
+        "taxonomies": [{"code": "101YM0800X", "desc": "Counselor Mental Health", "primary":
+        true, "state": "IN", "license": "39000251A"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1659374791, "last_updated_epoch": 1183852800, "created_epoch":
+        1116806400, "basic": {"name_prefix": "MR.", "first_name": "KEVIN", "last_name":
+        "BROWN", "middle_name": "J", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
         "2005-05-23", "last_updated": "2007-07-08", "status": "A", "name": "BROWN
         KEVIN"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
         "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
@@ -368,10 +398,90 @@ http_interactions:
         "574-267-7169", "fax_number": "574-269-3995"}], "taxonomies": [{"code": "101YM0800X",
         "desc": "Counselor Mental Health", "primary": true, "state": "IN", "license":
         "39001329A"}], "identifiers": []},{"enumeration_type": "NPI-1", "number":
-        1679576532, "last_updated_epoch": 1183852800, "created_epoch": 1116892800,
-        "basic": {"name_prefix": "MR.", "first_name": "WILLIAM", "last_name": "COBURN",
-        "middle_name": "RICHARD", "credential": "MA, LPC", "sole_proprietor": "NO",
-        "gender": "M", "enumeration_date": "2005-05-24", "last_updated": "2007-07-08",
+        1407859507, "last_updated_epoch": 1183852800, "created_epoch": 1116806400,
+        "basic": {"name_prefix": "MRS.", "first_name": "DOLORES", "last_name": "VEES",
+        "middle_name": "G", "credential": "LPC, LPCS, NCC", "sole_proprietor": "YES",
+        "gender": "F", "enumeration_date": "2005-05-23", "last_updated": "2007-07-08",
+        "status": "A", "name": "VEES DOLORES"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "1477 EBENEZER RD", "address_2": "", "city": "ROCK HILL",
+        "state": "SC", "postal_code": "297322338", "telephone_number": "803-487-3064",
+        "fax_number": "803-329-4184"}, {"country_code": "US", "country_name": "United
+        States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "PO BOX 4075", "address_2": "", "city": "ROCK HILL", "state": "SC", "postal_code":
+        "297326075", "telephone_number": "803-487-3064", "fax_number": "803-329-4184"}],
+        "taxonomies": [{"code": "101YP2500X", "desc": "Counselor Professional", "primary":
+        true, "state": "SC", "license": "1260"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1285637389, "last_updated_epoch": 1384300800, "created_epoch":
+        1116806400, "basic": {"first_name": "DELORA", "last_name": "BOAZ", "middle_name":
+        "K.", "credential": "LCSW, CADC", "sole_proprietor": "NO", "gender": "F",
+        "enumeration_date": "2005-05-23", "last_updated": "2013-11-13", "status":
+        "A", "name": "BOAZ DELORA"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "600 S PRESTON ST", "address_2": "", "city": "LOUISVILLE",
+        "state": "KY", "postal_code": "402021716", "telephone_number": "502-583-3951"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "600 S PRESTON ST", "address_2":
+        "", "city": "LOUISVILLE", "state": "KY", "postal_code": "402021716", "telephone_number":
+        "502-583-3951"}], "taxonomies": [{"code": "101YA0400X", "desc": "Counselor
+        Addiction (Substance Use Disorder)", "primary": false, "state": "KY", "license":
+        "0008"}, {"code": "104100000X", "desc": "Social Worker", "primary": true,
+        "state": "KY", "license": "1369"}], "identifiers": [{"identifier": "701764000",
+        "code": "01", "desc": "Other", "state": "", "issuer": "MAGELLAN MIS"}, {"identifier":
+        "78903689", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""},
+        {"identifier": "50704000", "code": "01", "desc": "Other", "state": "", "issuer":
+        "MAGELLAN MIS GROUP"}, {"identifier": "CK2274", "code": "01", "desc": "Other",
+        "state": "KY", "issuer": "MEDICARE RAILROAD GROUP"}, {"identifier": "000000056294",
+        "code": "01", "desc": "Other", "state": "", "issuer": "ANTHEM GROUP"}, {"identifier":
+        "82900176", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""},
+        {"identifier": "2748490000", "code": "01", "desc": "Other", "state": "KY",
+        "issuer": "PASSPORT GROUP"}, {"identifier": "6764", "code": "01", "desc":
+        "Other", "state": "KY", "issuer": "MEDICARE GROUP"}, {"identifier": "2748490000",
+        "code": "01", "desc": "Other", "state": "KY", "issuer": "PASSPORT ADVANTAGE"},
+        {"identifier": "82000902", "code": "05", "desc": "MEDICAID", "state": "KY",
+        "issuer": ""}, {"identifier": "000000312667", "code": "01", "desc": "Other",
+        "state": "", "issuer": "ANTHEM"}, {"identifier": "65927857", "code": "05",
+        "desc": "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type": "NPI-1",
+        "number": 1700889565, "last_updated_epoch": 1369785600, "created_epoch": 1116892800,
+        "basic": {"name_prefix": "MRS.", "first_name": "JANET", "last_name": "TODD",
+        "middle_name": "MEREDITH", "credential": "LPC LMFT", "sole_proprietor": "YES",
+        "gender": "F", "enumeration_date": "2005-05-24", "last_updated": "2013-05-29",
+        "status": "A", "name": "TODD JANET"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "1258 N MAIN ST", "address_2": "", "city": "MARION", "state":
+        "VA", "postal_code": "243544312", "telephone_number": "276-783-2440", "fax_number":
+        "276-783-2021"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "PO BOX 531", "address_2":
+        "", "city": "MEADOWVIEW", "state": "VA", "postal_code": "243610531", "telephone_number":
+        "276-783-2440", "fax_number": "276-783-2021"}], "taxonomies": [{"code": "106H00000X",
+        "desc": "Marriage & Family Therapist", "primary": false, "state": "VA", "license":
+        "0717001010"}, {"code": "101YP2500X", "desc": "Counselor Professional", "primary":
+        true, "state": "VA", "license": "0701002753"}], "identifiers": [{"identifier":
+        "394595", "code": "01", "desc": "Other", "state": "VA", "issuer": "BC BS PIN"},
+        {"identifier": "005407885", "code": "05", "desc": "MEDICAID", "state": "VA",
+        "issuer": ""}, {"identifier": "507638", "code": "01", "desc": "Other", "state":
+        "VA", "issuer": "VALUE OPTIONS PIN"}, {"identifier": "568156000", "code":
+        "01", "desc": "Other", "state": "VA", "issuer": "MAGELLAN MIS #"}, {"identifier":
+        "342504", "code": "01", "desc": "Other", "state": "VA", "issuer": "MHN PIN"}]},{"enumeration_type":
+        "NPI-1", "number": 1033112826, "last_updated_epoch": 1270684800, "created_epoch":
+        1116892800, "basic": {"first_name": "MEGAN", "last_name": "BUCKLIN", "middle_name":
+        "K", "credential": "LCPC", "sole_proprietor": "YES", "gender": "F", "enumeration_date":
+        "2005-05-24", "last_updated": "2010-04-08", "status": "A", "name": "BUCKLIN
+        MEGAN"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "197 W. HARRISON STREET", "address_2": "SUITE 2", "city": "BOURBONNAIS", "state":
+        "IL", "postal_code": "60914", "telephone_number": "815-935-5540", "fax_number":
+        "815-935-5459"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "197 W. HARRISON STREET", "address_2":
+        "SUITE 2", "city": "BOURBONNAIS", "state": "IL", "postal_code": "60914", "telephone_number":
+        "815-935-5540", "fax_number": "815-935-5459"}], "taxonomies": [{"code": "101YP2500X",
+        "desc": "Counselor Professional", "primary": false, "state": "IL", "license":
+        "178-002729"}, {"code": "101YP2500X", "desc": "Counselor Professional", "primary":
+        true, "state": "IL", "license": "180-005794"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1679576532, "last_updated_epoch": 1183852800, "created_epoch":
+        1116892800, "basic": {"name_prefix": "MR.", "first_name": "WILLIAM", "last_name":
+        "COBURN", "middle_name": "RICHARD", "credential": "MA, LPC", "sole_proprietor":
+        "NO", "gender": "M", "enumeration_date": "2005-05-24", "last_updated": "2007-07-08",
         "status": "A", "name": "COBURN WILLIAM"}, "other_names": [], "addresses":
         [{"country_code": "US", "country_name": "United States", "address_purpose":
         "LOCATION", "address_type": "DOM", "address_1": "1025 MAIN ST", "address_2":
@@ -382,178 +492,19 @@ http_interactions:
         "state": "WV", "postal_code": "260032726", "telephone_number": "304-232-7232",
         "fax_number": "304-232-7245"}], "taxonomies": [{"code": "101YM0800X", "desc":
         "Counselor Mental Health", "primary": true, "state": "WV", "license": "1683"}],
-        "identifiers": []},{"enumeration_type": "NPI-1", "number": 1366445215, "last_updated_epoch":
-        1432893978, "created_epoch": 1116892800, "basic": {"name_prefix": "MS.", "first_name":
-        "ALICE", "last_name": "GRIFFITT", "middle_name": "JOYCE", "credential": "MSN,
-        ARNP, BC, CNS", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2005-05-24", "last_updated": "2015-05-29", "status": "A", "name": "GRIFFITT
-        ALICE"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "identifiers": []},{"enumeration_type": "NPI-1", "number": 1417331588, "last_updated_epoch":
+        1437149106, "created_epoch": 1437091200, "basic": {"first_name": "SPENCER",
+        "last_name": "ENRIQUEZ", "sole_proprietor": "YES", "gender": "M", "enumeration_date":
+        "2015-07-17", "last_updated": "2015-07-17", "status": "A", "name": "ENRIQUEZ
+        SPENCER"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
         "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "5815 BROADWAY AVE", "address_2": "", "city": "GREAT BEND", "state": "KS",
-        "postal_code": "675303123", "telephone_number": "620-792-2544", "fax_number":
-        "620-792-4323"}, {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "5815 BROADWAY AVE", "address_2":
-        "", "city": "GREAT BEND", "state": "KS", "postal_code": "675303123", "telephone_number":
-        "620-792-2544", "fax_number": "620-792-4323"}], "taxonomies": [{"code": "363LP0808X",
-        "desc": "Nurse Practitioner Psych/Mental Health", "primary": false, "state":
-        "KS", "license": "74614"}, {"code": "364SP0808X", "desc": "Clinical Nurse
-        Specialist Psych/Mental Health", "primary": true, "state": "KS", "license":
-        "74614"}], "identifiers": [{"identifier": "161876", "code": "01", "desc":
-        "Other", "state": "KS", "issuer": "MEDICARE"}, {"identifier": "161876", "code":
-        "01", "desc": "Other", "state": "KS", "issuer": "BLUE CROSS BLUE SHIELD"},
-        {"identifier": "100375860C", "code": "05", "desc": "MEDICAID", "state": "KS",
-        "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1629450036, "last_updated_epoch":
-        1434985196, "created_epoch": 1434931200, "basic": {"first_name": "NORA", "last_name":
-        "MCCLUNG", "credential": "R.N.", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2015-06-22", "last_updated": "2015-06-22", "status": "A", "name": "MCCLUNG
-        NORA"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "6801 LUCY CORR CT", "address_2": "", "city": "CHESTERFIELD", "state": "VA",
-        "postal_code": "238326657", "telephone_number": "804-748-1227", "fax_number":
-        "804-717-6659"}, {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "6801 LUCY CORR CT", "address_2":
-        "", "city": "CHESTERFIELD", "state": "VA", "postal_code": "238326657", "telephone_number":
-        "804-748-1227", "fax_number": "804-717-6659"}], "taxonomies": [{"code": "163WP0808X",
-        "desc": "Registered Nurse Psych/Mental Health", "primary": true, "state":
-        "VA", "license": "0001241849"}], "identifiers": [{"identifier": "1336293000",
-        "code": "05", "desc": "MEDICAID", "state": "VA", "issuer": ""}]},{"enumeration_type":
-        "NPI-1", "number": 1417331588, "last_updated_epoch": 1437149106, "created_epoch":
-        1437091200, "basic": {"first_name": "SPENCER", "last_name": "ENRIQUEZ", "sole_proprietor":
-        "YES", "gender": "M", "enumeration_date": "2015-07-17", "last_updated": "2015-07-17",
-        "status": "A", "name": "ENRIQUEZ SPENCER"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "5284 ADOLFO RD STE 100",
-        "address_2": "", "city": "CAMARILLO", "state": "CA", "postal_code": "930126790",
-        "telephone_number": "805-289-0120"}, {"country_code": "US", "country_name":
-        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
         "5284 ADOLFO RD STE 100", "address_2": "", "city": "CAMARILLO", "state": "CA",
-        "postal_code": "930126790"}], "taxonomies": [{"code": "101YM0800X", "desc":
-        "Counselor Mental Health", "primary": true, "state": "", "license": ""}],
-        "identifiers": [{"identifier": "56CC", "code": "01", "desc": "Other", "state":
-        "CA", "issuer": "ASPIRA"}]},{"enumeration_type": "NPI-1", "number": 1952304040,
-        "last_updated_epoch": 1439643492, "created_epoch": 1116806400, "basic": {"first_name":
-        "JANICE", "last_name": "BRASHEAR", "middle_name": "L", "credential": "ARNP",
-        "sole_proprietor": "NO", "gender": "F", "enumeration_date": "2005-05-23",
-        "last_updated": "2015-08-15", "status": "A", "name": "BRASHEAR JANICE"}, "other_names":
-        [], "addresses": [{"country_code": "US", "country_name": "United States",
-        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "510 SPRING
-        ST", "address_2": "", "city": "JEFFERSONVILLE", "state": "IN", "postal_code":
-        "471303554", "telephone_number": "812-282-1888", "fax_number": "812-285-8392"},
-        {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "510 SPRING ST", "address_2":
-        "", "city": "JEFFERSONVILLE", "state": "IN", "postal_code": "471303554", "telephone_number":
-        "812-282-1888", "fax_number": "812-285-8392"}], "taxonomies": [{"code": "363LP0808X",
-        "desc": "Nurse Practitioner Psych/Mental Health", "primary": false, "state":
-        "KY", "license": "3003537"}, {"code": "363LP0808X", "desc": "Nurse Practitioner
-        Psych/Mental Health", "primary": true, "state": "IN", "license": "71001473A"}],
-        "identifiers": [{"identifier": "100386460", "code": "01", "desc": "Other",
-        "state": "IN", "issuer": "INDIANA MEDICAID GROUP"}, {"identifier": "160860",
-        "code": "01", "desc": "Other", "state": "IN", "issuer": "MEDICARE GROUP"},
-        {"identifier": "2444453000", "code": "01", "desc": "Other", "state": "KY",
-        "issuer": "PASSPORT ADVANTAGE"}, {"identifier": "50704000", "code": "01",
-        "desc": "Other", "state": "", "issuer": "MAGELLAN GROUP MIS"}, {"identifier":
-        "CG2274", "code": "01", "desc": "Other", "state": "IN", "issuer": "MEDICARE
-        RAILROAD GROUP"}, {"identifier": "78009404", "code": "05", "desc": "MEDICAID",
-        "state": "KY", "issuer": ""}, {"identifier": "160780", "code": "01", "desc":
-        "Other", "state": "IN", "issuer": "MEDICARE GROUP"}, {"identifier": "CK2274",
-        "code": "01", "desc": "Other", "state": "KY", "issuer": "RAILROAD MEDICARE
-        GROUP"}, {"identifier": "78903689", "code": "05", "desc": "MEDICAID", "state":
-        "KY", "issuer": ""}, {"identifier": "P00455002", "code": "01", "desc": "Other",
-        "state": "IN", "issuer": "RAILROAD MEDICARE"}, {"identifier": "200298400A",
-        "code": "05", "desc": "MEDICAID", "state": "IN", "issuer": ""}, {"identifier":
-        "000000303817", "code": "01", "desc": "Other", "state": "", "issuer": "ANTHEM"},
-        {"identifier": "1487872636", "code": "01", "desc": "Other", "state": "", "issuer":
-        "NPI GROUP NUMBER (ARNP)"}, {"identifier": "6764", "code": "01", "desc": "Other",
-        "state": "KY", "issuer": "MEDICARE GROUP"}, {"identifier": "P00065495", "code":
-        "01", "desc": "Other", "state": "KY", "issuer": "MEDICARE RAILROD"}, {"identifier":
-        "000000056294", "code": "01", "desc": "Other", "state": "", "issuer": "ANTHEM
-        GROUP #"}, {"identifier": "2444451000", "code": "01", "desc": "Other", "state":
-        "KY", "issuer": "PASSPORT GROUP"}, {"identifier": "82900176", "code": "05",
-        "desc": "MEDICAID", "state": "KY", "issuer": ""}, {"identifier": "580397000",
-        "code": "01", "desc": "Other", "state": "", "issuer": "MAGELLEN MIS #"}, {"identifier":
-        "65927857", "code": "05", "desc": "MEDICAID", "state": "KY", "issuer": ""}]},{"enumeration_type":
-        "NPI-1", "number": 1336504158, "last_updated_epoch": 1450714293, "created_epoch":
-        1450656000, "basic": {"name_prefix": "MRS.", "first_name": "RACHEL", "last_name":
-        "BLOUGH", "middle_name": "SUE", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
-        "2015-12-21", "last_updated": "2015-12-21", "status": "A", "name": "BLOUGH
-        RACHEL"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
-        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
-        "106 16TH ST SW", "address_2": "", "city": "WAVERLY", "state": "IA", "postal_code":
-        "506772822", "telephone_number": "319-859-3587", "fax_number": "319-352-0773"},
-        {"country_code": "US", "country_name": "United States", "address_purpose":
-        "MAILING", "address_type": "DOM", "address_1": "106 16TH ST SW", "address_2":
-        "", "city": "WAVERLY", "state": "IA", "postal_code": "506772822", "telephone_number":
-        "319-859-3587", "fax_number": "319-352-0773"}], "taxonomies": [{"code": "101YM0800X",
-        "desc": "Counselor Mental Health", "primary": true, "state": "IA", "license":
-        "001690"}], "identifiers": []},{"enumeration_type": "NPI-1", "number": 1669971909,
-        "last_updated_epoch": 1517443200, "created_epoch": 1517443200, "basic": {"first_name":
-        "TANUSHREE", "last_name": "DEY", "sole_proprietor": "YES", "gender": "F",
-        "enumeration_date": "2018-02-01", "last_updated": "2018-02-01", "status":
-        "A", "name": "DEY TANUSHREE"}, "other_names": [], "addresses": [{"country_code":
-        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
-        "DOM", "address_1": "1 LILE CT STE 200", "address_2": "", "city": "LITTLE
-        ROCK", "state": "AR", "postal_code": "722056240", "telephone_number": "501-663-1837",
-        "fax_number": "501-663-1839"}, {"country_code": "US", "country_name": "United
-        States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "1 LILE CT STE 200", "address_2": "", "city": "LITTLE ROCK", "state": "AR",
-        "postal_code": "722056240", "telephone_number": "501-663-1837", "fax_number":
-        "501-663-1839"}], "taxonomies": [{"code": "101YM0800X", "desc": "Counselor
-        Mental Health", "primary": true, "state": "AR", "license": "A1712332"}], "identifiers":
-        []},{"enumeration_type": "NPI-1", "number": 1306849237, "last_updated_epoch":
-        1183852800, "created_epoch": 1116892800, "basic": {"first_name": "MICHAEL",
-        "last_name": "FOSTER", "middle_name": "ERIC", "credential": "M.ED.", "sole_proprietor":
-        "NO", "gender": "M", "enumeration_date": "2005-05-24", "last_updated": "2007-07-08",
-        "status": "A", "name": "FOSTER MICHAEL"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "3808 CARR PL N", "address_2":
-        "", "city": "SEATTLE", "state": "WA", "postal_code": "981038126", "telephone_number":
-        "206-999-3477", "fax_number": "207-782-4124"}, {"country_code": "US", "country_name":
-        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "3808 CARR PL N", "address_2": "", "city": "SEATTLE", "state": "WA", "postal_code":
-        "981038126", "telephone_number": "206-999-3477", "fax_number": "207-782-4124"}],
-        "taxonomies": [{"code": "101YM0800X", "desc": "Counselor Mental Health", "primary":
-        true, "state": "WA", "license": "LH00005171"}], "identifiers": []},{"enumeration_type":
-        "NPI-1", "number": 1770586489, "last_updated_epoch": 1247616000, "created_epoch":
-        1117152000, "basic": {"first_name": "SUE", "last_name": "HERRING", "middle_name":
-        "BINGHAM", "credential": "MS, LMHC, NCC, BCETS", "sole_proprietor": "NO",
-        "gender": "F", "enumeration_date": "2005-05-27", "last_updated": "2009-07-15",
-        "status": "A", "name": "HERRING SUE"}, "other_names": [], "addresses": [{"country_code":
-        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
-        "DOM", "address_1": "1260 W 23RD ST", "address_2": "", "city": "PANAMA CITY",
-        "state": "FL", "postal_code": "324053646", "telephone_number": "850-872-3727",
-        "fax_number": "850-872-3729"}, {"country_code": "US", "country_name": "United
-        States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "PO BOX 2159", "address_2": "", "city": "LYNN HAVEN", "state": "FL", "postal_code":
-        "324448159", "telephone_number": "850-872-3727", "fax_number": "850-872-3729"}],
-        "taxonomies": [{"code": "101YM0800X", "desc": "Counselor Mental Health", "primary":
-        true, "state": "FL", "license": "MH 7041"}], "identifiers": []},{"enumeration_type":
-        "NPI-1", "number": 1851394357, "last_updated_epoch": 1183852800, "created_epoch":
-        1117152000, "basic": {"name_prefix": "MRS.", "first_name": "MARYANN", "last_name":
-        "DANKER", "middle_name": "MEHLFELDER", "credential": "ARNP", "sole_proprietor":
-        "NO", "gender": "F", "enumeration_date": "2005-05-27", "last_updated": "2007-07-08",
-        "status": "A", "name": "DANKER MARYANN"}, "other_names": [], "addresses":
-        [{"country_code": "US", "country_name": "United States", "address_purpose":
-        "LOCATION", "address_type": "DOM", "address_1": "1251 COWART RD", "address_2":
-        "", "city": "PIERSON", "state": "FL", "postal_code": "321802121", "telephone_number":
-        "386-749-0996", "fax_number": "386-749-3041"}, {"country_code": "US", "country_name":
-        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "1251 COWART RD", "address_2": "", "city": "PIERSON", "state": "FL", "postal_code":
-        "321802121", "telephone_number": "386-749-0996", "fax_number": "386-749-3041"}],
-        "taxonomies": [{"code": "363LP0808X", "desc": "Nurse Practitioner Psych/Mental
-        Health", "primary": true, "state": "FL", "license": "1610962"}], "identifiers":
-        []},{"enumeration_type": "NPI-1", "number": 1902809569, "last_updated_epoch":
-        1183852800, "created_epoch": 1117152000, "basic": {"name_prefix": "MR.", "first_name":
-        "CARL", "last_name": "MAHLER", "middle_name": "F.", "credential": "M.S.",
-        "sole_proprietor": "NO", "gender": "M", "enumeration_date": "2005-05-27",
-        "last_updated": "2007-07-08", "status": "A", "name": "MAHLER CARL"}, "other_names":
-        [], "addresses": [{"country_code": "US", "country_name": "United States",
-        "address_purpose": "LOCATION", "address_type": "DOM", "address_1": "9601 MICCOSUKEE
-        RD", "address_2": "LOT 63", "city": "TALLAHASSEE", "state": "FL", "postal_code":
-        "323099665", "telephone_number": "850-877-0318"}, {"country_code": "US", "country_name":
-        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
-        "9601 MICCOSUKEE RD", "address_2": "LOT 63", "city": "TALLAHASSEE", "state":
-        "FL", "postal_code": "323099665", "telephone_number": "850-877-0318"}], "taxonomies":
-        [{"code": "101YM0800X", "desc": "Counselor Mental Health", "primary": true,
-        "state": "FL", "license": "MH-0000885"}], "identifiers": []}]}'
-  recorded_at: Sun, 09 Jan 2022 15:08:14 GMT
+        "postal_code": "930126790", "telephone_number": "805-289-0120"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "5284 ADOLFO RD STE 100", "address_2": "", "city": "CAMARILLO",
+        "state": "CA", "postal_code": "930126790"}], "taxonomies": [{"code": "101YM0800X",
+        "desc": "Counselor Mental Health", "primary": true, "state": "", "license":
+        ""}], "identifiers": [{"identifier": "56CC", "code": "01", "desc": "Other",
+        "state": "CA", "issuer": "ASPIRA"}]}]}'
+  recorded_at: Mon, 10 Jan 2022 13:42:02 GMT
 recorded_with: VCR 6.0.0
