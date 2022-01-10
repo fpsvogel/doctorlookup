@@ -2,6 +2,8 @@
 
 Welcome to the [Doctor Lookup](https://doctorlookup.herokuapp.com/) codebase. Doctor Lookup is a tool for finding doctors in the U.S. by name, state, and/or specialization. It uses the [NPI API](https://npiregistry.cms.hhs.gov/registry/help-api) by the U.S. Centers for Medicare & Medicaid Services.
 
+This the last of four "lightning apps" that I built for practice, with a focus on Rails testing. For links to the other apps, and for more on how I built this one, see my blog post [Doctor Lookup: Rails lightning app #4](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool).
+
 ### Table of Contents
 
 - [Why this is on my GitHub portfolio](#why-this-is-on-my-github-portfolio)
@@ -12,13 +14,13 @@ Welcome to the [Doctor Lookup](https://doctorlookup.herokuapp.com/) codebase. Do
 
 ## Why this is on my GitHub portfolio
 
-I followed the same basic process that I followed in a trio of little apps that I built in December 2021 for Rails testing practice. Here is that process, in a nutshell:
+As with my previous lightning apps, I kept good habits at the front of my mind as I built Doctor Lookup. Here's the process that I followed, in a nutshell:
 
 - Test my code as I write it, not as an afterthought. I used RSpec and wrote model and system specs.
 - Use a minimalist CSS framework to speed up frontend development. This time I used [Pico](https://picocss.com/).
 - Avoid using the database if it's not necessary, just to keep things simple. In this case I did forgo the database, because the important features of a lookup tool don't require users or other persisted models. (The search results are shown dynamically with Turbo Streams, without the need to store them between requests.)
 
-For more on how I built this app, see my blog post [Doctor Lookup: Rails lightning app #4](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool).
+For more, see my blog post [Doctor Lookup: Rails lightning app #4](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool).
 
 ## Contributing
 
