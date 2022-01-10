@@ -58,7 +58,7 @@ class Query
 
   # @return [Array<String>] a list of all NPI taxonomy descriptions
   def taxonomy_descriptions
-    NPITaxonomyDescriptions::ALL
+    NpiTaxonomyDescriptions::ALL
   end
 
   # @return [Array<Array<String>>] pairs of U.S. state names and abbreviations
@@ -74,13 +74,13 @@ class Query
   # @return [Boolean] whether the taxonomy description (specialty) has a
   # specialization, as in "Social Worker -- Clinical".
   def taxonomy_description_has_specialization?
-    taxonomy_description.include? NPITaxonomyDescriptions::SEPARATOR
+    taxonomy_description.include? NpiTaxonomyDescriptions::SEPARATOR
   end
 
   # @return [String] the taxonomy description (specialty) with the
   # specialization in parentheses instead of after hyphens.
   def parenthesized_taxonomy_description
-    NPITaxonomyDescriptions.parenthesize(joined_taxonomy_description)
+    NpiTaxonomyDescriptions.parenthesize(joined_taxonomy_description)
   end
 
   private
@@ -143,15 +143,15 @@ class Query
   end
 
   def classification
-    taxonomy_description.split(NPITaxonomyDescriptions::SEPARATOR).first
+    taxonomy_description.split(NpiTaxonomyDescriptions::SEPARATOR).first
   end
 
   def specialization
-    taxonomy_description.split(NPITaxonomyDescriptions::SEPARATOR).second
+    taxonomy_description.split(NpiTaxonomyDescriptions::SEPARATOR).second
   end
 
   def joined_taxonomy_description
-    NPITaxonomyDescriptions.join(taxonomy_description)
+    NpiTaxonomyDescriptions.join(taxonomy_description)
   end
 
   def taxonomy_preliminary_higher_limit

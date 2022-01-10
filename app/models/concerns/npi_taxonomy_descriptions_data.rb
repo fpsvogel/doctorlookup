@@ -1,5 +1,5 @@
 # Scraped from a site. See taxonomy/scrape.rb.
-class NPITaxonomyDescriptionsData
+module NpiTaxonomyDescriptionsData
   DATA = {
     "207K00000X" => ["Allergy & Immunology"],
     "207KA0200X" => ["Allergy & Immunology", "Allergy"],

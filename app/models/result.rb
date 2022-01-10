@@ -52,7 +52,7 @@ class Result
     desc_and_primary = raw_taxonomies.map do |taxonomy|
       [taxonomy["desc"], taxonomy["primary"]]
     end.map do |desc, _primary|
-      NPITaxonomyDescriptions.parenthesize(desc)
+      NpiTaxonomyDescriptions.parenthesize(desc)
     end.each_with_object({}) do |(desc, primary), hash|
       hash[desc] = primary unless hash[desc] == true
     end

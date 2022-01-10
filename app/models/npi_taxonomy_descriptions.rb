@@ -1,12 +1,11 @@
-# Scraped from a site. See taxonomy/scrape.rb.
-class NPITaxonomyDescriptions < NPITaxonomyDescriptionsData
+class NpiTaxonomyDescriptions
   DEFAULT_TEXT = "Any"
   DEFAULT_VALUE = ""
   SEPARATOR = " -- "
 
   ALL =
     [[DEFAULT_TEXT, DEFAULT_VALUE]] +
-    DATA.map do |code, (classification, specialization)|
+    NpiTaxonomyDescriptionsData::DATA.map do |code, (classification, specialization)|
       if specialization
         ["#{classification} (#{specialization})",
          "#{classification} -- #{specialization}"]
@@ -17,7 +16,7 @@ class NPITaxonomyDescriptions < NPITaxonomyDescriptionsData
     end
 
   TO_PARENTHESIZED =
-    DATA.map do |code, (classification, specialization)|
+    NpiTaxonomyDescriptionsData::DATA.map do |code, (classification, specialization)|
       if specialization
         ["#{classification} #{specialization}",
         "#{classification} (#{specialization})"]
