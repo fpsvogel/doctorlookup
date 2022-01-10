@@ -9,20 +9,19 @@ URL = "https://opennpi.com/taxonomy/"
 CODES_INPUT_PATH = "taxonomy/codes.txt"
 DESC_OUTPUT_PATH ="taxonomy/descriptions.txt"
 DESC_IN_PAGE = /<h1>(?<classification>[^<]+)<br><small>(?:Specialization: (?<specialization>[^<]+))?<\/small>/
-OUTPUT_START = "ALL = [\n[DEFAULT_TEXT, DEFAULT_VALUE]"
-OUTPUT_END = "\n]"
+OUTPUT_START = "DATA = {"
+OUTPUT_END = "\n}"
 LINE = proc do |cls, spc, code, manual: false|
-  short = "\n  [\"#{cls}\", # #{code}\n   \"#{cls}\"]"
-  long = "\n  [\"#{cls} (#{spc})\", # #{code}\n   \"#{cls} -- #{spc}\"]"
+  line = "\n  \"#{code}\" => [\"#{cls}\"" + (spc ? ", \"#{spc}\"]" : "]")
   failed = "\n  # #{code} FAILED"
   failed_fixed = "#{failed}, fixed:"
   if cls.nil?
-    ",#{failed}#{" AUTO" unless manual}"
+    ",#{failed}"
   else
-    ",#{failed_fixed if manual}#{spc ? long : short}"
+    ",#{failed_fixed if manual}#{line}"
   end
 end
-start_after_code = "2082S0105X"
+start_after_code = nil
 
 codes = File.read(CODES_INPUT_PATH).split("\n").drop(1) # its first line is a comment
 File.write(DESC_OUTPUT_PATH, OUTPUT_START) unless start_after_code
