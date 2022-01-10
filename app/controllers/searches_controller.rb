@@ -27,12 +27,7 @@ class SearchesController < ApplicationController
 
   def query_params
     params.require(:query)
-          .permit(:taxonomy_description,
-                  :state,
-                  :city,
-                  :gender,
-                  :first_name,
-                  :last_name)
+          .permit(*Query::FORM_PARAMS)
   end
 
   def respond_to_create_or_show_more(results_action:, results_partial:)

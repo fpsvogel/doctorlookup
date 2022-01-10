@@ -17,13 +17,18 @@ class Query
   # would require an OrganizationResult model.
   API_URL = "https://npiregistry.cms.hhs.gov/api/?number=&enumeration_type=NPI-1&taxonomy_description=&first_name=&use_first_name_alias=&last_name=&organization_name=&address_purpose=&city=&state=&postal_code=&country_code=&limit=&skip=&version=2.1"
 
-  API_PARAM_ATTRIBUTES =
+  FORM_PARAMS =
     %i[taxonomy_description
        state
        city
+       gender
        first_name
-       last_name
-       limit]
+       last_name]
+
+  API_PARAMS = FORM_PARAMS \
+               - [:taxonomy_description] \
+               - [:gender] \
+               + [:limit]
 
   attribute :taxonomy_description, :string
   attribute :state,          :string
@@ -35,7 +40,7 @@ class Query
   attribute :effective_taxonomy_attr, :string
   attr_reader :limit
 
-  validate :any_param_besides_state_is_present
+  validate :any_param_besides_state_and_gender_is_present
 
   # Calls the API.
   # @return [Array<Result>] relevant information from each result in the response
@@ -71,6 +76,11 @@ class Query
     write_attribute(:gender, new_gender)
   end
 
+  def taxonomy_description=(new_taxonomy_description)
+    new_taxonomy_description = nil if new_taxonomy_description.downcase == "any"
+    write_attribute(:taxonomy_description, new_taxonomy_description)
+  end
+
   # @return [Boolean] whether the taxonomy description (specialty) has a
   # specialization, as in "Social Worker -- Clinical".
   def taxonomy_description_has_specialization?
@@ -85,8 +95,8 @@ class Query
 
   private
 
-  def any_param_besides_state_is_present
-    others = API_PARAM_ATTRIBUTES - [:state]
+  def any_param_besides_state_and_gender_is_present
+    others = FORM_PARAMS - [:state, :gender]
     others_blank = others.all? { |attr| send(attr).blank? }
     if others_blank
       errors.add :base, "Please specify at least one parameter besides State and Gender."
@@ -102,7 +112,7 @@ class Query
   def api_url_with_params(taxonomy_attr: :effective_taxonomy_description,
                           taxonomy_preliminary_higher_limit: false)
     url = API_URL
-    (API_PARAM_ATTRIBUTES - [:taxonomy_description]).each do |attr|
+    (API_PARAMS).each do |attr|
       url = insert_into_url(url, attr)
     end
     url = insert_into_url(url, :taxonomy_description,

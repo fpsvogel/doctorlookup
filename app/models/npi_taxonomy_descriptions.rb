@@ -1,10 +1,11 @@
 class NpiTaxonomyDescriptions
-  DEFAULT_TEXT = "Any"
-  DEFAULT_VALUE = ""
+  ANY_OPTION = "Any"
   SEPARATOR = " -- "
 
   ALL =
-    [[DEFAULT_TEXT, DEFAULT_VALUE]] +
+    # ANY twice because Selectize.js makes the empty option a placeholder.
+    [[ANY_OPTION, ""],
+     [ANY_OPTION, ANY_OPTION]] +
     NpiTaxonomyDescriptionsData::DATA.map do |code, (classification, specialization)|
       if specialization
         ["#{classification} (#{specialization})",

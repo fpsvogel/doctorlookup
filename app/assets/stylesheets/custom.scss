@@ -86,9 +86,17 @@ label[for^=query_gender] {
   }
   & input, .item {
     color: var(--form-element-color) !important;
-    font-size: 1rem !important;
+    font-size: .8rem !important;
   }
 }
+
+// // in case I can find a way for the search form to retrieve Selectize.js multi-select.
+// .selectize-control.multi .selectize-input [data-value] {
+//   font-size: 13px !important;
+//   color: var(--primary-inverse) !important;
+//   background-image: none !important;
+//   background-color: var(--primary) !important;
+// }
 
 .selectize-dropdown {
   background: var(--background-color-dark) !important;

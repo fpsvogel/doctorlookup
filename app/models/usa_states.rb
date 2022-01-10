@@ -1,8 +1,9 @@
 class UsaStates
-  DEFAULT_TEXT = "Any"
-  DEFAULT_VALUE = ""
+  ANY_OPTION = "Any"
   ALL = [
-    [DEFAULT_TEXT, DEFAULT_VALUE],
+    # ANY twice because Selectize.js makes the empty option a placeholder.
+    [ANY_OPTION, ""],
+    [ANY_OPTION, ANY_OPTION],
     ["Alabama", "AL"],
     ["Alaska", "AK"],
     ["Arizona", "AZ"],
