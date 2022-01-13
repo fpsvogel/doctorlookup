@@ -84,6 +84,7 @@ class Query
   # @return [Boolean] whether the taxonomy description (specialty) has a
   # specialization, as in "Social Worker -- Clinical".
   def taxonomy_description_has_specialization?
+    return false if taxonomy_description.nil?
     taxonomy_description.include? NpiTaxonomyDescriptions::SEPARATOR
   end
 

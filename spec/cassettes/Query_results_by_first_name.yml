@@ -1,0 +1,197 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=james&last_name=&limit=10&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=&use_first_name_alias=&version=2.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 13 Jan 2022 20:17:18 GMT
+      Content-Type:
+      - application/json
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Set-Cookie:
+      - TS017b4e40=01cffab1d3932d3d398968fc91735a1a038940e1c9f991317ed4d635dee62e78ac6dfc05c830188296d3c9d3eb75c8785c87571875;
+        Path=/; Domain=.npiregistry.cms.hhs.gov
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"result_count":10, "results":[{"enumeration_type": "NPI-1", "number":
+        1932102951, "last_updated_epoch": 1491350400, "created_epoch": 1116806400,
+        "basic": {"name_prefix": "DR.", "first_name": "JAIME", "last_name": "JIMENEZ
+        AGOSTO", "credential": "M.D.", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
+        "2005-05-23", "last_updated": "2017-04-05", "status": "A", "name": "JIMENEZ
+        AGOSTO JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1420 S 28TH AVE", "address_2": "", "city": "HATTIESBURG", "state": "MS",
+        "postal_code": "394023107", "telephone_number": "601-264-3937", "fax_number":
+        "601-264-5930"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1420 S 28TH AVE", "address_2":
+        "", "city": "HATTIESBURG", "state": "MS", "postal_code": "394023107", "telephone_number":
+        "601-264-3937", "fax_number": "601-264-5930"}], "taxonomies": [{"code": "207W00000X",
+        "desc": "Ophthalmology", "primary": true, "state": "MS", "license": "12372"},
+        {"code": "207W00000X", "desc": "Ophthalmology", "primary": false, "state":
+        "TX", "license": "H8698"}, {"code": "207WX0107X", "desc": "Ophthalmology Retina
+        Specialist", "primary": false, "state": "MS", "license": "12372"}, {"code":
+        "207WX0108X", "desc": "Ophthalmology Uveitis and Ocular Inflammatory Disease",
+        "primary": false, "state": "MS", "license": "12372"}], "identifiers": [{"identifier":
+        "00115830", "code": "05", "desc": "MEDICAID", "state": "MS", "issuer": ""},
+        {"identifier": "512I180024", "code": "01", "desc": "Other", "state": "MS",
+        "issuer": "MEDICARE PTAN FOR SOUTHERN EYE PHYSICIAN''S CENTER LLC"}, {"identifier":
+        "512I180025", "code": "01", "desc": "Other", "state": "MS", "issuer": "MEDICARE
+        PTAN FOR SOUTHERN EYE SURGERY CENTER LLC"}]},{"enumeration_type": "NPI-1",
+        "number": 1205839982, "last_updated_epoch": 1316044800, "created_epoch": 1116892800,
+        "basic": {"name_prefix": "MRS.", "first_name": "JAIME", "last_name": "HATCLIFF",
+        "credential": "P.A.C.", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2005-05-24", "last_updated": "2011-09-15", "status": "A", "name": "HATCLIFF
+        JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "1101 N 10TH ST", "address_2": "", "city": "BEATRICE", "state": "NE", "postal_code":
+        "683102001", "telephone_number": "402-228-3436", "fax_number": "402-223-4515"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "1101 N 10TH ST", "address_2":
+        "", "city": "BEATRICE", "state": "NE", "postal_code": "683102001", "telephone_number":
+        "402-228-3436", "fax_number": "402-223-4515"}], "taxonomies": [{"code": "363A00000X",
+        "desc": "Physician Assistant", "primary": true, "state": "NE", "license":
+        "867"}], "identifiers": [{"identifier": "970018972", "code": "01", "desc":
+        "Other", "state": "NE", "issuer": "RAILROAD MEDICARE"}]},{"enumeration_type":
+        "NPI-1", "number": 1689677916, "last_updated_epoch": 1344816000, "created_epoch":
+        1117497600, "basic": {"name_prefix": "DR.", "first_name": "JAIME", "last_name":
+        "MAYORAL", "middle_name": "LOPEZ", "credential": "MD", "sole_proprietor":
+        "NO", "gender": "M", "enumeration_date": "2005-05-31", "last_updated": "2012-08-13",
+        "status": "A", "name": "MAYORAL JAIME"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "1200 BROOKLYN AVE.", "address_2": "STE 150", "city":
+        "SAN ANTONIO", "state": "TX", "postal_code": "782124815", "telephone_number":
+        "210-212-4114", "fax_number": "210-212-4012"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "1200 BROOKLYN AVE", "address_2": "STE 150", "city": "SAN ANTONIO", "state":
+        "TX", "postal_code": "782124803", "telephone_number": "210-212-4114", "fax_number":
+        "210-212-4012"}], "taxonomies": [{"code": "208600000X", "desc": "Surgery",
+        "primary": false, "state": "TX", "license": "J9199"}, {"code": "208C00000X",
+        "desc": "Colon & Rectal Surgery", "primary": true, "state": "TX", "license":
+        "J9199"}], "identifiers": [{"identifier": "117142303", "code": "05", "desc":
+        "MEDICAID", "state": "TX", "issuer": ""}]},{"enumeration_type": "NPI-1", "number":
+        1619971512, "last_updated_epoch": 1305763200, "created_epoch": 1118188800,
+        "basic": {"name_prefix": "DR.", "first_name": "JAIME", "last_name": "FRIEDMAN",
+        "middle_name": "B", "credential": "M.D.", "sole_proprietor": "NO", "gender":
+        "M", "enumeration_date": "2005-06-08", "last_updated": "2011-05-19", "status":
+        "A", "name": "FRIEDMAN JAIME"}, "other_names": [], "addresses": [{"country_code":
+        "US", "country_name": "United States", "address_purpose": "LOCATION", "address_type":
+        "DOM", "address_1": "4026 NE 55TH ST", "address_2": "STE F", "city": "SEATTLE",
+        "state": "WA", "postal_code": "981052254", "telephone_number": "206-523-9195",
+        "fax_number": "206-523-5399"}, {"country_code": "US", "country_name": "United
+        States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "4223 NE 73RD ST", "address_2": "", "city": "SEATTLE", "state": "WA", "postal_code":
+        "981156033", "telephone_number": "206-525-9803"}], "taxonomies": [{"code":
+        "207R00000X", "desc": "Internal Medicine", "primary": true, "state": "WA",
+        "license": "MD00020845"}], "identifiers": [{"identifier": "8245490", "code":
+        "05", "desc": "MEDICAID", "state": "WA", "issuer": ""}]},{"enumeration_type":
+        "NPI-1", "number": 1003810854, "last_updated_epoch": 1271376000, "created_epoch":
+        1118275200, "basic": {"name_prefix": "DR.", "first_name": "JAIME", "last_name":
+        "BENREY", "credential": "MD", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
+        "2005-06-09", "last_updated": "2010-04-16", "status": "A", "name": "BENREY
+        JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "6624 FANNIN ST", "address_2": "STE 2310", "city": "HOUSTON", "state": "TX",
+        "postal_code": "770302335", "telephone_number": "713-796-2668", "fax_number":
+        "713-383-0378"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "6624 FANNIN ST", "address_2":
+        "STE 2310", "city": "HOUSTON", "state": "TX", "postal_code": "770302335",
+        "telephone_number": "713-796-2668", "fax_number": "713-383-0378"}], "taxonomies":
+        [{"code": "207RC0000X", "desc": "Internal Medicine Cardiovascular Disease",
+        "primary": true, "state": "TX", "license": "E3648"}], "identifiers": []},{"enumeration_type":
+        "NPI-1", "number": 1326042193, "last_updated_epoch": 1237766400, "created_epoch":
+        1118275200, "basic": {"name_prefix": "DR.", "first_name": "JAIME", "last_name":
+        "ROSADO MUNOZ", "middle_name": "R.", "credential": "M.D., M.P.H.", "sole_proprietor":
+        "NO", "gender": "M", "enumeration_date": "2005-06-09", "last_updated": "2009-03-23",
+        "status": "A", "name": "ROSADO MUNOZ JAIME"}, "other_names": [], "addresses":
+        [{"country_code": "US", "country_name": "United States", "address_purpose":
+        "LOCATION", "address_type": "DOM", "address_1": "735 PONCE DE LEON AVE", "address_2":
+        "STE 818", "city": "SAN JUAN", "state": "PR", "postal_code": "009175031",
+        "telephone_number": "787-758-0744", "fax_number": "787-765-6593"}, {"country_code":
+        "US", "country_name": "United States", "address_purpose": "MAILING", "address_type":
+        "DOM", "address_1": "TORRE AUXILIO MUTUO", "address_2": "735 PONCE DE LEON
+        AVE.,SUITE. 818", "city": "SAN JUAN", "state": "PR", "postal_code": "009175031",
+        "telephone_number": "787-758-0744", "fax_number": "787-765-6593"}], "taxonomies":
+        [{"code": "2080P0206X", "desc": "Pediatrics Pediatric Gastroenterology", "primary":
+        true, "state": "PR", "license": "12213"}], "identifiers": [{"identifier":
+        "12213", "code": "01", "desc": "Other", "state": "PR", "issuer": "STATE LICENSE"}]},{"enumeration_type":
+        "NPI-1", "number": 1700880499, "last_updated_epoch": 1409702400, "created_epoch":
+        1118275200, "basic": {"first_name": "JAIME", "last_name": "BLANCHARD", "middle_name":
+        "D", "credential": "O.D.", "sole_proprietor": "NO", "gender": "F", "enumeration_date":
+        "2005-06-09", "last_updated": "2014-09-03", "status": "A", "name": "BLANCHARD
+        JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "7300 W GREENFIELD AVE", "address_2": "", "city": "WEST ALLIS", "state": "WI",
+        "postal_code": "532144729", "telephone_number": "414-453-6667", "fax_number":
+        "414-774-5505"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "7300 W GREENFIELD AVE", "address_2":
+        "", "city": "WEST ALLIS", "state": "WI", "postal_code": "532144729", "telephone_number":
+        "414-453-6667", "fax_number": "414-774-5505"}], "taxonomies": [{"code": "152W00000X",
+        "desc": "Optometrist", "primary": true, "state": "WI", "license": "2968-035"}],
+        "identifiers": [{"identifier": "38622400", "code": "05", "desc": "MEDICAID",
+        "state": "WI", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1295739944,
+        "last_updated_epoch": 1332374400, "created_epoch": 1118361600, "basic": {"name_prefix":
+        "DR.", "first_name": "JAIME", "last_name": "LOPEZ-SANTINI", "middle_name":
+        "F", "credential": "MD", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
+        "2005-06-10", "last_updated": "2012-03-22", "status": "A", "name": "LOPEZ-SANTINI
+        JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "212 E 106TH ST", "address_2": "", "city": "NEW YORK", "state": "NY", "postal_code":
+        "100294007", "telephone_number": "212-360-2600", "fax_number": "212-360-2618"},
+        {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "212 E 106TH ST", "address_2":
+        "", "city": "NEW YORK", "state": "NY", "postal_code": "100294007", "telephone_number":
+        "212-360-2600", "fax_number": "212-360-2618"}], "taxonomies": [{"code": "207R00000X",
+        "desc": "Internal Medicine", "primary": true, "state": "NY", "license": "196408"}],
+        "identifiers": [{"identifier": "00355151", "code": "05", "desc": "MEDICAID",
+        "state": "NY", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1437154432,
+        "last_updated_epoch": 1401753600, "created_epoch": 1118880000, "basic": {"name_prefix":
+        "DR.", "first_name": "JAIME", "last_name": "BALLESTEROS", "middle_name": "T",
+        "credential": "MD", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
+        "2005-06-16", "last_updated": "2014-06-03", "status": "A", "name": "BALLESTEROS
+        JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "G3239 BEECHER RD", "address_2": "STE C", "city": "FLINT", "state": "MI",
+        "postal_code": "485323616", "telephone_number": "810-732-9222", "fax_number":
+        "810-732-4344"}, {"country_code": "US", "country_name": "United States", "address_purpose":
+        "MAILING", "address_type": "DOM", "address_1": "G3239 BEECHER RD", "address_2":
+        "STE C", "city": "FLINT", "state": "MI", "postal_code": "485323616", "telephone_number":
+        "810-732-9222", "fax_number": "810-732-4344"}], "taxonomies": [{"code": "174400000X",
+        "desc": "Specialist", "primary": true, "state": "MI", "license": "4301046964"}],
+        "identifiers": [{"identifier": "4211863", "code": "05", "desc": "MEDICAID",
+        "state": "MI", "issuer": ""}]},{"enumeration_type": "NPI-1", "number": 1881699809,
+        "last_updated_epoch": 1203465600, "created_epoch": 1118880000, "basic": {"name_prefix":
+        "DR.", "first_name": "JAIME", "last_name": "TUAZON", "middle_name": "SANTIAGO",
+        "credential": "MD", "sole_proprietor": "NO", "gender": "M", "enumeration_date":
+        "2005-06-16", "last_updated": "2008-02-20", "status": "A", "name": "TUAZON
+        JAIME"}, "other_names": [], "addresses": [{"country_code": "US", "country_name":
+        "United States", "address_purpose": "LOCATION", "address_type": "DOM", "address_1":
+        "989 ROBERT BLVD", "address_2": "", "city": "SLIDELL", "state": "LA", "postal_code":
+        "704582009", "telephone_number": "985-690-8200"}, {"country_code": "US", "country_name":
+        "United States", "address_purpose": "MAILING", "address_type": "DOM", "address_1":
+        "PO BOX 8430", "address_2": "", "city": "METAIRIE", "state": "LA", "postal_code":
+        "700118430", "telephone_number": "504-834-2062", "fax_number": "504-831-7429"}],
+        "taxonomies": [{"code": "2085R0202X", "desc": "Radiology Diagnostic Radiology",
+        "primary": true, "state": "LA", "license": "06059R"}], "identifiers": [{"identifier":
+        "1348589", "code": "05", "desc": "MEDICAID", "state": "LA", "issuer": ""},
+        {"identifier": "04308069", "code": "05", "desc": "MEDICAID", "state": "MS",
+        "issuer": ""}]}]}'
+  recorded_at: Thu, 13 Jan 2022 20:17:18 GMT
+recorded_with: VCR 6.0.0
