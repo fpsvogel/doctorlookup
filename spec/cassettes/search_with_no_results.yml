@@ -19,18 +19,18 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 10 Jan 2022 13:42:00 GMT
+      - Thu, 13 Jan 2022 21:50:14 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d38e4b35b752de405bda0542d2f4a1e62bbe15b00f85b03dc91ea27a5e48910926a7f5a48ce3303773d9e9716f6e714f96;
+      - TS017b4e40=01cffab1d35d5e94efc887532e7ab42c495d89a1599a2fd804f0fc8da40f038a681c15d035dd658980c92077d785fa2f752c155748;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"result_count":0, "results":[]}'
-  recorded_at: Mon, 10 Jan 2022 13:42:00 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:14 GMT
 recorded_with: VCR 6.0.0

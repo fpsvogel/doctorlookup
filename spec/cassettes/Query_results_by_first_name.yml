@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Jan 2022 20:17:18 GMT
+      - Thu, 13 Jan 2022 21:50:12 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d3932d3d398968fc91735a1a038940e1c9f991317ed4d635dee62e78ac6dfc05c830188296d3c9d3eb75c8785c87571875;
+      - TS017b4e40=01cffab1d3f8e8b7ca71e8376a5af0bf35f3dcb024b2735a6e799ca204b6280a70b0f16426704b57a76ee2ed7112ea04e627344481;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
@@ -193,5 +193,5 @@ http_interactions:
         "1348589", "code": "05", "desc": "MEDICAID", "state": "LA", "issuer": ""},
         {"identifier": "04308069", "code": "05", "desc": "MEDICAID", "state": "MS",
         "issuer": ""}]}]}'
-  recorded_at: Thu, 13 Jan 2022 20:17:18 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:12 GMT
 recorded_with: VCR 6.0.0

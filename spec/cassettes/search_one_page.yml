@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 10 Jan 2022 13:42:02 GMT
+      - Thu, 13 Jan 2022 21:50:15 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d311a96b86535fdb9d65effadc140b04049419bf20d04a60cd2090f84190b7cd1b58d642296f924800ba5dd9c52f184191;
+      - TS017b4e40=01cffab1d375aa3703259b1da4cf20f8afc483d142373d809d4a1fedfe8276e12933f632c9580922dcbc1f35292fcfad255659d48a;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
@@ -193,7 +193,7 @@ http_interactions:
         "270-247-5716"}], "taxonomies": [{"code": "246RP1900X", "desc": "Technician,
         Pathology Phlebotomy", "primary": true, "state": "", "license": ""}], "identifiers":
         []}]}'
-  recorded_at: Mon, 10 Jan 2022 13:42:03 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:15 GMT
 - request:
     method: get
     uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=20&number=&organization_name=&postal_code=&skip=&state=KY&taxonomy_description=Technician,%20Pathology&use_first_name_alias=&version=2.1
@@ -213,13 +213,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 10 Jan 2022 13:42:04 GMT
+      - Thu, 13 Jan 2022 21:50:16 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d3c0e0c242b2681622eb5bc6dd7d87baa2b2bb13b054c035817a95ebb6c01fd924c6cdc4bd0d0437d875f2d6fc3485d168;
+      - TS017b4e40=01cffab1d30a93cae2279b2abc406d59ada281bef787ad50c6c9782b2b261f5032de0aa0c232e8072a143055b5b69622c1d6839640;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
@@ -387,5 +387,5 @@ http_interactions:
         "270-247-5716"}], "taxonomies": [{"code": "246RP1900X", "desc": "Technician,
         Pathology Phlebotomy", "primary": true, "state": "", "license": ""}], "identifiers":
         []}]}'
-  recorded_at: Mon, 10 Jan 2022 13:42:05 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:16 GMT
 recorded_with: VCR 6.0.0

@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 10 Jan 2022 13:42:00 GMT
+      - Thu, 13 Jan 2022 21:50:14 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d3510a5cd3f6c8fc0e6460dfee2bfdb18e33d743b77f2225d1306a4d340976c1edbcfa692ffb68cc565262b7898a8c4e56;
+      - TS017b4e40=01cffab1d3517e27ef5eaf27f625214aa21288f24aad40f217949145db399c36477b0ac88abe8c0a85ef0f3e35eb0ad9a4c82d3520;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
@@ -169,7 +169,7 @@ http_interactions:
         "TX", "postal_code": "791061705", "telephone_number": "806-351-3348"}], "taxonomies":
         [{"code": "101YP2500X", "desc": "Counselor Professional", "primary": true,
         "state": "TX", "license": "16516"}], "identifiers": []}]}'
-  recorded_at: Mon, 10 Jan 2022 13:42:01 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:14 GMT
 - request:
     method: get
     uri: https://npiregistry.cms.hhs.gov/api/?address_purpose=&city=&country_code=&enumeration_type=NPI-1&first_name=&last_name=&limit=20&number=&organization_name=&postal_code=&skip=&state=&taxonomy_description=Counselor&use_first_name_alias=&version=2.1
@@ -189,13 +189,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 10 Jan 2022 13:42:01 GMT
+      - Thu, 13 Jan 2022 21:50:14 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d39625f06a32f1b3dd5db27fd4edae72ababf309b15131227ede2de4d0aab8c7a417bf4215096094c10f581061d29c1663;
+      - TS017b4e40=01cffab1d3dc123df9323f1044b79a7b0d0ef3f8715d3f48ad6196cdf07445af50685dab76ce327ec62d2b4961c76c6da7b7ef9f70;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
@@ -506,5 +506,5 @@ http_interactions:
         "desc": "Counselor Mental Health", "primary": true, "state": "", "license":
         ""}], "identifiers": [{"identifier": "56CC", "code": "01", "desc": "Other",
         "state": "CA", "issuer": "ASPIRA"}]}]}'
-  recorded_at: Mon, 10 Jan 2022 13:42:02 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:14 GMT
 recorded_with: VCR 6.0.0

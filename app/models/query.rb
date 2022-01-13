@@ -1,6 +1,3 @@
-require "open-uri"
-require "json"
-
 # Queries the NPI API.
 class Query
   include ActiveModel::Model
@@ -11,12 +8,6 @@ class Query
   GENDER_INCREMENT_MULTIPLIER = 3 # to reduce the need for repeated API calls.
   TAXONOMIES_TEST_LIMIT_MULTIPLIER = 20 # also to minimize API calls.
 
-  # see https://npiregistry.cms.hhs.gov/registry/help-api
-  # "&enumeration_type=NPI-1" means that only individuals are returned, not
-  # organizations (NPI-2), which have a different JSON response structure and
-  # would require an OrganizationResult model.
-  API_URL = "https://npiregistry.cms.hhs.gov/api/?number=&enumeration_type=NPI-1&taxonomy_description=&first_name=&use_first_name_alias=&last_name=&organization_name=&address_purpose=&city=&state=&postal_code=&country_code=&limit=&skip=&version=2.1"
-
   FORM_PARAMS =
     %i[taxonomy_description
        state
@@ -24,11 +15,6 @@ class Query
        gender
        first_name
        last_name]
-
-  API_PARAMS = FORM_PARAMS \
-               - [:taxonomy_description] \
-               - [:gender] \
-               + [:limit]
 
   attribute :taxonomy_description, :string
   attribute :state,          :string
@@ -49,8 +35,7 @@ class Query
     results_batch = []
     first_try = (stopping_point == 0)
     while results_batch.count < RESULTS_INCREMENT
-      url = api_url_with_params
-      response = JSON.load(URI.open(url))
+      response = api_adapter.call
       new_results, reached_end = Result.results_from_api_response(response, self)
       results_batch += new_results
       self.stopping_point = @limit
@@ -82,7 +67,7 @@ class Query
   end
 
   # @return [Boolean] whether the taxonomy description (specialty) has a
-  # specialization, as in "Social Worker -- Clinical".
+  # specialization, like "Clinical" in "Social Worker -- Clinical".
   def taxonomy_description_has_specialization?
     return false if taxonomy_description.nil?
     taxonomy_description.include? NpiTaxonomyDescriptions::SEPARATOR
@@ -94,7 +79,34 @@ class Query
     NpiTaxonomyDescriptions.parenthesize(joined_taxonomy_description)
   end
 
+  # @return [String] the taxonomy description (specialty) with no separator
+  # between the two parts.
+  def joined_taxonomy_description
+    NpiTaxonomyDescriptions.join(taxonomy_description)
+  end
+
+  # @return [String] the specialty's classification (the first part) or
+  # specialization (the second part), depending on which is deemed more
+  # effective to use in the API call. (The API allows only one or the other as
+  # a parameter, not both together.)
+  def effective_taxonomy_description
+    return send(effective_taxonomy_attr) unless effective_taxonomy_attr.nil?
+    return nil unless taxonomy_description_has_specialization?
+    self.effective_taxonomy_attr = api_adapter.taxonomy_preliminary_contest_winner
+    send(effective_taxonomy_attr)
+  end
+
+  # @return [Integer] the number of results to request from the API in the
+  # preliminary "contest" between the classification and specialization.
+  def taxonomy_preliminary_higher_limit
+    RESULTS_INCREMENT * TAXONOMIES_TEST_LIMIT_MULTIPLIER
+  end
+
   private
+
+  def api_adapter
+    @api_adapter ||= NpiApiAdapter.new(query: self)
+  end
 
   def any_param_besides_state_and_gender_is_present
     others = FORM_PARAMS - [:state, :gender]
@@ -110,62 +122,11 @@ class Query
     increment
   end
 
-  def api_url_with_params(taxonomy_attr: :effective_taxonomy_description,
-                          taxonomy_preliminary_higher_limit: false)
-    url = API_URL
-    (API_PARAMS).each do |attr|
-      url = insert_into_url(url, attr)
-    end
-    url = insert_into_url(url, :taxonomy_description,
-                          attr_value: send(taxonomy_attr) || taxonomy_description)
-    if taxonomy_preliminary_higher_limit
-      url = insert_into_url(url, :limit,
-                            attr_value: taxonomy_preliminary_higher_limit)
-    end
-    url
-  end
-
-  def insert_into_url(url, param, attr_value: send(param))
-    if attr_value.present?
-      return url.sub("&#{param}=", "&#{param}=#{attr_value.to_s.gsub("&", "%26")}")
-    end
-    url
-  end
-
-  def effective_taxonomy_description
-    return send(effective_taxonomy_attr) unless effective_taxonomy_attr.nil?
-    return nil unless taxonomy_description_has_specialization?
-    self.effective_taxonomy_attr = taxonomy_preliminary_contest_winner
-    send(effective_taxonomy_attr)
-  end
-
-  def taxonomy_preliminary_contest_winner
-    matches = {}
-    [:classification, :specialization].each do |taxonomy_attr|
-      matches[taxonomy_attr] = taxonomy_preliminary_request(taxonomy_attr)
-                                .to_s.scan("\"#{joined_taxonomy_description}\"").count
-    end
-    matches.max_by { |_attr, count| count }.first
-  end
-
-  def taxonomy_preliminary_request(taxonomy_attr)
-    JSON.load(URI.open(api_url_with_params(taxonomy_attr:,
-                                      taxonomy_preliminary_higher_limit: true)))
-  end
-
   def classification
     taxonomy_description.split(NpiTaxonomyDescriptions::SEPARATOR).first
   end
 
   def specialization
     taxonomy_description.split(NpiTaxonomyDescriptions::SEPARATOR).second
-  end
-
-  def joined_taxonomy_description
-    NpiTaxonomyDescriptions.join(taxonomy_description)
-  end
-
-  def taxonomy_preliminary_higher_limit
-    RESULTS_INCREMENT * TAXONOMIES_TEST_LIMIT_MULTIPLIER
   end
 end

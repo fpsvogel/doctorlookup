@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 13 Jan 2022 20:17:18 GMT
+      - Thu, 13 Jan 2022 21:50:12 GMT
       Content-Type:
       - application/json
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Set-Cookie:
-      - TS017b4e40=01cffab1d326609f746ab36cd852d789ebfee2b55edf8a82a97e51704168b184da344e37cbe7ddd616fbc894a150f5e09d657c584a;
+      - TS017b4e40=01cffab1d3014f8eba41ef703810fbee813bea47324336e1d7f67bc90eab7f18a32b0ecf01937ba99bdc206e42d74292d7ab7b88a1;
         Path=/; Domain=.npiregistry.cms.hhs.gov
       Transfer-Encoding:
       - chunked
@@ -188,5 +188,5 @@ http_interactions:
         "fax_number": "818-895-9339"}], "taxonomies": [{"code": "363LP2300X", "desc":
         "Nurse Practitioner Primary Care", "primary": true, "state": "CA", "license":
         "7504"}], "identifiers": []}]}'
-  recorded_at: Thu, 13 Jan 2022 20:17:18 GMT
+  recorded_at: Thu, 13 Jan 2022 21:50:11 GMT
 recorded_with: VCR 6.0.0
