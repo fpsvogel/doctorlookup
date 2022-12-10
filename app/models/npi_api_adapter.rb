@@ -8,7 +8,9 @@ class NpiApiAdapter
   # "&enumeration_type=NPI-1" means that only individuals are returned, not
   # organizations (NPI-2), which have a different JSON response structure and
   # would require an OrganizationResult model.
-  API_URL = "https://npiregistry.cms.hhs.gov/api/?number=&enumeration_type=NPI-1&taxonomy_description=&first_name=&use_first_name_alias=&last_name=&organization_name=&address_purpose=&city=&state=&postal_code=&country_code=&limit=&skip=&version=2.1"
+  # UPDATE 2022/10/18: removed the enumeration_type param because it results in an error, e.g.
+  # https://npiregistry.cms.hhs.gov/api/?enumeration_type=NPI-1&taxonomy_description=Family%20Medicine&version=2.1
+  API_URL = "https://npiregistry.cms.hhs.gov/api/?number=&enumeration_type=&taxonomy_description=&first_name=&use_first_name_alias=&last_name=&organization_name=&address_purpose=&city=&state=&postal_code=&country_code=&limit=&skip=&version=2.1"
 
   API_PARAMS = Query::FORM_PARAMS \
                 - [:taxonomy_description] \
@@ -20,6 +22,7 @@ class NpiApiAdapter
   end
 
   def call
+    debugger
     url = api_url_with_params
     JSON.load(URI.open(url))
   end

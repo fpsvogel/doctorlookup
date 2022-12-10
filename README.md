@@ -1,6 +1,6 @@
 <h1 align="center">👩‍⚕️ Doctor Lookup 👨‍⚕️</h1>
 
-Welcome to the [Doctor Lookup](https://doctorlookup.herokuapp.com/) codebase. Doctor Lookup is a tool for finding doctors in the U.S. by name, state, and/or specialization. It uses the [NPI API](https://npiregistry.cms.hhs.gov/registry/help-api) by the U.S. Centers for Medicare & Medicaid Services.
+Welcome to the Doctor Lookup codebase. Doctor Lookup is a tool for finding doctors in the U.S. by name, state, and/or specialization. It uses the [NPI API](https://npiregistry.cms.hhs.gov/registry/help-api) by the U.S. Centers for Medicare & Medicaid Services.
 
 This the last of four "lightning apps" that I built for practice, with a focus on Rails testing. For links to the other apps, and for more on how I built this one, see my blog post [Doctor Lookup: Rails lightning app #4](https://fpsvogel.com/posts/2022/doctor-lookup-health-provider-search-tool).
 

@@ -25,6 +25,7 @@ class Result
       raw_results.map do |result|
         gender = result["basic"]["gender"]
         next unless gender_match?(gender, query)
+        next unless individual?(result)
         primary_specialty, other_specialties = parse_specialties(result["taxonomies"])
         next unless specialty_match?(primary_specialty, other_specialties, query)
         new(
@@ -62,7 +63,6 @@ class Result
     others = desc_and_primary.except(primary_description)
     other_descriptions = others.keys
     other_descriptions&.select! do |other|
-      debugger if other.nil?
       !primary_description.include? other
     end
     [primary_description, other_descriptions || []]
@@ -75,6 +75,11 @@ class Result
 
   private_class_method def self.gender_match?(gender, query)
     query.gender.nil? || gender.downcase == query.gender.downcase
+  end
+
+  # Whether the result represents an individual provider (not an organization)
+  private_class_method def self.individual?(result)
+    result["enumeration_type"] == "NPI-1"
   end
 
   private_class_method def self.specialty_match?(primary_specialty,
